@@ -1,1 +1,9 @@
 iccvEnv/
+segFixEnv/
+segRefinerEnv/
+modelWeights/
+lvis-api/
+BIG/
+samEnv/
+segRefinerEnv/
+segRefinerEnvV2/
