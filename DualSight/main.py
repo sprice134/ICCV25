@@ -13,22 +13,22 @@ from tools import (
 
 def main():
     # Directories and Paths
-    output_dir = "outputImages/eval"
+    output_dir = "outputImages"
     os.makedirs(output_dir, exist_ok=True)
 
     # -------------------------------------------------------
     # 1) Load the model of your choice (YOLO / Mask R-CNN / MobileNetV3)
     # -------------------------------------------------------
     chosen_model_type = "yolo"  
-    model_path = "/home/sprice/RQ/models/yolov8n-seg-train2/weights/best.pt"
+    model_path = "/home/sprice/ICCV25/modelWeights/yolov8x-seg.pt"
     device = "cuda"
     model = load_trained_model(chosen_model_type, model_path, device=device)
 
     # -------------------------------------------------------
     # 2) Load SAM predictor
     # -------------------------------------------------------
-    sam_checkpoint = "/home/sprice/RQ/models/sam_vit_l_0b3195.pth"
     sam_model_type = "vit_l"
+    sam_checkpoint = f"/home/sprice/ICCV25/modelWeights/sam_{sam_model_type}.pth"
     sam_predictor = load_sam_model(
         sam_checkpoint=sam_checkpoint,
         model_type=sam_model_type,
@@ -46,7 +46,7 @@ def main():
     pil_image = Image.open(image_path)
 
     # -------------------------------------------------------
-    # 4) Model Inference (any of YOLO / Mask R-CNN / MobileNetV3)
+    # 4) Model Inference 
     # -------------------------------------------------------
     listOfPolygons, listOfBoxes, listOfMasks = get_inference_predictions(
         model,
@@ -72,8 +72,8 @@ def main():
         dropout_percentage=0,
         ignore_border_percentage=5,
         algorithm="Voronoi",
-        use_mask_input=False,       # Change to True if you want to feed the initial mask to SAM
-        box_expansion_rate=0.0      # Increase if you want bigger bounding boxes
+        use_mask_input=False,
+        box_expansion_rate=0.0
     )
 
     # -------------------------------------------------------

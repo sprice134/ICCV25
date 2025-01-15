@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from pycocotools import mask as maskUtils
 from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
+import sys
+
 
 def visualize_segmentations(image_path, mask_path, output_dir, title="Segmentation Overlay"):
     """
@@ -124,9 +126,14 @@ def compute_specific_metrics(coco_eval, max_dets=200):
     # If you want specific IoU thresholds, you can set them here
     coco_eval.params.iouThrs = [0.5, 0.75, 0.95]
 
-    # Run evaluation
-    coco_eval.evaluate()
-    coco_eval.accumulate()
+    sys.stdout = open(os.devnull, 'w')
+    try:
+        # Run evaluation
+        coco_eval.evaluate()
+        coco_eval.accumulate()
+    finally:
+        # Restore standard output
+        sys.stdout = sys.__stdout__
 
     # Extract precision and recall arrays after accumulation
     precision = coco_eval.eval['precision']  # shape: [T, R, K, A, M]
