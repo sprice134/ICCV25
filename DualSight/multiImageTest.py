@@ -33,7 +33,7 @@ def main():
     # -------------------------------------------------------
     # 2) Load SAM predictor
     # -------------------------------------------------------
-    sam_model_type = "vit_h"
+    sam_model_type = "vit_l"
     sam_checkpoint = f"/home/sprice/ICCV25/modelWeights/sam_{sam_model_type}.pth"
     sam_predictor = load_sam_model(
         sam_checkpoint=sam_checkpoint,

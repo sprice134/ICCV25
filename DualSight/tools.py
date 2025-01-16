@@ -8,6 +8,7 @@ from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
 import sys
 from PIL import Image
+import mmcv
 
 
 
@@ -240,3 +241,77 @@ def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
     # os.remove("temp_pred.json")
 
     return metrics
+
+
+def combine_masks_16bit(list_of_binary_masks, output_path):
+    """
+    Combine a list of 0/1 masks into a single 16-bit instance mask:
+    Each mask gets a unique ID (1, 2, 3, ...).
+    """
+    if not list_of_binary_masks:
+        print("[WARNING] No masks to combine.")
+        return
+
+    height, width = list_of_binary_masks[0].shape
+    combined_16bit = np.zeros((height, width), dtype=np.uint16)
+
+    for idx, mask in enumerate(list_of_binary_masks, start=1):
+        combined_16bit[mask > 0] = idx
+
+    # Save a 16-bit PNG
+    mmcv.imwrite(combined_16bit, output_path)
+    return
+
+def generate_coco_annotations_from_multi_instance_masks_16bit(
+    gt_mask_path,
+    pred_mask_path,
+    image_path,
+    image_id=1,
+    category_id=1
+):
+    """
+    Generate COCO-style annotations for both ground truth and predicted masks.
+    """
+    # Read masks preserving the original bit depth (e.g., 16-bit)
+    gt_mask = cv2.imread(gt_mask_path, cv2.IMREAD_UNCHANGED)
+    pred_mask = cv2.imread(pred_mask_path, cv2.IMREAD_UNCHANGED)
+
+    if gt_mask is None or pred_mask is None:
+        raise FileNotFoundError("One of the mask files was not found.")
+
+    # Identify unique object IDs (works correctly for >255 values)
+    gt_ids = np.unique(gt_mask)
+    pred_ids = np.unique(pred_mask)
+    gt_ids = gt_ids[gt_ids > 0]
+    pred_ids = pred_ids[pred_ids > 0]
+
+    gt_annotations = []
+    pred_annotations = []
+
+    # Create GT annotations
+    for annotation_id, obj_id in enumerate(gt_ids, start=1):
+        binary_mask = (gt_mask == obj_id).astype(np.uint8)
+        gt_annotations.append(
+            mask_to_coco_format(binary_mask, image_id, category_id, annotation_id)
+        )
+
+    # Create prediction annotations
+    for annotation_id, obj_id in enumerate(pred_ids, start=1):
+        binary_mask = (pred_mask == obj_id).astype(np.uint8)
+        pred_annotations.append(
+            mask_to_coco_format(binary_mask, image_id, category_id, annotation_id)
+        )
+
+    # COCO GT data structure
+    gt_data = {
+        "images": [{
+            "id": image_id,
+            "width": int(gt_mask.shape[1]),
+            "height": int(gt_mask.shape[0]),
+            "file_name": os.path.basename(image_path)
+        }],
+        "annotations": gt_annotations,
+        "categories": [{"id": category_id, "name": "object"}]
+    }
+
+    return gt_data, pred_annotations
