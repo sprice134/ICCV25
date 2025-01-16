@@ -20,7 +20,7 @@ def main():
     # 1) Load the model of your choice (YOLO / Mask R-CNN / MobileNetV3)
     # -------------------------------------------------------
     chosen_model_type = "yolo"  
-    model_path = "/home/sprice/ICCV25/modelWeights/yolov8x-seg.pt"
+    model_path = "/home/sprice/ICCV25/modelWeights/yolov8n-seg.pt"
     device = "cuda"
     model = load_trained_model(chosen_model_type, model_path, device=device)
 
@@ -42,6 +42,11 @@ def main():
         "/home/sprice/RQ/demo.v7i.yolov8/test/images/"
         "TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4.jpg"
     )
+    # image_path = (
+    #     "/home/sprice/ICCV25/demo.v7i.coco/test/"
+    #     "S02_02_SE1_300X18_png.rf.1a16e8c5f4e008cb2fc48c98b35778fb.jpg"
+    # )
+    
     loop_image = cv2.imread(image_path)
     pil_image = Image.open(image_path)
 
@@ -111,6 +116,11 @@ def main():
         "/home/sprice/ICCV25/SegRefinerV2/test_masks/"
         "TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4_mask.png"
     )
+    # gt_mask_path = (
+    #     "/home/sprice/ICCV25/SegRefinerV2/test_masks/"
+    #     "S02_02_SE1_300X18_png.rf.1a16e8c5f4e008cb2fc48c98b35778fb_mask.png"
+    # )
+    
 
     print(f"Evaluating {chosen_model_type.upper()} Segmentation Metrics:")
     gt_data, model_pred_data = generate_coco_annotations_from_multi_instance_masks(

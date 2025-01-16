@@ -3,12 +3,15 @@ import cv2
 import numpy as np
 
 # Load the YOLOv8 model with your specified weights
-yolo_model_path = "/home/sprice/RQ/models/yolov8n-seg-train2/weights/best.pt"
+# yolo_model_path = "/home/sprice/RQ/models/yolov8n-seg-train2/weights/best.pt"
+yolo_model_path = '/home/sprice/ICCV25/modelWeights/yolov8n-seg.pt'
 model = YOLO(yolo_model_path)
 
 # Input and output paths
 # input_image_path = "HP743_5S_500x_png.rf.9ff406796462449f85c2039537f32d6f.jpg"  # Replace with your image path
-input_image_path = 'S02_02_SE1_300X18_png.rf.1a16e8c5f4e008cb2fc48c98b35778fb.jpg'
+# input_image_path = 'TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4.jpg'
+input_image_path = 'Cu-Ni-Powder_250x_10_SE_png.rf.cd93ec4589ad8f4e412cb1ec0e805016.jpg'
+
 output_mask_path = "yoloMasks.png"  # Path to save the mask image
 
 # Load the image

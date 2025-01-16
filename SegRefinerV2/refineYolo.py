@@ -14,7 +14,7 @@ def refine_single_image_multi_object():
     config_path = "/home/sprice/ICCV25/SegRefinerV2/configs/segrefiner/segrefiner_config.py"
     checkpoint_path = "/home/sprice/ICCV25/modelWeights/segrefiner_lr_latest.pth"
     # image_path = "/home/sprice/ICCV25/SegRefiner/jan15Test/HP743_5S_500x_png.rf.9ff406796462449f85c2039537f32d6f.jpg"
-    image_path = '/home/sprice/ICCV25/SegRefinerV2/S02_02_SE1_300X18_png.rf.1a16e8c5f4e008cb2fc48c98b35778fb.jpg'
+    image_path = '/home/sprice/ICCV25/SegRefinerV2/TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4.jpg'
     mask_path = "/home/sprice/ICCV25/SegRefinerV2/yoloMasks.png"  # Coarse masks
     output_path = "/home/sprice/ICCV25/SegRefinerV2/refined_grayscale.png"
 

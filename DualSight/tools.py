@@ -7,6 +7,8 @@ from pycocotools import mask as maskUtils
 from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
 import sys
+from PIL import Image
+
 
 
 def visualize_segmentations(image_path, mask_path, output_dir, title="Segmentation Overlay"):
@@ -14,11 +16,11 @@ def visualize_segmentations(image_path, mask_path, output_dir, title="Segmentati
     Visualize segmentation masks by overlaying them on the original image.
     Saves a PNG file with the overlay in the output directory.
     """
-    image = cv2.imread(image_path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    original_image = Image.open(image_path).convert("RGBA")
     mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
 
-    if image is None or mask is None:
+    if original_image is None or mask is None:
         raise FileNotFoundError(
             f"Image or mask not found: {image_path}, {mask_path}"
         )
@@ -27,24 +29,32 @@ def visualize_segmentations(image_path, mask_path, output_dir, title="Segmentati
     unique_ids = np.unique(mask)
     unique_ids = unique_ids[unique_ids > 0]
 
-    # Assign random colors for each object ID
-    color_map = {obj_id: tuple(np.random.randint(0, 255, 3)) for obj_id in unique_ids}
+    # Assign random colors (RGBA) for each object ID
+    colors = [
+        np.append(np.random.randint(0, 256, size=3), 180)  # RGB with alpha channel
+        for _ in unique_ids
+    ]
 
-    overlay = image.copy()
-    for obj_id, color in color_map.items():
-        binary_mask = (mask == obj_id).astype(np.uint8)
-        colored_mask = np.stack([binary_mask * color[i] for i in range(3)], axis=-1)
-        overlay = cv2.addWeighted(overlay, 1, colored_mask, 0.5, 0)
+    # Create the composite mask
+    composite_mask = np.zeros((*mask.shape, 4), dtype=np.uint8)
+    for obj_id, color in zip(unique_ids, colors):
+        binary_mask = (mask == obj_id)
+        composite_mask[binary_mask] = color
 
-    plt.figure(figsize=(10, 10))
-    plt.title(title)
-    plt.imshow(overlay)
-    plt.axis('off')
+    # Convert composite mask to an image
+    composite_mask_image = Image.fromarray(composite_mask, mode="RGBA")
 
+    # Overlay the mask onto the original image
+    final_image = Image.alpha_composite(original_image, composite_mask_image)
+
+    # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
+
+    # Save the final image
     output_overlay_path = os.path.join(output_dir, f"{title.replace(' ', '_')}.png")
-    plt.savefig(output_overlay_path, bbox_inches='tight', pad_inches=0)
-    plt.close()
+    final_image.save(output_overlay_path, "PNG")
+
+
 
 def mask_to_coco_format(binary_mask, image_id, category_id=1, annotation_id=1):
     """
@@ -69,7 +79,7 @@ def generate_coco_annotations_from_multi_instance_masks(
     image_path,
     image_id=1,
     category_id=1
-):
+    ):
     """
     Generate COCO-style annotations for both ground truth and predicted masks.
     """
@@ -117,15 +127,13 @@ def generate_coco_annotations_from_multi_instance_masks(
     return gt_data, pred_annotations
 
 def compute_specific_metrics(coco_eval, max_dets=200):
-    """
-    Helper function to accumulate COCO evaluation metrics and print
-    out AP/AR for specific IOU thresholds (0.5, 0.75, 0.95).
-    """
     # Adjust parameters as needed
     coco_eval.params.maxDets = [max_dets, max_dets, max_dets]
-    # If you want specific IoU thresholds, you can set them here
+    # Set specific IoU thresholds
     coco_eval.params.iouThrs = [0.5, 0.75, 0.95]
 
+    # Suppress output during evaluation
+    saved_stdout = sys.stdout
     sys.stdout = open(os.devnull, 'w')
     try:
         # Run evaluation
@@ -133,7 +141,8 @@ def compute_specific_metrics(coco_eval, max_dets=200):
         coco_eval.accumulate()
     finally:
         # Restore standard output
-        sys.stdout = sys.__stdout__
+        sys.stdout.close()
+        sys.stdout = saved_stdout
 
     # Extract precision and recall arrays after accumulation
     precision = coco_eval.eval['precision']  # shape: [T, R, K, A, M]
@@ -150,52 +159,84 @@ def compute_specific_metrics(coco_eval, max_dets=200):
     # Compute AP for each IoU threshold over all areas
     ap_values = {}
     for thr, idx in iou_thr_indices.items():
-        ap = np.mean(precision[idx, :, :, :, max_det_index])
+        valid_precisions = precision[idx, :, :, :, max_det_index]
+        valid_precisions = valid_precisions[valid_precisions != -1]  # Exclude invalid entries
+        if valid_precisions.size > 0:
+            ap = np.mean(valid_precisions)
+        else:
+            ap = float('nan')  # No valid precision values
         ap_values[f"AP@{int(thr*100)}"] = ap
 
     # Compute AP across IoU thresholds for all areas (AP@50:95)
-    ap_values["AP@50:95"] = np.mean(precision[:, :, :, :, max_det_index])
+    all_valid_precisions = precision[:, :, :, :, max_det_index]
+    all_valid_precisions = all_valid_precisions[all_valid_precisions != -1]
+    if all_valid_precisions.size > 0:
+        ap_values["AP@50:95"] = np.mean(all_valid_precisions)
+    else:
+        ap_values["AP@50:95"] = float('nan')
 
     # Compute AR for each IoU threshold over all areas
     ar_values = {}
     for thr, idx in iou_thr_indices.items():
-        ar = np.mean(recall[idx, :, :, max_det_index])
+        valid_recalls = recall[idx, :, :, max_det_index]
+        if valid_recalls.size > 0:
+            ar = np.mean(valid_recalls)  # Recall values are valid; no need to filter
+        else:
+            ar = float('nan')
         ar_values[f"AR@{int(thr*100)}"] = ar
 
     # Compute AR across IoU thresholds for all areas (AR@50:95)
-    ar_values["AR@50:95"] = np.mean(recall[:, :, :, max_det_index])
+    all_valid_recalls = recall[:, :, :, max_det_index]
+    if all_valid_recalls.size > 0:
+        ar_values["AR@50:95"] = np.mean(all_valid_recalls)
+    else:
+        ar_values["AR@50:95"] = float('nan')
 
-    print(f"Metrics for maxDets={max_dets}:")
-    for metric, value in ap_values.items():
-        print(f"{metric}: {value:.3f}")
-    for metric, value in ar_values.items():
-        print(f"{metric}: {value:.3f}")
+    # Combine AP and AR metrics into a single dictionary to return
+    metrics = {}
+    metrics.update(ap_values)
+    metrics.update(ar_values)
+    metrics["maxDets"] = max_dets  # include maxDets for reference if needed
+
+    return metrics
 
 def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
     """
     Evaluate COCO metrics (AP, AR) given ground truth data and predicted data
-    in COCO format. Prints out results for each metric.
+    in COCO format. Returns a dictionary of metrics.
     """
-    # Create temporary JSON files
+    # Create temporary JSON files for ground truth and predictions
     with open("temp_gt.json", "w") as gt_file:
         json.dump(gt_data, gt_file)
 
     pred_coco_format = []
     for pred in pred_data:
-        # Defaulting the score to 1.0, can be updated if needed
-        pred_coco_format.append({
+        # Ensure each prediction has a score; adjust for bbox if necessary
+        pred_entry = {
             "image_id": pred["image_id"],
             "category_id": pred["category_id"],
-            "segmentation": pred["segmentation"],
-            "score": 1.0,
-        })
+            "score": pred.get("score", 1.0)  # default score 1.0 if missing
+        }
+        # Add segmentation or bbox depending on iou_type
+        if iou_type == "segm":
+            pred_entry["segmentation"] = pred["segmentation"]
+        elif iou_type == "bbox":
+            pred_entry["bbox"] = pred["bbox"]
+        pred_coco_format.append(pred_entry)
 
     with open("temp_pred.json", "w") as pred_file:
         json.dump(pred_coco_format, pred_file)
 
+    # Load ground truth and predictions into COCO API
     coco_gt = COCO("temp_gt.json")
     coco_pred = coco_gt.loadRes("temp_pred.json")
     coco_eval = COCOeval(coco_gt, coco_pred, iouType=iou_type)
 
-    # Compute and print custom metrics
-    compute_specific_metrics(coco_eval, max_dets=max_dets)
+    # Compute and retrieve metrics
+    metrics = compute_specific_metrics(coco_eval, max_dets=max_dets)
+
+    # Optionally delete temporary files after evaluation
+    # os.remove("temp_gt.json")
+    # os.remove("temp_pred.json")
+
+    return metrics

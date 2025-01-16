@@ -120,7 +120,7 @@ def load_trained_model(model_type, model_path, device="cuda"):
 #   3) Inference functions for each model (return polygons, boxes, masks)
 ############################################################################
 
-def get_yolo_predictions(model, image_path, min_mask_area=200):
+def get_yolo_predictions(model, image_path, min_mask_area=0):
     """
     Run YOLO inference on the given image_path.
     Returns:
