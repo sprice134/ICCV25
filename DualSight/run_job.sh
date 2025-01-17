@@ -3,7 +3,7 @@
 #SBATCH --cpus-per-task=8               # Number of CPU cores
 #SBATCH --gres=gpu:1                    # Number of GPUs
 #SBATCH --mem=16000MB                   # Memory in MB
-#SBATCH --time=1:00:00                 # Time limit (HH:MM:SS)
+#SBATCH --time=8:00:00                 # Time limit (HH:MM:SS)
 #SBATCH --partition=short               # Partition name
 
 # Print some job information
@@ -17,4 +17,4 @@ echo "  - Memory: $SLURM_MEM_PER_NODE"
 source /home/sprice/ICCV25/samEnv/bin/activate
 
 
-python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V3.py
+python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V5.py

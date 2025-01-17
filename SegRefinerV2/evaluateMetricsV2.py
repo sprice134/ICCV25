@@ -344,9 +344,9 @@ refined_mask_path = "refined_grayscale.png"
 
 # Save individual masks for ground truth
 
-# save_individual_overlays(original_image_path, gt_mask_path, "ground_truth_masks", prefix="ground_truth")
-# save_individual_overlays(original_image_path, pred_mask_path, "predicted_masks", prefix="predicted")
-# save_individual_overlays(original_image_path, refined_mask_path, "refined_masks", prefix="refined")
+save_individual_overlays(original_image_path, gt_mask_path, "ground_truth_masks", prefix="ground_truth")
+save_individual_overlays(original_image_path, pred_mask_path, "predicted_masks", prefix="predicted")
+save_individual_overlays(original_image_path, refined_mask_path, "refined_masks", prefix="refined")
 
 
 # Visualize the segmentations

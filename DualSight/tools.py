@@ -315,3 +315,25 @@ def generate_coco_annotations_from_multi_instance_masks_16bit(
     }
 
     return gt_data, pred_annotations
+
+def compute_pixel_precision_recall(gt_path, pred_path):
+    """
+    Compute pixel-level precision and recall by comparing a predicted mask
+    with the ground truth mask.
+    """
+
+    # Load images as grayscale
+    gt = np.array(Image.open(gt_path).convert("L"))
+    pred = np.array(Image.open(pred_path).convert("L"))
+
+    # Convert to binary masks: non-zero indicates "Not Background"
+    gt_binary = (gt > 127)
+    pred_binary = (pred > 127)
+
+    TP = np.sum(np.logical_and(pred_binary, gt_binary))
+    FP = np.sum(np.logical_and(pred_binary, np.logical_not(gt_binary)))
+    FN = np.sum(np.logical_and(np.logical_not(pred_binary), gt_binary))
+
+    precision = TP / (TP + FP) if (TP + FP) > 0 else None
+    recall = TP / (TP + FN) if (TP + FN) > 0 else None
+    return precision, recall

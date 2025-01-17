@@ -64,7 +64,8 @@ def load_yolo_model(yolo_model_path):
 
 def load_maskrcnn_model(model_path='/home/sprice/RQ/maskrcnn/final_mask_rcnn_model.pth', 
                         num_classes=2,
-                        backbone="resnet50"):
+                        backbone="resnet50",
+                        device="cuda"):  # Added device parameter
     """
     Load and return a trained Mask R-CNN model with specified parameters.
     """
@@ -87,7 +88,8 @@ def load_maskrcnn_model(model_path='/home/sprice/RQ/maskrcnn/final_mask_rcnn_mod
     )
 
     # Load trained weights
-    model.load_state_dict(torch.load(model_path))
+    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.to(device)  # Move model to the specified device
     model.eval()
     return model
 
@@ -109,7 +111,7 @@ def load_trained_model(model_type, model_path, device="cuda"):
     if model_type == 'yolo':
         return load_yolo_model(model_path)
     elif model_type == 'maskrcnn':
-        return load_maskrcnn_model(model_path=model_path)
+        return load_maskrcnn_model(model_path=model_path, device=device)
     elif model_type == 'mobilenetv3':
         return load_mobilenetv3_model(model_path=model_path, device=device)
     else:
