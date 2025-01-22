@@ -1,6 +1,7 @@
 import numpy as np
 import sys
 sys.path.append('../SegRefinerV2/')
+sys.path.append('../../SegRefinerV2/')
 import mmcv
 import torch
 from mmcv import Config

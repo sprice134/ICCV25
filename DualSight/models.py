@@ -111,7 +111,9 @@ def load_trained_model(model_type, model_path, device="cuda"):
     if model_type == 'yolo':
         return load_yolo_model(model_path)
     elif model_type == 'maskrcnn':
-        return load_maskrcnn_model(model_path=model_path, device=device)
+        model = load_maskrcnn_model(model_path=model_path, device=device)
+        model.eval()
+        return model
     elif model_type == 'mobilenetv3':
         return load_mobilenetv3_model(model_path=model_path, device=device)
     else:

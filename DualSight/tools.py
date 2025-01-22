@@ -237,20 +237,28 @@ def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
     metrics = compute_specific_metrics(coco_eval, max_dets=max_dets)
 
     # Optionally delete temporary files after evaluation
-    # os.remove("temp_gt.json")
-    # os.remove("temp_pred.json")
+    os.remove("temp_gt.json")
+    os.remove("temp_pred.json")
 
     return metrics
 
 
-def combine_masks_16bit(list_of_binary_masks, output_path):
+def combine_masks_16bit(list_of_binary_masks, output_path=None, return_array=False):
     """
     Combine a list of 0/1 masks into a single 16-bit instance mask:
     Each mask gets a unique ID (1, 2, 3, ...).
+
+    Parameters:
+    - list_of_binary_masks: List of 0/1 binary masks.
+    - output_path: Path to save the 16-bit PNG file (optional).
+    - return_array: Whether to return the combined 16-bit mask array.
+    
+    Returns:
+    - combined_16bit (optional): The combined 16-bit instance mask array if return_array is True.
     """
     if not list_of_binary_masks:
         print("[WARNING] No masks to combine.")
-        return
+        return None
 
     height, width = list_of_binary_masks[0].shape
     combined_16bit = np.zeros((height, width), dtype=np.uint16)
@@ -258,9 +266,15 @@ def combine_masks_16bit(list_of_binary_masks, output_path):
     for idx, mask in enumerate(list_of_binary_masks, start=1):
         combined_16bit[mask > 0] = idx
 
-    # Save a 16-bit PNG
-    mmcv.imwrite(combined_16bit, output_path)
-    return
+    # Save the combined mask if output_path is provided
+    if output_path:
+        mmcv.imwrite(combined_16bit, output_path)
+
+    if return_array:
+        return combined_16bit
+
+    return None
+
 
 def generate_coco_annotations_from_multi_instance_masks_16bit(
     gt_mask_path,

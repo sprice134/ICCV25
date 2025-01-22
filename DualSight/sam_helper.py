@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from segment_anything import sam_model_registry, SamPredictor
 
 ############################################################################
-#   1) Sub-algorithms used by select_furthest_points_from_mask
+#   1) Sub-algorithms used by select_point_placement
 ############################################################################
 
 import random
@@ -193,13 +193,13 @@ def voronoi_optimization_from_coords(coords, num_points, iterations=50):
     return points.tolist()
 
 ############################################################################
-#   2) The main function: select_furthest_points_from_mask
+#   2) The main function: select_point_placement
 ############################################################################
 
 from skimage.measure import label, regionprops
 from scipy.ndimage import binary_erosion
 
-def select_furthest_points_from_mask(
+def select_point_placement(
     mask, num_points, dropout_percentage=0, ignore_border_percentage=0,
     algorithm="Naive", select_perimeter=False
 ):
@@ -289,79 +289,197 @@ def load_sam_model(sam_checkpoint, model_type="vit_l", device="cuda"):
     predictor = SamPredictor(sam)
     return predictor
 
+
+def expand_bbox_within_border(x1, y1, x2, y2, width, height, expansion_rate=0.0):
+    """
+    Expands or shrinks the bounding box by expansion_rate, recentered about its original center.
+    E.g., expansion_rate=1.1 → 110% size; expansion_rate=0.9 → 90% size.
+    """
+    if expansion_rate <= 0:
+        return [x1, y1, x2, y2]
+
+    original_w = x2 - x1
+    original_h = y2 - y1
+
+    new_w = original_w * expansion_rate
+    new_h = original_h * expansion_rate
+
+    center_x = (x1 + x2) / 2
+    center_y = (y1 + y2) / 2
+
+    new_x1 = max(0, center_x - new_w / 2)
+    new_y1 = max(0, center_y - new_h / 2)
+    new_x2 = min(width, center_x + new_w / 2)
+    new_y2 = min(height, center_y + new_h / 2)
+
+    return [new_x1, new_y1, new_x2, new_y2]
+
+def adjust_mask_area(mask, target_percentage, max_iterations=50, kernel_size=(3,3)):
+    """
+    Erodes or dilates 'mask' to reach a target area = (target_percentage / 100) * original_area.
+    """
+    if target_percentage == 0 or target_percentage == 100:
+        return mask
+
+    binary_mask = (mask > 0).astype(np.uint8)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, kernel_size)
+
+    original_area = np.sum(binary_mask)
+    target_area = original_area * (target_percentage / 100.0)
+
+    if target_percentage < 100:
+        operation = 'erode'
+    else:
+        operation = 'dilate'
+
+    new_mask = binary_mask.copy()
+    for _ in range(max_iterations):
+        current_area = np.sum(new_mask)
+        # Check if we've met the area criteria
+        if operation == 'erode' and current_area <= target_area:
+            break
+        if operation == 'dilate' and current_area >= target_area:
+            break
+
+        if operation == 'erode':
+            new_mask = cv2.erode(new_mask, kernel, iterations=1)
+        else:  # dilate
+            new_mask = cv2.dilate(new_mask, kernel, iterations=1)
+
+    return new_mask
+
 def prepare_mask_for_sam(mask, target_size=(256, 256)):
     """
-    Resize a 2D binary mask for passing to SAM as mask_input.
+    Resize a 2D binary mask (H,W) so it can be fed into SAM's predictor as mask_input.
     """
     if len(mask.shape) != 2:
         raise ValueError("Mask must be a 2D array (H, W).")
 
-    if mask.max() > 1:
-        mask = mask / 255.0
+    mask_float = mask.astype(np.float32)
+    # Normalizing to [0,1] if needed
+    if mask_float.max() > 1:
+        mask_float /= 255.0
 
-    mask_tensor = torch.tensor(mask, dtype=torch.float32)[None, None, :, :]  # (1,1,H,W)
+    mask_tensor = torch.tensor(mask_float, dtype=torch.float32)[None, None, :, :]  # shape (1,1,H,W)
     mask_resized = F.interpolate(
         mask_tensor,
         size=target_size,
         mode="bilinear",
         align_corners=False
-    ).squeeze(0)  # -> (1, target_size[0], target_size[1])
+    ).squeeze(0)  # -> shape (1, target_size[0], target_size[1])
+
     return mask_resized
 
-def run_sam_inference(predictor,
-                      loop_image,
-                      listOfPolygons,
-                      listOfBoxes,
-                      listOfMasks,
-                      image_width,
-                      image_height,
-                      num_points=4,
-                      dropout_percentage=0,
-                      ignore_border_percentage=5,
-                      algorithm="Voronoi",
-                      use_mask_input=False,
-                      box_expansion_rate=0.0):
+def run_sam_inference(
+    predictor,
+    loop_image,
+    listOfPolygons,
+    listOfBoxes,
+    listOfMasks,
+    image_width,
+    image_height,
+    num_points=4,
+    dropout_percentage=0,
+    ignore_border_percentage=5,
+    algorithm="Voronoi",
+    use_box_input=True,   # <--- NEW PARAM
+    use_mask_input=False,
+    box_expansion_rate=0.0,
+    mask_expansion_rate=0.0
+):
     """
     Runs SAM segmentation refinement on predicted masks.
     Optionally pass an initial mask to SAM (mask_input) or expand bounding boxes.
     Returns a list of SAM-refined masks.
     """
+
     sam_masks_list = []
+    if algorithm=="Distance Max":
+        algorithm = 'Hill Climbing'
 
     def expand_bbox_within_border(x1, y1, x2, y2, width, height, expansion_rate=0.0):
         if expansion_rate <= 0:
             return [x1, y1, x2, y2]
-        w = x2 - x1
-        h = y2 - y1
-        dw = w * expansion_rate
-        dh = h * expansion_rate
-        new_x1 = max(0, x1 - dw/2)
-        new_y1 = max(0, y1 - dh/2)
-        new_x2 = min(width, x2 + dw/2)
-        new_y2 = min(height, y2 + dh/2)
+        # Calculate original width and height
+        original_w = x2 - x1
+        original_h = y2 - y1
+        
+        # Calculate new width and height based on scale
+        new_w = original_w * expansion_rate
+        new_h = original_h * expansion_rate
+        
+        # Center the bounding box and calculate new coordinates
+        center_x = (x1 + x2) / 2
+        center_y = (y1 + y2) / 2
+        
+        new_x1 = max(0, center_x - new_w / 2)
+        new_y1 = max(0, center_y - new_h / 2)
+        new_x2 = min(width, center_x + new_w / 2)
+        new_y2 = min(height, center_y + new_h / 2)
+    
         return [new_x1, new_y1, new_x2, new_y2]
+    
+    def adjust_mask_area(mask, target_percentage, max_iterations=50, kernel_size=(3,3)):
+        if target_percentage == 0 or target_percentage == 100:
+            return mask
+        if target_percentage < 100:
+            operation = 'erode'
+        else:
+            operation = 'dilate'
+        # Ensure mask is binary
+        binary_mask = (mask > 0).astype(np.uint8)
+
+        # Create structuring element (e.g., elliptical kernel)
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, kernel_size)
+
+        # Calculate target area based on percentage
+        original_area = np.sum(binary_mask)
+        target_area = original_area * (target_percentage / 100.0)
+
+        new_mask = binary_mask.copy()
+        for i in range(max_iterations):
+            current_area = np.sum(new_mask)
+            # Check if we've met the area criteria.
+            if operation == 'erode' and current_area <= target_area:
+                break
+            if operation == 'dilate' and current_area >= target_area:
+                break
+            # Apply morphological operation
+            if operation == 'erode':
+                new_mask = cv2.erode(new_mask, kernel, iterations=1)
+            elif operation == 'dilate':
+                new_mask = cv2.dilate(new_mask, kernel, iterations=1)
+            else:
+                raise ValueError("Operation must be 'erode' or 'dilate'.")
+        return new_mask
 
     for index in range(len(listOfPolygons)):
         box = listOfBoxes[index]
         box = box.cpu().numpy() if hasattr(box, 'cpu') else np.array(box)
 
-        x1, y1, x2, y2 = expand_bbox_within_border(
-            box[0], box[1], box[2], box[3],
-            image_width, image_height,
-            expansion_rate=box_expansion_rate
-        )
-        box = np.array([x1, y1, x2, y2])
+        # If use_box_input=False, skip bounding box usage entirely
+        if use_box_input:
+            x1, y1, x2, y2 = expand_bbox_within_border(
+                box[0], box[1], box[2], box[3],
+                image_width, image_height,
+                expansion_rate=box_expansion_rate
+            )
+            box = np.array([x1, y1, x2, y2])
+        else:
+            box = None
 
         mask = listOfMasks[index]
         # pick sample points from the existing mask
-        selected_points, _, _ = select_furthest_points_from_mask(
+        selected_points, _, _ = select_point_placement(
             mask=mask,
             num_points=num_points,
             dropout_percentage=dropout_percentage,
             ignore_border_percentage=ignore_border_percentage,
             algorithm=algorithm
         )
-
+        # Modifies mask after point selection to be independent from buffer
+        mask = adjust_mask_area(mask, mask_expansion_rate)
+        
         op_y, op_x = zip(*selected_points)
         predictor.set_image(loop_image)
         input_point = np.array(list(zip(op_x, op_y)))
@@ -376,9 +494,11 @@ def run_sam_inference(predictor,
             'multimask_output': True
         }
 
-        # Use bounding box if it’s not degenerate
-        if (box_expansion_rate > 0.0) or (x2 - x1 > 0 and y2 - y1 > 0):
-            predict_kwargs['box'] = box[None, :]
+        # Only pass bounding box if use_box_input=True and it's not degenerate
+        if use_box_input and box is not None:
+            x1, y1, x2, y2 = box
+            if (box_expansion_rate > 0.0) or (x2 - x1 > 0 and y2 - y1 > 0):
+                predict_kwargs['box'] = box[None, :]
 
         if mask_input is not None:
             predict_kwargs['mask_input'] = mask_input
@@ -387,6 +507,8 @@ def run_sam_inference(predictor,
         sam_masks_list.append(masks[0])  # keep the first mask for simplicity
 
     return sam_masks_list
+
+
 
 def combine_masks(masks_list, output_mask_path):
     """
