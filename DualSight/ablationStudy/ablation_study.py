@@ -156,11 +156,26 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             "average_metrics": {}
         }
 
+        # ---------------------------------------------------------------------
+        # Modified: Now we also track AR@50, AR@75, AR@95, AR@50:95
+        # ---------------------------------------------------------------------
         metrics_accumulators = {k: [] for k in [
-            "base_box_AP@50","base_box_AP@75","base_box_AP@95","base_box_AP@50:95",
-            "base_mask_AP@50","base_mask_AP@75","base_mask_AP@95","base_mask_AP@50:95",
-            "sam_box_AP@50","sam_box_AP@75","sam_box_AP@95","sam_box_AP@50:95",
-            "sam_mask_AP@50","sam_mask_AP@75","sam_mask_AP@95","sam_mask_AP@50:95",
+            # Base BBox AP
+            "base_box_AP@50", "base_box_AP@75", "base_box_AP@95", "base_box_AP@50:95",
+            # Base Mask AP
+            "base_mask_AP@50", "base_mask_AP@75", "base_mask_AP@95", "base_mask_AP@50:95",
+            # SAM BBox AP
+            "sam_box_AP@50", "sam_box_AP@75", "sam_box_AP@95", "sam_box_AP@50:95",
+            # SAM Mask AP
+            "sam_mask_AP@50", "sam_mask_AP@75", "sam_mask_AP@95", "sam_mask_AP@50:95",
+            # Base BBox AR
+            "base_box_AR@50", "base_box_AR@75", "base_box_AR@95", "base_box_AR@50:95",
+            # Base Mask AR
+            "base_mask_AR@50", "base_mask_AR@75", "base_mask_AR@95", "base_mask_AR@50:95",
+            # SAM BBox AR
+            "sam_box_AR@50", "sam_box_AR@75", "sam_box_AR@95", "sam_box_AR@50:95",
+            # SAM Mask AR
+            "sam_mask_AR@50", "sam_mask_AR@75", "sam_mask_AR@95", "sam_mask_AR@50:95",
         ]}
 
         for image_name, image_data in model_inference_data.items():
@@ -227,48 +242,85 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             Image.fromarray(sam_16bit).save(sam_16bit_path)
 
             try:
+                # ------------------ Base metrics (bbox + segm) ------------------
                 gt_data, pred_data_base = generate_coco_annotations_from_multi_instance_masks_16bit(
                     gt_mask_path, base_16bit_path, image_path
                 )
-                base_segm_metrics = evaluate_coco_metrics(gt_data, pred_data_base, iou_type="segm", max_dets=350)
-                base_bbox_metrics = evaluate_coco_metrics(gt_data, pred_data_base, iou_type="bbox", max_dets=350)
+                base_segm_metrics = evaluate_coco_metrics(gt_data, pred_data_base, iou_type="segm", max_dets=450)
+                base_bbox_metrics = evaluate_coco_metrics(gt_data, pred_data_base, iou_type="bbox", max_dets=450)
 
+                # ------------------ SAM metrics (bbox + segm) ------------------
                 gt_data, pred_data_sam = generate_coco_annotations_from_multi_instance_masks_16bit(
                     gt_mask_path, sam_16bit_path, image_path
                 )
-                sam_segm_metrics = evaluate_coco_metrics(gt_data, pred_data_sam, iou_type="segm", max_dets=350)
-                sam_bbox_metrics = evaluate_coco_metrics(gt_data, pred_data_sam, iou_type="bbox", max_dets=350)
+                sam_segm_metrics = evaluate_coco_metrics(gt_data, pred_data_sam, iou_type="segm", max_dets=450)
+                sam_bbox_metrics = evaluate_coco_metrics(gt_data, pred_data_sam, iou_type="bbox", max_dets=450)
 
             except Exception as e:
                 print(f"[ERROR] Failed to evaluate metrics for image '{image_name}': {e}")
                 base_segm_metrics = base_bbox_metrics = {}
                 sam_segm_metrics = sam_bbox_metrics = {}
 
+            # Build image-level metrics
             image_result = {
                 "image_name": image_name,
                 "original_image_path": image_path,
                 "gt_mask_path": gt_mask_path,
                 "processing_time_sec": processing_time,
+
+                # ------------------ Base BBox AP metrics ------------------
                 "base_box_AP@50": safe_get(base_bbox_metrics, "AP@50"),
                 "base_box_AP@75": safe_get(base_bbox_metrics, "AP@75"),
                 "base_box_AP@95": safe_get(base_bbox_metrics, "AP@95"),
                 "base_box_AP@50:95": safe_get(base_bbox_metrics, "AP@50:95"),
+
+                # ------------------ Base Mask AP metrics ------------------
                 "base_mask_AP@50": safe_get(base_segm_metrics, "AP@50"),
                 "base_mask_AP@75": safe_get(base_segm_metrics, "AP@75"),
                 "base_mask_AP@95": safe_get(base_segm_metrics, "AP@95"),
                 "base_mask_AP@50:95": safe_get(base_segm_metrics, "AP@50:95"),
+
+                # ------------------ SAM BBox AP metrics ------------------
                 "sam_box_AP@50": safe_get(sam_bbox_metrics, "AP@50"),
                 "sam_box_AP@75": safe_get(sam_bbox_metrics, "AP@75"),
                 "sam_box_AP@95": safe_get(sam_bbox_metrics, "AP@95"),
                 "sam_box_AP@50:95": safe_get(sam_bbox_metrics, "AP@50:95"),
+
+                # ------------------ SAM Mask AP metrics ------------------
                 "sam_mask_AP@50": safe_get(sam_segm_metrics, "AP@50"),
                 "sam_mask_AP@75": safe_get(sam_segm_metrics, "AP@75"),
                 "sam_mask_AP@95": safe_get(sam_segm_metrics, "AP@95"),
                 "sam_mask_AP@50:95": safe_get(sam_segm_metrics, "AP@50:95"),
+
+                # ------------------ Base BBox AR metrics ------------------
+                "base_box_AR@50": safe_get(base_bbox_metrics, "AR@50"),
+                "base_box_AR@75": safe_get(base_bbox_metrics, "AR@75"),
+                "base_box_AR@95": safe_get(base_bbox_metrics, "AR@95"),
+                "base_box_AR@50:95": safe_get(base_bbox_metrics, "AR@50:95"),
+
+                # ------------------ Base Mask AR metrics ------------------
+                "base_mask_AR@50": safe_get(base_segm_metrics, "AR@50"),
+                "base_mask_AR@75": safe_get(base_segm_metrics, "AR@75"),
+                "base_mask_AR@95": safe_get(base_segm_metrics, "AR@95"),
+                "base_mask_AR@50:95": safe_get(base_segm_metrics, "AR@50:95"),
+
+                # ------------------ SAM BBox AR metrics ------------------
+                "sam_box_AR@50": safe_get(sam_bbox_metrics, "AR@50"),
+                "sam_box_AR@75": safe_get(sam_bbox_metrics, "AR@75"),
+                "sam_box_AR@95": safe_get(sam_bbox_metrics, "AR@95"),
+                "sam_box_AR@50:95": safe_get(sam_bbox_metrics, "AR@50:95"),
+
+                # ------------------ SAM Mask AR metrics ------------------
+                "sam_mask_AR@50": safe_get(sam_segm_metrics, "AR@50"),
+                "sam_mask_AR@75": safe_get(sam_segm_metrics, "AR@75"),
+                "sam_mask_AR@95": safe_get(sam_segm_metrics, "AR@95"),
+                "sam_mask_AR@50:95": safe_get(sam_segm_metrics, "AR@50:95"),
             }
 
+            # Save image_result to run_data
             run_data["per_image"].append(image_result)
 
+            # Accumulate for averaging
             for k in metrics_accumulators.keys():
                 val = image_result.get(k, None)
                 if val is not None:
@@ -280,6 +332,7 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             if os.path.exists(sam_16bit_path):
                 os.remove(sam_16bit_path)
 
+        # After processing all images for this config
         run_data["average_metrics"] = {k: average_or_none(v) for k, v in metrics_accumulators.items()}
 
         json_filename = f"{config_id}.json"
@@ -290,13 +343,15 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
         print(f"[INFO] Saved results for configuration ID {config_id} to {json_path}")
 
 
+
 if __name__ == "__main__":
     # Load DOI.csv into a DataFrame
     doiDF = pd.read_csv("DOI.csv")
 
     # Define experiment filters as desired
     experiment_filters = {
-        'ID': range(150, 300)
+        'ID': [2114, 881, 2225], #3458, 3569]
+        # 'ID': range(1600, 1800)
     }
 
     run_experiments(
