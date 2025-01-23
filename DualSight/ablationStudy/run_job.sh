@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=1600-1800    # Job name
+#SBATCH --job-name=770             # Job name
 #SBATCH --cpus-per-task=8               # Number of CPU cores
 #SBATCH --gres=gpu:1                    # Number of GPUs
 #SBATCH --mem=16000MB                   # Memory in MB

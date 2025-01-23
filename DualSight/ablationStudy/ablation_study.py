@@ -210,6 +210,8 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             base_16bit = combine_masks_16bit(bin_masks, return_array=True)
 
             start_time = time.time()
+            # print(f'Running Analysis on {len(boxes)} Samples')
+            # print(sam_params["algorithm"])
             sam_masks_list = run_sam_inference(
                 predictor=sam_predictor,
                 loop_image=loop_image,
@@ -229,7 +231,7 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             )
             end_time = time.time()
             processing_time = end_time - start_time
-
+            
             sam_16bit = combine_masks_16bit(sam_masks_list, return_array=True)
 
             # Create unique random IDs for these temp files
@@ -316,7 +318,7 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
                 "sam_mask_AR@95": safe_get(sam_segm_metrics, "AR@95"),
                 "sam_mask_AR@50:95": safe_get(sam_segm_metrics, "AR@50:95"),
             }
-
+            # print(image_result)
             # Save image_result to run_data
             run_data["per_image"].append(image_result)
 
@@ -350,8 +352,9 @@ if __name__ == "__main__":
 
     # Define experiment filters as desired
     experiment_filters = {
-        'ID': [2114, 881, 2225], #3458, 3569]
-        # 'ID': range(1600, 1800)
+        # 'ID': [2114, 881, 2225] #3569] #3458
+        # 'ID': [770]
+        'ID': range(2800, 3000)
     }
 
     run_experiments(

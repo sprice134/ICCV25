@@ -84,8 +84,8 @@ def summarize_sam_mask_results(doi_csv_path, results_json_dir, output_csv_path):
             box_dist = row["BoundingBoxDistortion"]
             mask_dist = row["MaskDistortion"]
             score = row["avg_sam_mask_AP_50_95"]
-            
-            print(f"  ID={rid}, BoxInclusion={box_inclusion}, MaskInclusion={mask_inclusion}, "
+            comp = rid in [770, 881, 2114, 2225, 3458, 3569]
+            print(f"  ID={rid}, Competitor={comp}, Box={box_inclusion}, Mask={mask_inclusion}, "
                 f"POIs={num_pois}, Algorithm={poi_alg}, PerimeterBuffer={perimeter_buf}, "
                 f"BoxDist={box_dist}, MaskDist={mask_dist}, Score={score:.5f}")
 

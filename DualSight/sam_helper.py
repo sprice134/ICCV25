@@ -201,7 +201,7 @@ from scipy.ndimage import binary_erosion
 
 def select_point_placement(
     mask, num_points, dropout_percentage=0, ignore_border_percentage=0,
-    algorithm="Naive", select_perimeter=False
+    algorithm="Voronoi", select_perimeter=False
 ):
     """
     Selects N furthest points from a binary mask using a chosen algorithm.
@@ -257,7 +257,6 @@ def select_point_placement(
         "Random": randomSelection,
         "Voronoi": voronoi_optimization_from_coords,
     }
-
     white_cells_normalized = [(r / mask.shape[0], c / mask.shape[1]) for (r, c) in white_cells]
     start_time = time.time()
     selected_points = algo_map[algorithm](white_cells_normalized, num_points)
@@ -469,42 +468,64 @@ def run_sam_inference(
             box = None
 
         mask = listOfMasks[index]
-        # pick sample points from the existing mask
-        selected_points, _, _ = select_point_placement(
-            mask=mask,
-            num_points=num_points,
-            dropout_percentage=dropout_percentage,
-            ignore_border_percentage=ignore_border_percentage,
-            algorithm=algorithm
-        )
-        # Modifies mask after point selection to be independent from buffer
-        mask = adjust_mask_area(mask, mask_expansion_rate)
-        
-        op_y, op_x = zip(*selected_points)
-        predictor.set_image(loop_image)
-        input_point = np.array(list(zip(op_x, op_y)))
-        input_label = np.array([1]*len(input_point))
+        if np.sum(mask) > num_points * num_points:
+            # pick sample points from the existing mask
+            if algorithm == 'Hill Climbing' and num_points != 1:
+                print('Selecting Points from perimeter')
+                print(num_points)
+                print(algorithm)
+                try:
+                    selected_points, _, _ = select_point_placement(
+                        mask=mask,
+                        num_points=num_points,
+                        dropout_percentage=dropout_percentage,
+                        ignore_border_percentage=ignore_border_percentage,
+                        algorithm=algorithm,
+                        select_perimeter=True
+                    )
+                except:
+                    print(np.sum(mask))
+            else:
+                print('Selecting Points from all')
+                selected_points, _, _ = select_point_placement(
+                    mask=mask,
+                    num_points=num_points,
+                    dropout_percentage=dropout_percentage,
+                    ignore_border_percentage=ignore_border_percentage,
+                    algorithm=algorithm,
+                    select_perimeter=False
+                )
+                
+            # Modifies mask after point selection to be independent from buffer
+            mask = adjust_mask_area(mask, mask_expansion_rate)
+            
+            op_y, op_x = zip(*selected_points)
+            predictor.set_image(loop_image)
+            input_point = np.array(list(zip(op_x, op_y)))
+            input_label = np.array([1]*len(input_point))
 
-        # Optionally feed the mask to SAM
-        mask_input = prepare_mask_for_sam(mask) if use_mask_input else None
+            # Optionally feed the mask to SAM
+            mask_input = prepare_mask_for_sam(mask) if use_mask_input else None
 
-        predict_kwargs = {
-            'point_coords': input_point,
-            'point_labels': input_label,
-            'multimask_output': True
-        }
+            predict_kwargs = {
+                'point_coords': input_point,
+                'point_labels': input_label,
+                'multimask_output': True
+            }
 
-        # Only pass bounding box if use_box_input=True and it's not degenerate
-        if use_box_input and box is not None:
-            x1, y1, x2, y2 = box
-            if (box_expansion_rate > 0.0) or (x2 - x1 > 0 and y2 - y1 > 0):
-                predict_kwargs['box'] = box[None, :]
+            # Only pass bounding box if use_box_input=True and it's not degenerate
+            if use_box_input and box is not None:
+                x1, y1, x2, y2 = box
+                if (box_expansion_rate > 0.0) or (x2 - x1 > 0 and y2 - y1 > 0):
+                    predict_kwargs['box'] = box[None, :]
 
-        if mask_input is not None:
-            predict_kwargs['mask_input'] = mask_input
+            if mask_input is not None:
+                predict_kwargs['mask_input'] = mask_input
 
-        masks, scores, logits = predictor.predict(**predict_kwargs)
-        sam_masks_list.append(masks[0])  # keep the first mask for simplicity
+            masks, scores, logits = predictor.predict(**predict_kwargs)
+            sam_masks_list.append(masks[0])  # keep the first mask for simplicity
+        else:
+            print(f'Skipping Mask Because Area ({np.sum(mask)}) Smallar than number of points^2 ({num_points * num_points})')
 
     return sam_masks_list
 

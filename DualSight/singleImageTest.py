@@ -1,6 +1,7 @@
 import os
 import cv2
 from PIL import Image
+import numpy as np
 
 # Local imports from our new modules
 from models import load_trained_model, get_inference_predictions
@@ -40,7 +41,11 @@ def main():
     # -------------------------------------------------------
     image_path = (
         "/home/sprice/RQ/demo.v7i.yolov8/test/images/"
-        "TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4.jpg"
+        "Cu-Ni-Powder_250x_10_SE_png.rf.cd93ec4589ad8f4e412cb1ec0e805016.jpg"
+    )
+    gt_mask_path = (
+        "/home/sprice/ICCV25/SegRefinerV2/test_masks/"
+        "Cu-Ni-Powder_250x_10_SE_png.rf.cd93ec4589ad8f4e412cb1ec0e805016_mask.png"
     )
     # image_path = (
     #     "/home/sprice/ICCV25/demo.v7i.coco/test/"
@@ -81,6 +86,39 @@ def main():
         box_expansion_rate=0.0
     )
 
+    # ----- NEW: Save Each Refined SAM Mask as Binary ----- 
+    # Create a subdirectory for individual SAM masks
+    individual_sam_dir = os.path.join(output_dir, "individual_sam_masks")
+    os.makedirs(individual_sam_dir, exist_ok=True)
+
+    # Iterate over SAM masks and save each as a binary image
+    for idx, mask in enumerate(sam_masks_list, start=1):
+        # Convert mask to binary (0 or 255) - assuming mask is binary already
+        binary_mask = (mask > 0).astype(np.uint8) * 255
+        mask_path = os.path.join(individual_sam_dir, f"sam_mask_{idx:03d}.png")
+        cv2.imwrite(mask_path, binary_mask)
+    # -----------------------------------------------------
+
+    gt_mask = cv2.imread(gt_mask_path, cv2.IMREAD_GRAYSCALE)
+    if gt_mask is None:
+        raise FileNotFoundError(f"Ground truth mask not found: {gt_mask_path}")
+
+    # Directory to store individual GT masks
+    individual_gt_dir = os.path.join(output_dir, "individual_gt_masks")
+    os.makedirs(individual_gt_dir, exist_ok=True)
+
+    # Extract unique object IDs (excluding background assumed to be 0)
+    gt_ids = np.unique(gt_mask)
+    gt_ids = gt_ids[gt_ids > 0]
+
+    # Iterate over each object ID, create a binary mask, and save
+    for obj_id in gt_ids:
+        binary_mask = (gt_mask == obj_id).astype(np.uint8) * 255
+        mask_filename = f"gt_mask_{int(obj_id):03d}.png"
+        mask_path = os.path.join(individual_gt_dir, mask_filename)
+        cv2.imwrite(mask_path, binary_mask)
+    # -----------------------------------------------------
+
     # -------------------------------------------------------
     # 6) Combine SAM masks into one mask
     # -------------------------------------------------------
@@ -112,15 +150,6 @@ def main():
     # -------------------------------------------------------
     # 9) Evaluation with your original COCO logic
     # -------------------------------------------------------
-    gt_mask_path = (
-        "/home/sprice/ICCV25/SegRefinerV2/test_masks/"
-        "TruForm174-2_00-37_500X16_png.rf.17ddf81ab4dd63c5ce6f66654a48c5b4_mask.png"
-    )
-    # gt_mask_path = (
-    #     "/home/sprice/ICCV25/SegRefinerV2/test_masks/"
-    #     "S02_02_SE1_300X18_png.rf.1a16e8c5f4e008cb2fc48c98b35778fb_mask.png"
-    # )
-    
 
     print(f"Evaluating {chosen_model_type.upper()} Segmentation Metrics:")
     gt_data, model_pred_data = generate_coco_annotations_from_multi_instance_masks(

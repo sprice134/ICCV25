@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the CSV file
-file_path = "outputImages/evaluation_metrics.csv"  # Replace with your actual file path
+file_path = "outputImages/evaluation_metrics_all.csv"  # Replace with your actual file path
 data = pd.read_csv(file_path)
 
 # ------------------------------------------------------
@@ -19,6 +19,14 @@ method_column_map = {
     "SegRefiner - Large": [
         "segrefiner_large_mask_AP@50", "segrefiner_large_mask_AP@75", "segrefiner_large_mask_AP@95", "segrefiner_large_mask_AP@50:95",
         "segrefiner_large_mask_AR@50", "segrefiner_large_mask_AR@75", "segrefiner_large_mask_AR@95", "segrefiner_large_mask_AR@50:95"
+    ],
+    # "Zero Shot Refinement": [
+    #     "zfr_mask_AP@50", "zfr_mask_AP@75", "zfr_mask_AP@95", "zfr_mask_AP@50:95",
+    #     "zfr_mask_AR@50", "zfr_mask_AR@75", "zfr_mask_AR@95", "zfr_mask_AR@50:95"
+    # ],
+    "DualSight Old": [
+        "dualsight_mask_AP@50", "dualsight_mask_AP@75", "dualsight_mask_AP@95", "dualsight_mask_AP@50:95",
+        "dualsight_mask_AR@50", "dualsight_mask_AR@75", "dualsight_mask_AR@95", "dualsight_mask_AR@50:95"
     ],
     "DualSight (Ours)": [
         "sam_mask_AP@50", "sam_mask_AP@75", "sam_mask_AP@95", "sam_mask_AP@50:95",

@@ -17,4 +17,5 @@ echo "  - Memory: $SLURM_MEM_PER_NODE"
 source /home/sprice/ICCV25/samEnv/bin/activate
 
 
-python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V5.py
+python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V2.py
+# python /home/sprice/ICCV25/DualSight/ablationStudy/ablation_study.py
