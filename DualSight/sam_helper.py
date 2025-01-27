@@ -469,7 +469,7 @@ def run_sam_inference(
 
         mask = listOfMasks[index]
         if np.sum(mask) > num_points * num_points:
-            # pick sample points from the existing mask
+            # Pick sample points from the existing mask
             if algorithm == 'Hill Climbing' and num_points != 1:
                 print('Selecting Points from perimeter')
                 print(num_points)
@@ -483,26 +483,33 @@ def run_sam_inference(
                         algorithm=algorithm,
                         select_perimeter=True
                     )
-                except:
-                    print(np.sum(mask))
+                except Exception as e:
+                    print(f"Error selecting points: {e}")
+                    print(f"Mask sum: {np.sum(mask)}")
+                    continue  # Skip to the next iteration
             else:
                 print('Selecting Points from all')
-                selected_points, _, _ = select_point_placement(
-                    mask=mask,
-                    num_points=num_points,
-                    dropout_percentage=dropout_percentage,
-                    ignore_border_percentage=ignore_border_percentage,
-                    algorithm=algorithm,
-                    select_perimeter=False
-                )
-                
-            # Modifies mask after point selection to be independent from buffer
+                try:
+                    selected_points, _, _ = select_point_placement(
+                        mask=mask,
+                        num_points=num_points,
+                        dropout_percentage=dropout_percentage,
+                        ignore_border_percentage=ignore_border_percentage,
+                        algorithm=algorithm,
+                        select_perimeter=False
+                    )
+                except Exception as e:
+                    print(f"Error selecting points: {e}")
+                    print(f"Mask sum: {np.sum(mask)}")
+                    continue  # Skip to the next iteration
+
+            # Modify mask after point selection to be independent from buffer
             mask = adjust_mask_area(mask, mask_expansion_rate)
             
             op_y, op_x = zip(*selected_points)
             predictor.set_image(loop_image)
             input_point = np.array(list(zip(op_x, op_y)))
-            input_label = np.array([1]*len(input_point))
+            input_label = np.array([1] * len(input_point))
 
             # Optionally feed the mask to SAM
             mask_input = prepare_mask_for_sam(mask) if use_mask_input else None
@@ -522,12 +529,17 @@ def run_sam_inference(
             if mask_input is not None:
                 predict_kwargs['mask_input'] = mask_input
 
-            masks, scores, logits = predictor.predict(**predict_kwargs)
-            sam_masks_list.append(masks[0])  # keep the first mask for simplicity
+            try:
+                masks, scores, logits = predictor.predict(**predict_kwargs)
+                sam_masks_list.append(masks[0])  # Keep the first mask for simplicity
+            except Exception as e:
+                print(f"Error during prediction: {e}")
+                continue  # Optionally skip to the next iteration if prediction fails
         else:
-            print(f'Skipping Mask Because Area ({np.sum(mask)}) Smallar than number of points^2 ({num_points * num_points})')
+            print(f'Skipping Mask Because Area ({np.sum(mask)}) Smaller than number of points^2 ({num_points * num_points})')
 
     return sam_masks_list
+
 
 
 

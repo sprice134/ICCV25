@@ -1,7 +1,8 @@
 #!/bin/bash
-#SBATCH --job-name=770             # Job name
+#SBATCH --job-name=3292-3301             # Job name
 #SBATCH --cpus-per-task=8               # Number of CPU cores
 #SBATCH --gres=gpu:1                    # Number of GPUs
+#SBATCH -C A100|V100                    # A100 or V100 GPU
 #SBATCH --mem=16000MB                   # Memory in MB
 #SBATCH --time=24:00:00                 # Time limit (HH:MM:SS)
 #SBATCH --partition=short               # Partition name

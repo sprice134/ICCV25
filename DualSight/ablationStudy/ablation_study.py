@@ -354,7 +354,7 @@ if __name__ == "__main__":
     experiment_filters = {
         # 'ID': [2114, 881, 2225] #3569] #3458
         # 'ID': [770]
-        'ID': range(2800, 3000)
+        'ID': list(range(3565, 3576)) #+ list(range(3577,3599))
     }
 
     run_experiments(

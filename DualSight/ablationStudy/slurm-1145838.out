@@ -1,6 +1,0 @@
-Running job on gpu-4-11
-Requested resources:
-  - CPUs: 8
-  - GPUs: 
-  - Memory: 16000
-slurmstepd: error: *** JOB 1145838 ON gpu-4-11 CANCELLED AT 2025-01-22T20:13:23 ***
