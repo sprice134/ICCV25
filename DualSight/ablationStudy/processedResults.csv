@@ -3395,18 +3395,18 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 3394,Mask R-CNN,True,True,7,Distance Max,10%,100%,90%,0.5098746385044791
 3395,Mask R-CNN,True,True,7,Distance Max,10%,100%,100%,0.5011261911893738
 3396,Mask R-CNN,True,True,7,Distance Max,10%,100%,110%,0.5013018989737636
-3397,Mask R-CNN,True,True,7,Distance Max,10%,110%,90%,
-3398,Mask R-CNN,True,True,7,Distance Max,10%,110%,100%,
-3399,Mask R-CNN,True,True,7,Distance Max,10%,110%,110%,
-3400,Mask R-CNN,True,True,7,Distance Max,15%,90%,90%,
-3401,Mask R-CNN,True,True,7,Distance Max,15%,90%,100%,
-3402,Mask R-CNN,True,True,7,Distance Max,15%,90%,110%,
-3403,Mask R-CNN,True,True,7,Distance Max,15%,100%,90%,
-3404,Mask R-CNN,True,True,7,Distance Max,15%,100%,100%,
-3405,Mask R-CNN,True,True,7,Distance Max,15%,100%,110%,
-3406,Mask R-CNN,True,True,7,Distance Max,15%,110%,90%,
-3407,Mask R-CNN,True,True,7,Distance Max,15%,110%,100%,
-3408,Mask R-CNN,True,True,7,Distance Max,15%,110%,110%,
+3397,Mask R-CNN,True,True,7,Distance Max,10%,110%,90%,0.46256073345503
+3398,Mask R-CNN,True,True,7,Distance Max,10%,110%,100%,0.4622949672111994
+3399,Mask R-CNN,True,True,7,Distance Max,10%,110%,110%,0.46249707905320114
+3400,Mask R-CNN,True,True,7,Distance Max,15%,90%,90%,0.48319628625428523
+3401,Mask R-CNN,True,True,7,Distance Max,15%,90%,100%,0.48345761102896356
+3402,Mask R-CNN,True,True,7,Distance Max,15%,90%,110%,0.48288394716648375
+3403,Mask R-CNN,True,True,7,Distance Max,15%,100%,90%,0.46637587936557834
+3404,Mask R-CNN,True,True,7,Distance Max,15%,100%,100%,0.46637587936557834
+3405,Mask R-CNN,True,True,7,Distance Max,15%,100%,110%,0.46637587936557834
+3406,Mask R-CNN,True,True,7,Distance Max,15%,110%,90%,0.42202233352201945
+3407,Mask R-CNN,True,True,7,Distance Max,15%,110%,100%,0.42165377383383235
+3408,Mask R-CNN,True,True,7,Distance Max,15%,110%,110%,0.43146440664384417
 3409,Mask R-CNN,True,True,7,Voronoi,0%,90%,90%,0.5678875672691327
 3410,Mask R-CNN,True,True,7,Voronoi,0%,90%,100%,0.5872911605718759
 3411,Mask R-CNN,True,True,7,Voronoi,0%,90%,110%,0.5699864295739504
@@ -3562,7 +3562,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 3561,Mask R-CNN,True,False,4,Random,10%,110%,,0.6403466857064845
 3562,Mask R-CNN,True,False,4,Random,15%,90%,,0.6460754731006375
 3563,Mask R-CNN,True,False,4,Random,15%,100%,,0.6377446053674592
-3564,Mask R-CNN,True,False,4,Random,15%,110%,,
+3564,Mask R-CNN,True,False,4,Random,15%,110%,,0.6435148076944304
 3565,Mask R-CNN,True,False,4,Distance Max,0%,90%,,0.6203826931032282
 3566,Mask R-CNN,True,False,4,Distance Max,0%,100%,,0.6605752121353761
 3567,Mask R-CNN,True,False,4,Distance Max,0%,110%,,0.6443665191495394
@@ -3574,7 +3574,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 3573,Mask R-CNN,True,False,4,Distance Max,10%,110%,,0.6410492296492178
 3574,Mask R-CNN,True,False,4,Distance Max,15%,90%,,0.6140628092311394
 3575,Mask R-CNN,True,False,4,Distance Max,15%,100%,,0.6421261938851592
-3576,Mask R-CNN,True,False,4,Distance Max,15%,110%,,
+3576,Mask R-CNN,True,False,4,Distance Max,15%,110%,,0.6225592089192795
 3577,Mask R-CNN,True,False,4,Voronoi,0%,90%,,0.6530540499498596
 3578,Mask R-CNN,True,False,4,Voronoi,0%,100%,,0.6898811386279129
 3579,Mask R-CNN,True,False,4,Voronoi,0%,110%,,0.6602249713963276
@@ -3636,52 +3636,52 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 3635,Mask R-CNN,True,False,6,Random,15%,100%,,0.6480062282129714
 3636,Mask R-CNN,True,False,6,Random,15%,110%,,0.6433441818943104
 3637,Mask R-CNN,True,False,6,Distance Max,0%,90%,,0.6447806504887866
-3638,Mask R-CNN,True,False,6,Distance Max,0%,100%,,
-3639,Mask R-CNN,True,False,6,Distance Max,0%,110%,,
-3640,Mask R-CNN,True,False,6,Distance Max,5%,90%,,
-3641,Mask R-CNN,True,False,6,Distance Max,5%,100%,,
-3642,Mask R-CNN,True,False,6,Distance Max,5%,110%,,
-3643,Mask R-CNN,True,False,6,Distance Max,10%,90%,,
-3644,Mask R-CNN,True,False,6,Distance Max,10%,100%,,
-3645,Mask R-CNN,True,False,6,Distance Max,10%,110%,,
-3646,Mask R-CNN,True,False,6,Distance Max,15%,90%,,
-3647,Mask R-CNN,True,False,6,Distance Max,15%,100%,,
-3648,Mask R-CNN,True,False,6,Distance Max,15%,110%,,
-3649,Mask R-CNN,True,False,6,Voronoi,0%,90%,,
-3650,Mask R-CNN,True,False,6,Voronoi,0%,100%,,
-3651,Mask R-CNN,True,False,6,Voronoi,0%,110%,,
-3652,Mask R-CNN,True,False,6,Voronoi,5%,90%,,
-3653,Mask R-CNN,True,False,6,Voronoi,5%,100%,,
-3654,Mask R-CNN,True,False,6,Voronoi,5%,110%,,
-3655,Mask R-CNN,True,False,6,Voronoi,10%,90%,,
-3656,Mask R-CNN,True,False,6,Voronoi,10%,100%,,
-3657,Mask R-CNN,True,False,6,Voronoi,10%,110%,,
-3658,Mask R-CNN,True,False,6,Voronoi,15%,90%,,
-3659,Mask R-CNN,True,False,6,Voronoi,15%,100%,,
-3660,Mask R-CNN,True,False,6,Voronoi,15%,110%,,
-3661,Mask R-CNN,True,False,7,Random,0%,90%,,
-3662,Mask R-CNN,True,False,7,Random,0%,100%,,
-3663,Mask R-CNN,True,False,7,Random,0%,110%,,
-3664,Mask R-CNN,True,False,7,Random,5%,90%,,
-3665,Mask R-CNN,True,False,7,Random,5%,100%,,
-3666,Mask R-CNN,True,False,7,Random,5%,110%,,
-3667,Mask R-CNN,True,False,7,Random,10%,90%,,
-3668,Mask R-CNN,True,False,7,Random,10%,100%,,
-3669,Mask R-CNN,True,False,7,Random,10%,110%,,
-3670,Mask R-CNN,True,False,7,Random,15%,90%,,
-3671,Mask R-CNN,True,False,7,Random,15%,100%,,
-3672,Mask R-CNN,True,False,7,Random,15%,110%,,
-3673,Mask R-CNN,True,False,7,Distance Max,0%,90%,,
-3674,Mask R-CNN,True,False,7,Distance Max,0%,100%,,
-3675,Mask R-CNN,True,False,7,Distance Max,0%,110%,,
-3676,Mask R-CNN,True,False,7,Distance Max,5%,90%,,
-3677,Mask R-CNN,True,False,7,Distance Max,5%,100%,,
-3678,Mask R-CNN,True,False,7,Distance Max,5%,110%,,
-3679,Mask R-CNN,True,False,7,Distance Max,10%,90%,,
-3680,Mask R-CNN,True,False,7,Distance Max,10%,100%,,
-3681,Mask R-CNN,True,False,7,Distance Max,10%,110%,,
-3682,Mask R-CNN,True,False,7,Distance Max,15%,90%,,
-3683,Mask R-CNN,True,False,7,Distance Max,15%,100%,,
+3638,Mask R-CNN,True,False,6,Distance Max,0%,100%,,0.6456737324026812
+3639,Mask R-CNN,True,False,6,Distance Max,0%,110%,,0.6388548120113817
+3640,Mask R-CNN,True,False,6,Distance Max,5%,90%,,0.6488134799424401
+3641,Mask R-CNN,True,False,6,Distance Max,5%,100%,,0.6398034475309547
+3642,Mask R-CNN,True,False,6,Distance Max,5%,110%,,0.6388080898080644
+3643,Mask R-CNN,True,False,6,Distance Max,10%,90%,,0.6457983843243319
+3644,Mask R-CNN,True,False,6,Distance Max,10%,100%,,0.6456320583898935
+3645,Mask R-CNN,True,False,6,Distance Max,10%,110%,,0.6477485485074442
+3646,Mask R-CNN,True,False,6,Distance Max,15%,90%,,0.6193519518497722
+3647,Mask R-CNN,True,False,6,Distance Max,15%,100%,,0.6108364242572184
+3648,Mask R-CNN,True,False,6,Distance Max,15%,110%,,0.6036987087078922
+3649,Mask R-CNN,True,False,6,Voronoi,0%,90%,,0.6462242554754286
+3650,Mask R-CNN,True,False,6,Voronoi,0%,100%,,0.6429852406992993
+3651,Mask R-CNN,True,False,6,Voronoi,0%,110%,,0.6459770438444388
+3652,Mask R-CNN,True,False,6,Voronoi,5%,90%,,0.6427893097568764
+3653,Mask R-CNN,True,False,6,Voronoi,5%,100%,,0.6409535437505149
+3654,Mask R-CNN,True,False,6,Voronoi,5%,110%,,0.6455783056223514
+3655,Mask R-CNN,True,False,6,Voronoi,10%,90%,,0.64128076031391
+3656,Mask R-CNN,True,False,6,Voronoi,10%,100%,,0.6483189934755311
+3657,Mask R-CNN,True,False,6,Voronoi,10%,110%,,0.6429158998432095
+3658,Mask R-CNN,True,False,6,Voronoi,15%,90%,,0.6423677705023011
+3659,Mask R-CNN,True,False,6,Voronoi,15%,100%,,0.6489153329795787
+3660,Mask R-CNN,True,False,6,Voronoi,15%,110%,,0.6439496357342286
+3661,Mask R-CNN,True,False,7,Random,0%,90%,,0.6374125478866437
+3662,Mask R-CNN,True,False,7,Random,0%,100%,,0.6496633640597919
+3663,Mask R-CNN,True,False,7,Random,0%,110%,,0.6436964518877167
+3664,Mask R-CNN,True,False,7,Random,5%,90%,,0.6412431923689296
+3665,Mask R-CNN,True,False,7,Random,5%,100%,,0.6416273044296229
+3666,Mask R-CNN,True,False,7,Random,5%,110%,,0.6402857529897438
+3667,Mask R-CNN,True,False,7,Random,10%,90%,,0.6379480913479662
+3668,Mask R-CNN,True,False,7,Random,10%,100%,,0.6391172775102589
+3669,Mask R-CNN,True,False,7,Random,10%,110%,,0.6442024609502248
+3670,Mask R-CNN,True,False,7,Random,15%,90%,,0.6395774472372752
+3671,Mask R-CNN,True,False,7,Random,15%,100%,,0.6472127721364374
+3672,Mask R-CNN,True,False,7,Random,15%,110%,,0.643681772346574
+3673,Mask R-CNN,True,False,7,Distance Max,0%,90%,,0.6439034459804942
+3674,Mask R-CNN,True,False,7,Distance Max,0%,100%,,0.6446621927480626
+3675,Mask R-CNN,True,False,7,Distance Max,0%,110%,,0.6369437474164041
+3676,Mask R-CNN,True,False,7,Distance Max,5%,90%,,0.6458457390171957
+3677,Mask R-CNN,True,False,7,Distance Max,5%,100%,,0.6409198401890086
+3678,Mask R-CNN,True,False,7,Distance Max,5%,110%,,0.6388256111649545
+3679,Mask R-CNN,True,False,7,Distance Max,10%,90%,,0.6384261249325418
+3680,Mask R-CNN,True,False,7,Distance Max,10%,100%,,0.6405394378984869
+3681,Mask R-CNN,True,False,7,Distance Max,10%,110%,,0.6369885436000798
+3682,Mask R-CNN,True,False,7,Distance Max,15%,90%,,0.5938955029341528
+3683,Mask R-CNN,True,False,7,Distance Max,15%,100%,,0.5942491988088965
 3684,Mask R-CNN,True,False,7,Distance Max,15%,110%,,
 3685,Mask R-CNN,True,False,7,Voronoi,0%,90%,,0.6130308046215027
 3686,Mask R-CNN,True,False,7,Voronoi,0%,100%,,0.6670500235416564
