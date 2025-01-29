@@ -8,3 +8,9 @@ samEnv/
 segRefinerEnv/
 segRefinerEnvV2/
 DualSight/ablationStudy/inference_outputs
+
+SegRefiner/
+CascadePSP/
+cascadeEnv/
+segrefinerEnv/
+dsEnv/

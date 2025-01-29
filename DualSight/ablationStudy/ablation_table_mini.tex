@@ -1,0 +1,22 @@
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|c|c|c|c}
+\toprule
+\textbf{Model} & \textbf{AP$^{50}_{\text{mask}}$} & \textbf{AP$^{50:95}_{\text{mask}}$} & \textbf{AR$^{50}_{\text{mask}}$} & \textbf{AR$^{50:95}_{\text{mask}}$} \\ \midrule
+ZFR (770) & 0.8826 & 0.7390 & 0.7604 & 0.6249 \\ 
+DualSight (881) & 0.8648 & 0.6861 & 0.7426 & 0.5768 \\ 
+DSv2 (836) & 0.9123 & \textbf{0.7794} & 0.7151 & 0.5961 \\ 
+ZFR (2114) & 0.8748 & 0.7291 & 0.7524 & 0.6202 \\ 
+DualSight (2225) & 0.8499 & 0.6885 & 0.7311 & 0.5828 \\ 
+DSv2 (2179) & 0.8920 & \textbf{0.7480} & 0.7534 & 0.6246 \\ 
+ZFR (3458) & 0.7889 & 0.6708 & 0.6367 & 0.5375 \\ 
+DualSight (3569) & 0.7788 & 0.6469 & 0.6371 & 0.5280 \\ 
+DSv2 (3578) & 0.8168 & \textbf{0.6899} & 0.6615 & 0.5547 \\ 
+
+\bottomrule
+\end{tabular}
+\caption{Comparison of selected sam\_mask metrics for YOLOv8n, YOLOv8x, and Mask R-CNN. 
+Best DSv2 experiments are shown with bolded AP$^{50:95}_{\text{mask}}$ metric.}
+\label{tab:mini_comparison}
+\end{table}
