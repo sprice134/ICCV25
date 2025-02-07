@@ -8,7 +8,6 @@ from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
 import sys
 from PIL import Image
-import mmcv
 
 
 
@@ -245,30 +244,58 @@ def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
 
 def combine_masks_16bit(list_of_binary_masks, output_path=None, return_array=False):
     """
-    Combine a list of 0/1 masks into a single 16-bit instance mask:
-    Each mask gets a unique ID (1, 2, 3, ...).
+    Combine a list of 0/1 or 0/255 binary masks into a single 16-bit instance mask.
+    Each mask is assigned a unique ID (1, 2, 3, ...).
 
     Parameters:
-    - list_of_binary_masks: List of 0/1 binary masks.
-    - output_path: Path to save the 16-bit PNG file (optional).
-    - return_array: Whether to return the combined 16-bit mask array.
-    
+    - list_of_binary_masks (List[np.ndarray]): List of 0/1 or 0/255 binary masks (numpy arrays).
+    - output_path (str, optional): Path to save the combined 16-bit PNG file.
+    - return_array (bool, optional): If True, returns the combined 16-bit mask array.
+
     Returns:
-    - combined_16bit (optional): The combined 16-bit instance mask array if return_array is True.
+    - combined_16bit (np.ndarray, optional): The combined 16-bit instance mask array if return_array is True.
     """
     if not list_of_binary_masks:
-        print("[WARNING] No masks to combine.")
+        print("[WARNING] No masks provided to combine.")
         return None
 
-    height, width = list_of_binary_masks[0].shape
+    # Verify that all masks have the same shape
+    first_shape = list_of_binary_masks[0].shape
+    for idx, mask in enumerate(list_of_binary_masks):
+        if mask.shape != first_shape:
+            raise ValueError(f"All masks must have the same shape. Mask at index {idx} has shape {mask.shape}, expected {first_shape}.")
+
+    height, width = first_shape
     combined_16bit = np.zeros((height, width), dtype=np.uint16)
 
     for idx, mask in enumerate(list_of_binary_masks, start=1):
-        combined_16bit[mask > 0] = idx
+        # Debug: Print unique values in the mask
+        unique_vals = set(np.unique(mask))
+        # print(f"Mask {idx-1} unique values: {unique_vals}")
 
-    # Save the combined mask if output_path is provided
+        # Ensure mask is binary
+        if mask.dtype != bool and not (unique_vals <= {0, 1} or unique_vals <= {0, 255}):
+            raise ValueError(f"Mask at index {idx-1} has unexpected unique values {unique_vals}. Please provide 0/1 or 0/255 masks.")
+
+        # Convert mask to boolean
+        mask_bool = mask.astype(bool)
+
+        # Assign unique ID to each mask
+        combined_16bit[mask_bool] = idx
+
+    # Save the combined mask as a 16-bit PNG if output_path is provided
     if output_path:
-        mmcv.imwrite(combined_16bit, output_path)
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+        # OpenCV expects the image in the correct format
+        # Ensure that combined_16bit is in uint16
+        if combined_16bit.dtype != np.uint16:
+            combined_16bit = combined_16bit.astype(np.uint16)
+
+        success = cv2.imwrite(output_path, combined_16bit)
+        if not success:
+            raise IOError(f"Failed to write the combined mask to {output_path}")
 
     if return_array:
         return combined_16bit

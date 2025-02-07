@@ -14,3 +14,11 @@ CascadePSP/
 cascadeEnv/
 segrefinerEnv/
 dsEnv/
+*.pt
+*.pth
+*.pkl
+savedInference/
+cocoTest/
+maskFormerEnv/
+teeth/
+datasets/dental/

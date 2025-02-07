@@ -14,16 +14,17 @@ source ../cascadeEnv/bin/activate
 
 
 # Define paths to the inference pickle files
-INFERENCE_PKL_1="../DualSight/ablationStudy/inference_outputs/yolov8n_inference.pkl"
-INFERENCE_PKL_2="../DualSight/ablationStudy/inference_outputs/yolov8x_inference.pkl"
-INFERENCE_PKL_3="../DualSight/ablationStudy/inference_outputs/maskrcnn_inference.pkl"
+INFERENCE_PKL_1="../savedInference/particle_yolov8n_inference.pkl"
+INFERENCE_PKL_2="../savedInference/particle_yolov8x_inference.pkl"
+INFERENCE_PKL_3="../savedInference/particle_maskrcnn_inference.pkl"
+INFERENCE_PKL_4="../savedInference/particle_mask2former_inference.pkl"
 
 # Define other common parameters
-IMAGES_DIR="../demo.v7i.coco/test"
+IMAGES_DIR="../datasets/powder/test"
 OUTPUT_DIR="cascade_refined_outputs"
 
 # Define the output CSV file
-OUTPUT_CSV="cascadeMetrics.csv"
+OUTPUT_CSV="metrics/powder_cascadePSP.csv"
 
 # Ensure the output directory exists
 mkdir -p "$OUTPUT_DIR"
@@ -56,5 +57,6 @@ run_cascadePSP() {
 run_cascadePSP "$INFERENCE_PKL_1" "YOLOv8 Nano"
 run_cascadePSP "$INFERENCE_PKL_2" "YOLOv8 X-Large"
 run_cascadePSP "$INFERENCE_PKL_3" "Mask R-CNN"
+run_cascadePSP "$INFERENCE_PKL_4" "Mask2Former"
 
 echo "All runs completed. Metrics have been aggregated in $OUTPUT_CSV."

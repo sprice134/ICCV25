@@ -102,7 +102,8 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
     model_name_mapping = {
         "YOLOv8 Nano": "yolov8n",
         "YOLOv8 XL": "yolov8x",
-        "Mask R-CNN": "maskrcnn"
+        "Mask R-CNN": "maskrcnn",
+        "Mask2Former": "mask2former"
     }
 
     for _, row in filtered_df.iterrows():
@@ -114,7 +115,7 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
             continue
 
         model_key = model_name_mapping[model_display_name]
-        pickle_path = os.path.join(inference_dir, f"{model_key}_inference.pkl")
+        pickle_path = os.path.join(inference_dir, f"particle_{model_key}_inference.pkl")
 
         if not os.path.exists(pickle_path):
             print(f"[ERROR] Pickle file '{pickle_path}' not found for configuration ID {config_id}. Skipping...")
@@ -354,13 +355,19 @@ if __name__ == "__main__":
     experiment_filters = {
         # 'ID': [2114, 881, 2225] #3569] #3458
         # 'ID': [770]
-        'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
+        # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
+        'BoxInclusion': [True],
+        'MaskInclusion': [False],
+        'BoundingBoxDistortion': ['100%'],
+        'Model': ['Mask2Former'],
+        # "POIPlacementAlgorithm": ['Random']
+
     }
 
     run_experiments(
         doiDF=doiDF,
-        inference_dir="inference_outputs",
-        images_dir="/home/sprice/ICCV25/demo.v7i.coco/test",
+        inference_dir="../../savedInference",
+        images_dir="/home/sprice/ICCV25/datasets/powder/test",
         output_dir="ablation_outputs",
         filters=experiment_filters
     )

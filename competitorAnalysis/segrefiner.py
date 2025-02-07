@@ -69,7 +69,6 @@ def combine_masks_16bit(list_of_binary_masks, output_path=None, return_array=Fal
         return combined_16bit
     return None
 
-
 def compute_specific_metrics(coco_eval, max_dets=200):
     # Adjust parameters as needed
     coco_eval.params.maxDets = [max_dets, max_dets, max_dets]

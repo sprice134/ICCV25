@@ -27,7 +27,40 @@ Usage Example:
         --image-dir "/home/sprice/ICCV25/demo.v7i.coco/test" \
         --output-file "inference_outputs/maskrcnn_inference.pkl" \
         --device "cuda"
-"""
+
+    python model_inference.py \
+        --model "mask2former" \
+        --model-type "mask2former" \
+        --model-path "/home/sprice/ICCV25/modelWeights/powder_mask2former.pth" \
+        --image-dir "/home/sprice/ICCV25/datasets/powder/test" \
+        --output-file "/home/sprice/ICCV25/savedInference/powder_mask2former_inference.pkl" \
+        --device "cuda"
+
+
+    python model_inference.py \
+        --model "yolov8n-seg" \
+        --model-type "yolo" \
+        --model-path "/home/sprice/ICCV25/modelWeights/dental_yolov8n-seg.pt" \
+        --image-dir "/home/sprice/ICCV25/datasets/dental/valid/images" \
+        --output-file "/home/sprice/ICCV25/savedInference/dental_yolov8n_inference.pkl" \
+        --device "cuda"
+    
+    python model_inference.py \
+        --model "yolov8n-seg" \
+        --model-type "yolo" \
+        --model-path "/home/sprice/ICCV25/modelWeights/dental_yolov8x-seg.pt" \
+        --image-dir "/home/sprice/ICCV25/datasets/dental/valid/images" \
+        --output-file "/home/sprice/ICCV25/savedInference/dental_yolov8x_inference.pkl" \
+        --device "cuda"
+
+    python model_inference.py \
+        --model "maskrcnn" \
+        --model-type "maskrcnn" \
+        --model-path "/home/sprice/ICCV25/modelWeights/dental_maskrcnn.pth" \
+        --image-dir "/home/sprice/ICCV25/datasets/dental/valid/images" \
+        --output-file "inference_outputs/dental_maskrcnn_inference.pkl" \
+        --device "cuda"
+    """
 
 import os
 import cv2
@@ -40,6 +73,7 @@ import sys
 sys.path.append('../')
 # Replace these imports with your actual modules
 from models import load_trained_model, get_inference_predictions
+
 
 def run_inference_for_model(model_type, model_name, model_path, image_dir, output_file, device="cuda"):
     """

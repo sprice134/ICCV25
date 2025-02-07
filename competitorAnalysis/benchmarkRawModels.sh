@@ -16,15 +16,16 @@ set -e
 source ../cascadeEnv/bin/activate
 
 # Define paths to the inference pickle files
-INFERENCE_PKL_1="../DualSight/ablationStudy/inference_outputs/yolov8n_inference.pkl"
-INFERENCE_PKL_2="../DualSight/ablationStudy/inference_outputs/yolov8x_inference.pkl"
-INFERENCE_PKL_3="../DualSight/ablationStudy/inference_outputs/maskrcnn_inference.pkl"
+INFERENCE_PKL_1="../savedInference/particle_yolov8n_inference.pkl"
+INFERENCE_PKL_2="../savedInference/particle_yolov8x_inference.pkl"
+INFERENCE_PKL_3="../savedInference/particle_maskrcnn_inference.pkl"
+INFERENCE_PKL_4="../savedInference/particle_mask2former_inference.pkl"
 
 # Define other common parameters
-IMAGES_DIR="../demo.v7i.coco/test"
+IMAGES_DIR="../datasets/powder/test"
 
 # Define the output CSV file
-OUTPUT_CSV="rawMetrics.csv"
+OUTPUT_CSV="metrics/powder_raw.csv"
 
 # Ensure the images directory exists
 if [ ! -d "$IMAGES_DIR" ]; then
@@ -62,5 +63,6 @@ run_evaluation() {
 run_evaluation "$INFERENCE_PKL_1" "YOLOv8 Nano"
 run_evaluation "$INFERENCE_PKL_2" "YOLOv8 X-Large"
 run_evaluation "$INFERENCE_PKL_3" "Mask R-CNN"
+run_evaluation "$INFERENCE_PKL_4" "Mask2Former"
 
 echo "All evaluations completed. Metrics have been aggregated in '$OUTPUT_CSV'."

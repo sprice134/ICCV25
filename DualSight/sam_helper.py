@@ -471,9 +471,9 @@ def run_sam_inference(
         if np.sum(mask) > num_points * num_points:
             # Pick sample points from the existing mask
             if algorithm == 'Hill Climbing' and num_points != 1:
-                print('Selecting Points from perimeter')
-                print(num_points)
-                print(algorithm)
+                # print('Selecting Points from perimeter')
+                # print(num_points)
+                # print(algorithm)
                 try:
                     selected_points, _, _ = select_point_placement(
                         mask=mask,
@@ -488,7 +488,7 @@ def run_sam_inference(
                     print(f"Mask sum: {np.sum(mask)}")
                     continue  # Skip to the next iteration
             else:
-                print('Selecting Points from all')
+                # print('Selecting Points from all')
                 try:
                     selected_points, _, _ = select_point_placement(
                         mask=mask,

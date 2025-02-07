@@ -221,7 +221,8 @@ def generate_coco_annotations_from_multi_instance_masks_16bit(
     # Read masks preserving the original bit depth (e.g., 16-bit)
     gt_mask = cv2.imread(gt_mask_path, cv2.IMREAD_UNCHANGED)
     pred_mask = cv2.imread(pred_mask_path, cv2.IMREAD_UNCHANGED)
-
+    print(gt_mask_path)
+    print('-'*100)
     if gt_mask is None or pred_mask is None:
         raise FileNotFoundError("One of the mask files was not found.")
 
@@ -559,7 +560,7 @@ if __name__ == "__main__":
 '''
 python cascadePSP.py \
         --inference_pickle_path "../DualSight/ablationStudy/inference_outputs/yolov8n_inference.pkl" \
-        --images_dir "../demo.v7i.coco/test" \
+        --images_dir "../datasets/powder/test" \
         --output_dir "cascade_refined_outputs" \
         --run_name "yolov8n" \
         --output_csv "cascadeMetrics.csv"

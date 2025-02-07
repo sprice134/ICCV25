@@ -1,0 +1,35 @@
+\begin{table*}[h!]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{@{}l|c|c|c|c|c|c|c|c@{}}
+\toprule
+\textbf{Model} & \textbf{AP$^{50}_{\text{mask}}$} & \textbf{AP$^{75}_{\text{mask}}$} & \textbf{AP$^{95}_{\text{mask}}$} & \textbf{AP$^{50:95}_{\text{mask}}$} & \textbf{AR$^{50}_{\text{mask}}$} & \textbf{AR$^{75}_{\text{mask}}$} & \textbf{AR$^{95}_{\text{mask}}$} & \textbf{AR$^{50:95}_{\text{mask}}$} \\ \midrule
+YOLOv8 Nano & 0.8373 & 0.6693 & 0.0806 & 0.5291 & 0.7203 & 0.5664 & -0.0035 & 0.4277 \\
+YOLOv8 Nano + CascadePSP & 0.8450 & 0.7529 & 0.3781 & 0.6587 & 0.7345 & 0.6593 & 0.2870 & 0.5603 \\
+YOLOv8 Nano + SegRefiner - Small & 0.8026 & 0.6911 & 0.1952 & 0.5630 & 0.6797 & 0.5915 & 0.1240 & 0.4650 \\
+YOLOv8 Nano + SegRefiner - Large & 0.8338 & 0.7296 & 0.3445 & 0.6360 & 0.7054 & 0.6239 & 0.2474 & 0.5255 \\
+YOLOv8 Nano + DualSight (Ours) & \textbf{0.8812} & \textbf{0.8059} & \textbf{0.4591} & \textbf{0.7154} & \textbf{0.7624} & \textbf{0.6999} & \textbf{0.3690} & \textbf{0.6104} \\
+\midrule
+YOLOv8 X-Large & 0.8357 & 0.6802 & 0.0916 & 0.5358 & 0.7088 & 0.5656 & 0.0200 & 0.4314 \\
+YOLOv8 X-Large + CascadePSP & 0.8446 & 0.7587 & 0.3870 & 0.6635 & 0.7230 & 0.6612 & 0.3006 & 0.5616 \\
+YOLOv8 X-Large + SegRefiner - Small & 0.8055 & 0.6894 & 0.1854 & 0.5601 & 0.6795 & 0.5944 & 0.1211 & 0.4650 \\
+YOLOv8 X-Large + SegRefiner - Large & 0.8363 & 0.7420 & 0.3500 & 0.6428 & 0.6972 & 0.6313 & 0.2571 & 0.5286 \\
+YOLOv8 X-Large + DualSight (Ours) & \textbf{0.8775} & \textbf{0.8102} & \textbf{0.4757} & \textbf{0.7211} & \textbf{0.7474} & \textbf{0.6943} & \textbf{0.3864} & \textbf{0.6094} \\
+\midrule
+Mask R-CNN & 0.6876 & 0.5599 & 0.1061 & 0.4512 & 0.5604 & 0.4557 & 0.0404 & 0.3522 \\
+Mask R-CNN + CascadePSP & 0.7254 & 0.6305 & 0.3245 & 0.5601 & 0.5943 & 0.5223 & 0.2511 & 0.4559 \\
+Mask R-CNN + SegRefiner - Small & 0.6976 & 0.5953 & 0.1841 & 0.4923 & 0.5911 & 0.5096 & 0.1312 & 0.4106 \\
+Mask R-CNN + SegRefiner - Large & 0.7416 & 0.6551 & 0.3184 & 0.5717 & 0.6047 & 0.5343 & 0.2346 & 0.4579 \\
+Mask R-CNN + DualSight (Ours) & \textbf{0.7788} & \textbf{0.7130} & \textbf{0.4692} & \textbf{0.6537} & \textbf{0.6348} & \textbf{0.5849} & \textbf{0.3773} & \textbf{0.5323} \\
+\midrule
+Mask2Former & 0.6336 & 0.5111 & 0.1229 & 0.4225 & 0.5974 & 0.5019 & 0.0884 & 0.3959 \\
+Mask2Former + CascadePSP & \textbf{0.6673} & \textbf{0.5805} & 0.2387 & 0.4955 & 0.5978 & 0.5374 & 0.2176 & 0.4509 \\
+Mask2Former + SegRefiner - Small & 0.6305 & 0.5061 & 0.1279 & 0.4215 & 0.5759 & 0.4810 & 0.0922 & 0.3830 \\
+Mask2Former + SegRefiner - Large & 0.6603 & 0.5701 & 0.2370 & 0.4891 & 0.5872 & 0.5251 & 0.2049 & 0.4391 \\
+Mask2Former + DualSight (Ours) & 0.6548 & 0.5497 & \textbf{0.3110} & \textbf{0.5052} & \textbf{0.6124} & \textbf{0.5420} & \textbf{0.3121} & \textbf{0.4889} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Performance comparison of models. Best results in each group are highlighted in \textbf{bold}.}
+\label{tab:performance_comparison}
+\end{table*}
