@@ -8,6 +8,8 @@ from pycocotools.cocoeval import COCOeval
 from pycocotools.coco import COCO
 import sys
 from PIL import Image
+import uuid
+
 
 
 
@@ -205,10 +207,16 @@ def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
     Evaluate COCO metrics (AP, AR) given ground truth data and predicted data
     in COCO format. Returns a dictionary of metrics.
     """
-    # Create temporary JSON files for ground truth and predictions
-    with open("temp_gt.json", "w") as gt_file:
+    # Generate a unique ID for the temporary file names
+    unique_id = uuid.uuid4().hex
+    gt_filename = f"temp_gt_{unique_id}.json"
+    pred_filename = f"temp_pred_{unique_id}.json"
+    
+    # Write the ground truth data to a unique temporary file
+    with open(gt_filename, "w") as gt_file:
         json.dump(gt_data, gt_file)
 
+    # Convert predictions to COCO format and write them to a unique temporary file
     pred_coco_format = []
     for pred in pred_data:
         # Ensure each prediction has a score; adjust for bbox if necessary
@@ -224,20 +232,20 @@ def evaluate_coco_metrics(gt_data, pred_data, iou_type="segm", max_dets=200):
             pred_entry["bbox"] = pred["bbox"]
         pred_coco_format.append(pred_entry)
 
-    with open("temp_pred.json", "w") as pred_file:
+    with open(pred_filename, "w") as pred_file:
         json.dump(pred_coco_format, pred_file)
 
     # Load ground truth and predictions into COCO API
-    coco_gt = COCO("temp_gt.json")
-    coco_pred = coco_gt.loadRes("temp_pred.json")
+    coco_gt = COCO(gt_filename)
+    coco_pred = coco_gt.loadRes(pred_filename)
     coco_eval = COCOeval(coco_gt, coco_pred, iouType=iou_type)
 
     # Compute and retrieve metrics
     metrics = compute_specific_metrics(coco_eval, max_dets=max_dets)
 
-    # Optionally delete temporary files after evaluation
-    os.remove("temp_gt.json")
-    os.remove("temp_pred.json")
+    # Clean up the temporary files
+    os.remove(gt_filename)
+    os.remove(pred_filename)
 
     return metrics
 
