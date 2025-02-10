@@ -4094,59 +4094,59 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 4093,Mask2Former,True,True,1,Distance Max,10%,110%,90%,0.4654767196444564
 4094,Mask2Former,True,True,1,Distance Max,10%,110%,100%,0.4586704149802304
 4095,Mask2Former,True,True,1,Distance Max,10%,110%,110%,0.46623947383950437
-4096,Mask2Former,True,True,1,Distance Max,15%,90%,90%,
-4097,Mask2Former,True,True,1,Distance Max,15%,90%,100%,
-4098,Mask2Former,True,True,1,Distance Max,15%,90%,110%,
-4099,Mask2Former,True,True,1,Distance Max,15%,100%,90%,
-4100,Mask2Former,True,True,1,Distance Max,15%,100%,100%,
-4101,Mask2Former,True,True,1,Distance Max,15%,100%,110%,
-4102,Mask2Former,True,True,1,Distance Max,15%,110%,90%,
-4103,Mask2Former,True,True,1,Distance Max,15%,110%,100%,
-4104,Mask2Former,True,True,1,Distance Max,15%,110%,110%,
-4105,Mask2Former,True,True,1,Voronoi,0%,90%,90%,
-4106,Mask2Former,True,True,1,Voronoi,0%,90%,100%,
-4107,Mask2Former,True,True,1,Voronoi,0%,90%,110%,
-4108,Mask2Former,True,True,1,Voronoi,0%,100%,90%,
-4109,Mask2Former,True,True,1,Voronoi,0%,100%,100%,
-4110,Mask2Former,True,True,1,Voronoi,0%,100%,110%,
-4111,Mask2Former,True,True,1,Voronoi,0%,110%,90%,
-4112,Mask2Former,True,True,1,Voronoi,0%,110%,100%,
-4113,Mask2Former,True,True,1,Voronoi,0%,110%,110%,
-4114,Mask2Former,True,True,1,Voronoi,5%,90%,90%,
-4115,Mask2Former,True,True,1,Voronoi,5%,90%,100%,
-4116,Mask2Former,True,True,1,Voronoi,5%,90%,110%,
-4117,Mask2Former,True,True,1,Voronoi,5%,100%,90%,
-4118,Mask2Former,True,True,1,Voronoi,5%,100%,100%,
-4119,Mask2Former,True,True,1,Voronoi,5%,100%,110%,
-4120,Mask2Former,True,True,1,Voronoi,5%,110%,90%,
-4121,Mask2Former,True,True,1,Voronoi,5%,110%,100%,
-4122,Mask2Former,True,True,1,Voronoi,5%,110%,110%,
-4123,Mask2Former,True,True,1,Voronoi,10%,90%,90%,
-4124,Mask2Former,True,True,1,Voronoi,10%,90%,100%,
-4125,Mask2Former,True,True,1,Voronoi,10%,90%,110%,
-4126,Mask2Former,True,True,1,Voronoi,10%,100%,90%,
-4127,Mask2Former,True,True,1,Voronoi,10%,100%,100%,
-4128,Mask2Former,True,True,1,Voronoi,10%,100%,110%,
-4129,Mask2Former,True,True,1,Voronoi,10%,110%,90%,
-4130,Mask2Former,True,True,1,Voronoi,10%,110%,100%,
-4131,Mask2Former,True,True,1,Voronoi,10%,110%,110%,
-4132,Mask2Former,True,True,1,Voronoi,15%,90%,90%,
-4133,Mask2Former,True,True,1,Voronoi,15%,90%,100%,
-4134,Mask2Former,True,True,1,Voronoi,15%,90%,110%,
-4135,Mask2Former,True,True,1,Voronoi,15%,100%,90%,
-4136,Mask2Former,True,True,1,Voronoi,15%,100%,100%,
-4137,Mask2Former,True,True,1,Voronoi,15%,100%,110%,
-4138,Mask2Former,True,True,1,Voronoi,15%,110%,90%,
-4139,Mask2Former,True,True,1,Voronoi,15%,110%,100%,
-4140,Mask2Former,True,True,1,Voronoi,15%,110%,110%,
-4141,Mask2Former,True,True,2,Random,0%,90%,90%,
-4142,Mask2Former,True,True,2,Random,0%,90%,100%,
+4096,Mask2Former,True,True,1,Distance Max,15%,90%,90%,0.506645466047675
+4097,Mask2Former,True,True,1,Distance Max,15%,90%,100%,0.5079963172503872
+4098,Mask2Former,True,True,1,Distance Max,15%,90%,110%,0.5070599482266697
+4099,Mask2Former,True,True,1,Distance Max,15%,100%,90%,0.4976233705606886
+4100,Mask2Former,True,True,1,Distance Max,15%,100%,100%,0.4876944355846716
+4101,Mask2Former,True,True,1,Distance Max,15%,100%,110%,0.4964332829931196
+4102,Mask2Former,True,True,1,Distance Max,15%,110%,90%,0.4638469764872702
+4103,Mask2Former,True,True,1,Distance Max,15%,110%,100%,0.4623666793705638
+4104,Mask2Former,True,True,1,Distance Max,15%,110%,110%,0.45929288740643803
+4105,Mask2Former,True,True,1,Voronoi,0%,90%,90%,0.5042523186402836
+4106,Mask2Former,True,True,1,Voronoi,0%,90%,100%,0.5052517870879806
+4107,Mask2Former,True,True,1,Voronoi,0%,90%,110%,0.5050380952865751
+4108,Mask2Former,True,True,1,Voronoi,0%,100%,90%,0.4974119167591904
+4109,Mask2Former,True,True,1,Voronoi,0%,100%,100%,0.4975642909287151
+4110,Mask2Former,True,True,1,Voronoi,0%,100%,110%,0.4972125371761952
+4111,Mask2Former,True,True,1,Voronoi,0%,110%,90%,0.45647390837973345
+4112,Mask2Former,True,True,1,Voronoi,0%,110%,100%,0.4620726121204945
+4113,Mask2Former,True,True,1,Voronoi,0%,110%,110%,0.46097994264593034
+4114,Mask2Former,True,True,1,Voronoi,5%,90%,90%,0.5068607125142431
+4115,Mask2Former,True,True,1,Voronoi,5%,90%,100%,0.5059195207907698
+4116,Mask2Former,True,True,1,Voronoi,5%,90%,110%,0.5063350369690924
+4117,Mask2Former,True,True,1,Voronoi,5%,100%,90%,0.49820678811968316
+4118,Mask2Former,True,True,1,Voronoi,5%,100%,100%,0.497054899852008
+4119,Mask2Former,True,True,1,Voronoi,5%,100%,110%,0.49756176349732517
+4120,Mask2Former,True,True,1,Voronoi,5%,110%,90%,0.4615906477093448
+4121,Mask2Former,True,True,1,Voronoi,5%,110%,100%,0.4611189433898037
+4122,Mask2Former,True,True,1,Voronoi,5%,110%,110%,0.46101999305822083
+4123,Mask2Former,True,True,1,Voronoi,10%,90%,90%,0.5071110744729121
+4124,Mask2Former,True,True,1,Voronoi,10%,90%,100%,0.5065269386764877
+4125,Mask2Former,True,True,1,Voronoi,10%,90%,110%,0.506932553692387
+4126,Mask2Former,True,True,1,Voronoi,10%,100%,90%,0.4972230494667594
+4127,Mask2Former,True,True,1,Voronoi,10%,100%,100%,0.4970710784172706
+4128,Mask2Former,True,True,1,Voronoi,10%,100%,110%,0.4973686298845962
+4129,Mask2Former,True,True,1,Voronoi,10%,110%,90%,0.46054679195247894
+4130,Mask2Former,True,True,1,Voronoi,10%,110%,100%,0.4600589156304203
+4131,Mask2Former,True,True,1,Voronoi,10%,110%,110%,0.4602410069006203
+4132,Mask2Former,True,True,1,Voronoi,15%,90%,90%,0.5060047591254904
+4133,Mask2Former,True,True,1,Voronoi,15%,90%,100%,0.5064552646240023
+4134,Mask2Former,True,True,1,Voronoi,15%,90%,110%,0.5057469075392115
+4135,Mask2Former,True,True,1,Voronoi,15%,100%,90%,0.497816429683757
+4136,Mask2Former,True,True,1,Voronoi,15%,100%,100%,0.4970438163523535
+4137,Mask2Former,True,True,1,Voronoi,15%,100%,110%,0.4963636400372927
+4138,Mask2Former,True,True,1,Voronoi,15%,110%,90%,0.45773488569108167
+4139,Mask2Former,True,True,1,Voronoi,15%,110%,100%,0.4616389725685158
+4140,Mask2Former,True,True,1,Voronoi,15%,110%,110%,0.45747176124742783
+4141,Mask2Former,True,True,2,Random,0%,90%,90%,0.5013002451245091
+4142,Mask2Former,True,True,2,Random,0%,90%,100%,0.5007782692170364
 4143,Mask2Former,True,True,2,Random,0%,90%,110%,
-4144,Mask2Former,True,True,2,Random,0%,100%,90%,
-4145,Mask2Former,True,True,2,Random,0%,100%,100%,
-4146,Mask2Former,True,True,2,Random,0%,100%,110%,
-4147,Mask2Former,True,True,2,Random,0%,110%,90%,
-4148,Mask2Former,True,True,2,Random,0%,110%,100%,
+4144,Mask2Former,True,True,2,Random,0%,100%,90%,0.4836269760974571
+4145,Mask2Former,True,True,2,Random,0%,100%,100%,0.4761712451374418
+4146,Mask2Former,True,True,2,Random,0%,100%,110%,0.4741832102756218
+4147,Mask2Former,True,True,2,Random,0%,110%,90%,0.44655941968742835
+4148,Mask2Former,True,True,2,Random,0%,110%,100%,0.44796609677576404
 4149,Mask2Former,True,True,2,Random,0%,110%,110%,
 4150,Mask2Former,True,True,2,Random,5%,90%,90%,
 4151,Mask2Former,True,True,2,Random,5%,90%,100%,
@@ -4823,31 +4823,31 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 4822,Mask2Former,True,False,1,Voronoi,15%,90%,,0.5216070091787486
 4823,Mask2Former,True,False,1,Voronoi,15%,100%,,0.5183259062172441
 4824,Mask2Former,True,False,1,Voronoi,15%,110%,,0.5190708552131545
-4825,Mask2Former,True,False,2,Random,0%,90%,,
+4825,Mask2Former,True,False,2,Random,0%,90%,,0.5174655419207019
 4826,Mask2Former,True,False,2,Random,0%,100%,,0.5160768899442048
 4827,Mask2Former,True,False,2,Random,0%,110%,,0.5127101249086332
-4828,Mask2Former,True,False,2,Random,5%,90%,,
+4828,Mask2Former,True,False,2,Random,5%,90%,,0.5214373655561204
 4829,Mask2Former,True,False,2,Random,5%,100%,,0.5169989328807534
 4830,Mask2Former,True,False,2,Random,5%,110%,,0.5180777794777623
-4831,Mask2Former,True,False,2,Random,10%,90%,,
+4831,Mask2Former,True,False,2,Random,10%,90%,,0.5194756693208031
 4832,Mask2Former,True,False,2,Random,10%,100%,,0.5149567197369052
 4833,Mask2Former,True,False,2,Random,10%,110%,,0.5117995059385649
-4834,Mask2Former,True,False,2,Random,15%,90%,,
+4834,Mask2Former,True,False,2,Random,15%,90%,,0.5225750220339046
 4835,Mask2Former,True,False,2,Random,15%,100%,,0.5174639023587349
 4836,Mask2Former,True,False,2,Random,15%,110%,,0.5170570786866444
-4837,Mask2Former,True,False,2,Distance Max,0%,90%,,
+4837,Mask2Former,True,False,2,Distance Max,0%,90%,,0.5118440807491204
 4838,Mask2Former,True,False,2,Distance Max,0%,100%,,0.5086736430294464
 4839,Mask2Former,True,False,2,Distance Max,0%,110%,,0.4902009840449811
-4840,Mask2Former,True,False,2,Distance Max,5%,90%,,
+4840,Mask2Former,True,False,2,Distance Max,5%,90%,,0.5155283676646054
 4841,Mask2Former,True,False,2,Distance Max,5%,100%,,0.5123227577304492
 4842,Mask2Former,True,False,2,Distance Max,5%,110%,,0.499089099127951
-4843,Mask2Former,True,False,2,Distance Max,10%,90%,,
+4843,Mask2Former,True,False,2,Distance Max,10%,90%,,0.519875495581164
 4844,Mask2Former,True,False,2,Distance Max,10%,100%,,0.515484540731827
 4845,Mask2Former,True,False,2,Distance Max,10%,110%,,0.5097995382999405
-4846,Mask2Former,True,False,2,Distance Max,15%,90%,,
+4846,Mask2Former,True,False,2,Distance Max,15%,90%,,0.5113817738233765
 4847,Mask2Former,True,False,2,Distance Max,15%,100%,,0.508992064065661
 4848,Mask2Former,True,False,2,Distance Max,15%,110%,,0.5084128030232934
-4849,Mask2Former,True,False,2,Voronoi,0%,90%,,
+4849,Mask2Former,True,False,2,Voronoi,0%,90%,,0.5206344440101836
 4850,Mask2Former,True,False,2,Voronoi,0%,100%,,0.5184208516973647
 4851,Mask2Former,True,False,2,Voronoi,0%,110%,,0.5181088440010014
 4852,Mask2Former,True,False,2,Voronoi,5%,90%,,
@@ -4858,55 +4858,55 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 4857,Mask2Former,True,False,2,Voronoi,10%,110%,,0.5180637109100406
 4858,Mask2Former,True,False,2,Voronoi,15%,90%,,
 4859,Mask2Former,True,False,2,Voronoi,15%,100%,,0.5165040505238003
-4860,Mask2Former,True,False,2,Voronoi,15%,110%,,
+4860,Mask2Former,True,False,2,Voronoi,15%,110%,,0.5187569194201631
 4861,Mask2Former,True,False,3,Random,0%,90%,,
 4862,Mask2Former,True,False,3,Random,0%,100%,,0.5170797355768646
-4863,Mask2Former,True,False,3,Random,0%,110%,,
+4863,Mask2Former,True,False,3,Random,0%,110%,,0.5179111197748961
 4864,Mask2Former,True,False,3,Random,5%,90%,,
 4865,Mask2Former,True,False,3,Random,5%,100%,,0.5151979919669284
-4866,Mask2Former,True,False,3,Random,5%,110%,,
+4866,Mask2Former,True,False,3,Random,5%,110%,,0.5162254472812229
 4867,Mask2Former,True,False,3,Random,10%,90%,,
 4868,Mask2Former,True,False,3,Random,10%,100%,,0.5149663482071211
-4869,Mask2Former,True,False,3,Random,10%,110%,,
+4869,Mask2Former,True,False,3,Random,10%,110%,,0.5176215939876766
 4870,Mask2Former,True,False,3,Random,15%,90%,,
 4871,Mask2Former,True,False,3,Random,15%,100%,,0.5176590081764393
-4872,Mask2Former,True,False,3,Random,15%,110%,,
+4872,Mask2Former,True,False,3,Random,15%,110%,,0.5164865132095806
 4873,Mask2Former,True,False,3,Distance Max,0%,90%,,
 4874,Mask2Former,True,False,3,Distance Max,0%,100%,,0.501178319610831
-4875,Mask2Former,True,False,3,Distance Max,0%,110%,,
+4875,Mask2Former,True,False,3,Distance Max,0%,110%,,0.48764935414183885
 4876,Mask2Former,True,False,3,Distance Max,5%,90%,,
 4877,Mask2Former,True,False,3,Distance Max,5%,100%,,0.5034493829652477
-4878,Mask2Former,True,False,3,Distance Max,5%,110%,,
+4878,Mask2Former,True,False,3,Distance Max,5%,110%,,0.4939636327960793
 4879,Mask2Former,True,False,3,Distance Max,10%,90%,,
 4880,Mask2Former,True,False,3,Distance Max,10%,100%,,0.5039913672345027
-4881,Mask2Former,True,False,3,Distance Max,10%,110%,,
+4881,Mask2Former,True,False,3,Distance Max,10%,110%,,0.494990657349509
 4882,Mask2Former,True,False,3,Distance Max,15%,90%,,
 4883,Mask2Former,True,False,3,Distance Max,15%,100%,,0.5032377869355672
-4884,Mask2Former,True,False,3,Distance Max,15%,110%,,
+4884,Mask2Former,True,False,3,Distance Max,15%,110%,,0.4992233722351961
 4885,Mask2Former,True,False,3,Voronoi,0%,90%,,
 4886,Mask2Former,True,False,3,Voronoi,0%,100%,,0.5164352755332255
-4887,Mask2Former,True,False,3,Voronoi,0%,110%,,
+4887,Mask2Former,True,False,3,Voronoi,0%,110%,,0.5110079021012723
 4888,Mask2Former,True,False,3,Voronoi,5%,90%,,
 4889,Mask2Former,True,False,3,Voronoi,5%,100%,,0.5142267827052966
-4890,Mask2Former,True,False,3,Voronoi,5%,110%,,
+4890,Mask2Former,True,False,3,Voronoi,5%,110%,,0.5149855432459522
 4891,Mask2Former,True,False,3,Voronoi,10%,90%,,
 4892,Mask2Former,True,False,3,Voronoi,10%,100%,,0.5167359849570479
-4893,Mask2Former,True,False,3,Voronoi,10%,110%,,
+4893,Mask2Former,True,False,3,Voronoi,10%,110%,,0.5189514687610504
 4894,Mask2Former,True,False,3,Voronoi,15%,90%,,
 4895,Mask2Former,True,False,3,Voronoi,15%,100%,,0.5158397792316834
-4896,Mask2Former,True,False,3,Voronoi,15%,110%,,
+4896,Mask2Former,True,False,3,Voronoi,15%,110%,,0.5142897211564927
 4897,Mask2Former,True,False,4,Random,0%,90%,,
 4898,Mask2Former,True,False,4,Random,0%,100%,,0.5144981274145761
-4899,Mask2Former,True,False,4,Random,0%,110%,,
+4899,Mask2Former,True,False,4,Random,0%,110%,,0.5132640857935653
 4900,Mask2Former,True,False,4,Random,5%,90%,,
 4901,Mask2Former,True,False,4,Random,5%,100%,,0.5106109913496114
-4902,Mask2Former,True,False,4,Random,5%,110%,,
+4902,Mask2Former,True,False,4,Random,5%,110%,,0.5129124404235352
 4903,Mask2Former,True,False,4,Random,10%,90%,,
 4904,Mask2Former,True,False,4,Random,10%,100%,,0.5098630873530807
-4905,Mask2Former,True,False,4,Random,10%,110%,,
+4905,Mask2Former,True,False,4,Random,10%,110%,,0.513526707954408
 4906,Mask2Former,True,False,4,Random,15%,90%,,
 4907,Mask2Former,True,False,4,Random,15%,100%,,0.5202363924257489
-4908,Mask2Former,True,False,4,Random,15%,110%,,
+4908,Mask2Former,True,False,4,Random,15%,110%,,0.5211799609668842
 4909,Mask2Former,True,False,4,Distance Max,0%,90%,,
 4910,Mask2Former,True,False,4,Distance Max,0%,100%,,0.49906471458404544
 4911,Mask2Former,True,False,4,Distance Max,0%,110%,,
@@ -5060,23 +5060,23 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 5059,Mask2Former,False,True,1,Distance Max,10%,,90%,0.41622951911268985
 5060,Mask2Former,False,True,1,Distance Max,10%,,100%,0.40179013697813815
 5061,Mask2Former,False,True,1,Distance Max,10%,,110%,0.4270502731172843
-5062,Mask2Former,False,True,1,Distance Max,15%,,90%,
-5063,Mask2Former,False,True,1,Distance Max,15%,,100%,
-5064,Mask2Former,False,True,1,Distance Max,15%,,110%,
-5065,Mask2Former,False,True,1,Voronoi,0%,,90%,
-5066,Mask2Former,False,True,1,Voronoi,0%,,100%,
-5067,Mask2Former,False,True,1,Voronoi,0%,,110%,
-5068,Mask2Former,False,True,1,Voronoi,5%,,90%,
-5069,Mask2Former,False,True,1,Voronoi,5%,,100%,
-5070,Mask2Former,False,True,1,Voronoi,5%,,110%,
-5071,Mask2Former,False,True,1,Voronoi,10%,,90%,
-5072,Mask2Former,False,True,1,Voronoi,10%,,100%,
-5073,Mask2Former,False,True,1,Voronoi,10%,,110%,
-5074,Mask2Former,False,True,1,Voronoi,15%,,90%,
-5075,Mask2Former,False,True,1,Voronoi,15%,,100%,
-5076,Mask2Former,False,True,1,Voronoi,15%,,110%,
-5077,Mask2Former,False,True,2,Random,0%,,90%,
-5078,Mask2Former,False,True,2,Random,0%,,100%,
+5062,Mask2Former,False,True,1,Distance Max,15%,,90%,0.41262156892374974
+5063,Mask2Former,False,True,1,Distance Max,15%,,100%,0.4119977709761913
+5064,Mask2Former,False,True,1,Distance Max,15%,,110%,0.43565554107799204
+5065,Mask2Former,False,True,1,Voronoi,0%,,90%,0.42178040984683873
+5066,Mask2Former,False,True,1,Voronoi,0%,,100%,0.4217202567154805
+5067,Mask2Former,False,True,1,Voronoi,0%,,110%,0.4262018507473321
+5068,Mask2Former,False,True,1,Voronoi,5%,,90%,0.42216273939778165
+5069,Mask2Former,False,True,1,Voronoi,5%,,100%,0.42748886099634004
+5070,Mask2Former,False,True,1,Voronoi,5%,,110%,0.42807524599865776
+5071,Mask2Former,False,True,1,Voronoi,10%,,90%,0.42907667345303013
+5072,Mask2Former,False,True,1,Voronoi,10%,,100%,0.4216051410120169
+5073,Mask2Former,False,True,1,Voronoi,10%,,110%,0.4221471844118191
+5074,Mask2Former,False,True,1,Voronoi,15%,,90%,0.42145811599153776
+5075,Mask2Former,False,True,1,Voronoi,15%,,100%,0.423973469226251
+5076,Mask2Former,False,True,1,Voronoi,15%,,110%,0.4225236988627312
+5077,Mask2Former,False,True,2,Random,0%,,90%,0.3052343038773712
+5078,Mask2Former,False,True,2,Random,0%,,100%,0.300135323631524
 5079,Mask2Former,False,True,2,Random,0%,,110%,
 5080,Mask2Former,False,True,2,Random,5%,,90%,
 5081,Mask2Former,False,True,2,Random,5%,,100%,
@@ -5313,23 +5313,23 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 5312,Mask2Former,False,False,2,Distance Max,15%,,,0.3719329648528333
 5313,Mask2Former,False,False,2,Voronoi,0%,,,0.4456032992707978
 5314,Mask2Former,False,False,2,Voronoi,5%,,,0.4600288143722405
-5315,Mask2Former,False,False,2,Voronoi,10%,,,
-5316,Mask2Former,False,False,2,Voronoi,15%,,,
-5317,Mask2Former,False,False,3,Random,0%,,,
-5318,Mask2Former,False,False,3,Random,5%,,,
-5319,Mask2Former,False,False,3,Random,10%,,,
-5320,Mask2Former,False,False,3,Random,15%,,,
-5321,Mask2Former,False,False,3,Distance Max,0%,,,
-5322,Mask2Former,False,False,3,Distance Max,5%,,,
-5323,Mask2Former,False,False,3,Distance Max,10%,,,
-5324,Mask2Former,False,False,3,Distance Max,15%,,,
-5325,Mask2Former,False,False,3,Voronoi,0%,,,
-5326,Mask2Former,False,False,3,Voronoi,5%,,,
-5327,Mask2Former,False,False,3,Voronoi,10%,,,
-5328,Mask2Former,False,False,3,Voronoi,15%,,,
-5329,Mask2Former,False,False,4,Random,0%,,,
-5330,Mask2Former,False,False,4,Random,5%,,,
-5331,Mask2Former,False,False,4,Random,10%,,,
+5315,Mask2Former,False,False,2,Voronoi,10%,,,0.44604992706180935
+5316,Mask2Former,False,False,2,Voronoi,15%,,,0.4463946321254003
+5317,Mask2Former,False,False,3,Random,0%,,,0.46128974542854495
+5318,Mask2Former,False,False,3,Random,5%,,,0.4726990241427263
+5319,Mask2Former,False,False,3,Random,10%,,,0.4673440364614027
+5320,Mask2Former,False,False,3,Random,15%,,,0.45426785591446023
+5321,Mask2Former,False,False,3,Distance Max,0%,,,0.3041307193315316
+5322,Mask2Former,False,False,3,Distance Max,5%,,,0.3458572941117602
+5323,Mask2Former,False,False,3,Distance Max,10%,,,0.3786156062445176
+5324,Mask2Former,False,False,3,Distance Max,15%,,,0.36189149258501135
+5325,Mask2Former,False,False,3,Voronoi,0%,,,0.4676868056235862
+5326,Mask2Former,False,False,3,Voronoi,5%,,,0.4724682218498253
+5327,Mask2Former,False,False,3,Voronoi,10%,,,0.46857079046013794
+5328,Mask2Former,False,False,3,Voronoi,15%,,,0.4533759965084704
+5329,Mask2Former,False,False,4,Random,0%,,,0.47976425485658314
+5330,Mask2Former,False,False,4,Random,5%,,,0.4699132291167836
+5331,Mask2Former,False,False,4,Random,10%,,,0.48678328052267983
 5332,Mask2Former,False,False,4,Random,15%,,,
 5333,Mask2Former,False,False,4,Distance Max,0%,,,
 5334,Mask2Former,False,False,4,Distance Max,5%,,,
