@@ -357,11 +357,11 @@ if __name__ == "__main__":
         # 'ID': [2114, 881, 2225] #3569] #3458
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
-        'BoxInclusion': [False],
-        'MaskInclusion': [True],
+        'BoxInclusion': [True],
+        'MaskInclusion': [False],
         # 'BoundingBoxDistortion': ['90%'],
         'Model': ['YOLOv8 Nano + Sam'],
-        'NumberOfPOIs': [3]
+        'NumberOfPOIs': [4]
         # "POIPlacementAlgorithm": ['Random']
 
     }
