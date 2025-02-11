@@ -19,5 +19,12 @@ source /home/sprice/ICCV25/maskFormerEnv/bin/activate
 
 
 # python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V5.py
-python /home/sprice/ICCV25/DualSight/ablationStudy/ablation_study.py
+# python /home/sprice/ICCV25/DualSight/ablationStudy/ablation_study.py
 # python /home/sprice/ICCV25/DualSight/ablationStudy/testingPickle2.py
+
+
+python model_sam_inference.py \
+        --inference-pickle "../../savedInference/particle_yolov8x_inference.pkl" \
+        --images-dir "/home/sprice/ICCV25/datasets/powder/test" \
+        --output-pickle "../../savedInference/particle_yolov8x_dualsight_inference.pkl" \
+        --device "cuda"

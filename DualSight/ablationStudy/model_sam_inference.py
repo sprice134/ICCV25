@@ -8,6 +8,18 @@ Usage Example:
         --output-pickle "../../savedInference/particle_yolov8n_dualsight_inference.pkl" \
         --device "cuda"
 
+    python model_sam_inference.py \
+        --inference-pickle "../../savedInference/particle_yolov8x_inference.pkl" \
+        --images-dir "/home/sprice/ICCV25/datasets/powder/test" \
+        --output-pickle "../../savedInference/particle_yolov8x_dualsight_inference.pkl" \
+        --device "cuda"
+
+    python model_sam_inference.py \
+        --inference-pickle "../../savedInference/particle_yolov8n_inference.pkl" \
+        --images-dir "/home/sprice/ICCV25/datasets/powder/test" \
+        --output-pickle "../../savedInference/particle_yolov8n_dualsight_inference.pkl" \
+        --device "cuda"
+
 Description:
     This script loads an existing inference pickle (produced by model_inference.py),
     loads each corresponding image, runs SAM to refine the annotations, and then
