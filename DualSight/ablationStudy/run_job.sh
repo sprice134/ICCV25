@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=5_nb_no_mask       # Job name
+#SBATCH --job-name=6_nb_no_mask       # Job name
 #SBATCH --cpus-per-task=12              # Number of CPU cores
 #SBATCH --gres=gpu:1                    # Number of GPUs
 #SBATCH -C A100|V100|L40S               # A100 or V100 GPU
