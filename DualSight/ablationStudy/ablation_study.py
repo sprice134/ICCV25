@@ -103,7 +103,8 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
         "YOLOv8 Nano": "yolov8n",
         "YOLOv8 XL": "yolov8x",
         "Mask R-CNN": "maskrcnn",
-        "Mask2Former": "mask2former"
+        "Mask2Former": "mask2former",
+        "YOLOv8 Nano + Sam": "yolov8n_dualsight"
     }
 
     for _, row in filtered_df.iterrows():
@@ -356,11 +357,11 @@ if __name__ == "__main__":
         # 'ID': [2114, 881, 2225] #3569] #3458
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
-        'BoxInclusion': [True],
+        'BoxInclusion': [False],
         'MaskInclusion': [True],
-        'BoundingBoxDistortion': ['90%'],
-        'Model': ['Mask2Former'],
-        'NumberOfPOIs': [5, 6, 7]
+        # 'BoundingBoxDistortion': ['90%'],
+        'Model': ['YOLOv8 Nano + Sam'],
+        'NumberOfPOIs': [3]
         # "POIPlacementAlgorithm": ['Random']
 
     }

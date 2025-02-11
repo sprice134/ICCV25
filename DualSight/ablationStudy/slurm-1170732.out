@@ -1,0 +1,5 @@
+Running job on gpu-4-12
+Requested resources:
+  - CPUs: 12
+  - GPUs: 
+  - Memory: 24000

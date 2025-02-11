@@ -5375,3 +5375,1347 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 5374,Mask2Former,False,False,7,Voronoi,5%,N/A,N/A
 5375,Mask2Former,False,False,7,Voronoi,10%,N/A,N/A
 5376,Mask2Former,False,False,7,Voronoi,15%,N/A,N/A
+5377,YOLOv8 Nano + Sam,True,True,1,Random,0%,90%,90%
+5378,YOLOv8 Nano + Sam,True,True,1,Random,0%,90%,100%
+5379,YOLOv8 Nano + Sam,True,True,1,Random,0%,90%,110%
+5380,YOLOv8 Nano + Sam,True,True,1,Random,0%,100%,90%
+5381,YOLOv8 Nano + Sam,True,True,1,Random,0%,100%,100%
+5382,YOLOv8 Nano + Sam,True,True,1,Random,0%,100%,110%
+5383,YOLOv8 Nano + Sam,True,True,1,Random,0%,110%,90%
+5384,YOLOv8 Nano + Sam,True,True,1,Random,0%,110%,100%
+5385,YOLOv8 Nano + Sam,True,True,1,Random,0%,110%,110%
+5386,YOLOv8 Nano + Sam,True,True,1,Random,5%,90%,90%
+5387,YOLOv8 Nano + Sam,True,True,1,Random,5%,90%,100%
+5388,YOLOv8 Nano + Sam,True,True,1,Random,5%,90%,110%
+5389,YOLOv8 Nano + Sam,True,True,1,Random,5%,100%,90%
+5390,YOLOv8 Nano + Sam,True,True,1,Random,5%,100%,100%
+5391,YOLOv8 Nano + Sam,True,True,1,Random,5%,100%,110%
+5392,YOLOv8 Nano + Sam,True,True,1,Random,5%,110%,90%
+5393,YOLOv8 Nano + Sam,True,True,1,Random,5%,110%,100%
+5394,YOLOv8 Nano + Sam,True,True,1,Random,5%,110%,110%
+5395,YOLOv8 Nano + Sam,True,True,1,Random,10%,90%,90%
+5396,YOLOv8 Nano + Sam,True,True,1,Random,10%,90%,100%
+5397,YOLOv8 Nano + Sam,True,True,1,Random,10%,90%,110%
+5398,YOLOv8 Nano + Sam,True,True,1,Random,10%,100%,90%
+5399,YOLOv8 Nano + Sam,True,True,1,Random,10%,100%,100%
+5400,YOLOv8 Nano + Sam,True,True,1,Random,10%,100%,110%
+5401,YOLOv8 Nano + Sam,True,True,1,Random,10%,110%,90%
+5402,YOLOv8 Nano + Sam,True,True,1,Random,10%,110%,100%
+5403,YOLOv8 Nano + Sam,True,True,1,Random,10%,110%,110%
+5404,YOLOv8 Nano + Sam,True,True,1,Random,15%,90%,90%
+5405,YOLOv8 Nano + Sam,True,True,1,Random,15%,90%,100%
+5406,YOLOv8 Nano + Sam,True,True,1,Random,15%,90%,110%
+5407,YOLOv8 Nano + Sam,True,True,1,Random,15%,100%,90%
+5408,YOLOv8 Nano + Sam,True,True,1,Random,15%,100%,100%
+5409,YOLOv8 Nano + Sam,True,True,1,Random,15%,100%,110%
+5410,YOLOv8 Nano + Sam,True,True,1,Random,15%,110%,90%
+5411,YOLOv8 Nano + Sam,True,True,1,Random,15%,110%,100%
+5412,YOLOv8 Nano + Sam,True,True,1,Random,15%,110%,110%
+5413,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,90%,90%
+5414,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,90%,100%
+5415,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,90%,110%
+5416,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,100%,90%
+5417,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,100%,100%
+5418,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,100%,110%
+5419,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,110%,90%
+5420,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,110%,100%
+5421,YOLOv8 Nano + Sam,True,True,1,Distance Max,0%,110%,110%
+5422,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,90%,90%
+5423,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,90%,100%
+5424,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,90%,110%
+5425,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,100%,90%
+5426,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,100%,100%
+5427,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,100%,110%
+5428,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,110%,90%
+5429,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,110%,100%
+5430,YOLOv8 Nano + Sam,True,True,1,Distance Max,5%,110%,110%
+5431,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,90%,90%
+5432,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,90%,100%
+5433,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,90%,110%
+5434,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,100%,90%
+5435,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,100%,100%
+5436,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,100%,110%
+5437,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,110%,90%
+5438,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,110%,100%
+5439,YOLOv8 Nano + Sam,True,True,1,Distance Max,10%,110%,110%
+5440,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,90%,90%
+5441,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,90%,100%
+5442,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,90%,110%
+5443,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,100%,90%
+5444,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,100%,100%
+5445,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,100%,110%
+5446,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,110%,90%
+5447,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,110%,100%
+5448,YOLOv8 Nano + Sam,True,True,1,Distance Max,15%,110%,110%
+5449,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,90%,90%
+5450,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,90%,100%
+5451,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,90%,110%
+5452,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,100%,90%
+5453,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,100%,100%
+5454,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,100%,110%
+5455,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,110%,90%
+5456,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,110%,100%
+5457,YOLOv8 Nano + Sam,True,True,1,Voronoi,0%,110%,110%
+5458,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,90%,90%
+5459,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,90%,100%
+5460,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,90%,110%
+5461,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,100%,90%
+5462,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,100%,100%
+5463,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,100%,110%
+5464,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,110%,90%
+5465,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,110%,100%
+5466,YOLOv8 Nano + Sam,True,True,1,Voronoi,5%,110%,110%
+5467,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,90%,90%
+5468,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,90%,100%
+5469,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,90%,110%
+5470,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,100%,90%
+5471,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,100%,100%
+5472,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,100%,110%
+5473,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,110%,90%
+5474,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,110%,100%
+5475,YOLOv8 Nano + Sam,True,True,1,Voronoi,10%,110%,110%
+5476,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,90%,90%
+5477,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,90%,100%
+5478,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,90%,110%
+5479,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,100%,90%
+5480,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,100%,100%
+5481,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,100%,110%
+5482,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,110%,90%
+5483,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,110%,100%
+5484,YOLOv8 Nano + Sam,True,True,1,Voronoi,15%,110%,110%
+5485,YOLOv8 Nano + Sam,True,True,2,Random,0%,90%,90%
+5486,YOLOv8 Nano + Sam,True,True,2,Random,0%,90%,100%
+5487,YOLOv8 Nano + Sam,True,True,2,Random,0%,90%,110%
+5488,YOLOv8 Nano + Sam,True,True,2,Random,0%,100%,90%
+5489,YOLOv8 Nano + Sam,True,True,2,Random,0%,100%,100%
+5490,YOLOv8 Nano + Sam,True,True,2,Random,0%,100%,110%
+5491,YOLOv8 Nano + Sam,True,True,2,Random,0%,110%,90%
+5492,YOLOv8 Nano + Sam,True,True,2,Random,0%,110%,100%
+5493,YOLOv8 Nano + Sam,True,True,2,Random,0%,110%,110%
+5494,YOLOv8 Nano + Sam,True,True,2,Random,5%,90%,90%
+5495,YOLOv8 Nano + Sam,True,True,2,Random,5%,90%,100%
+5496,YOLOv8 Nano + Sam,True,True,2,Random,5%,90%,110%
+5497,YOLOv8 Nano + Sam,True,True,2,Random,5%,100%,90%
+5498,YOLOv8 Nano + Sam,True,True,2,Random,5%,100%,100%
+5499,YOLOv8 Nano + Sam,True,True,2,Random,5%,100%,110%
+5500,YOLOv8 Nano + Sam,True,True,2,Random,5%,110%,90%
+5501,YOLOv8 Nano + Sam,True,True,2,Random,5%,110%,100%
+5502,YOLOv8 Nano + Sam,True,True,2,Random,5%,110%,110%
+5503,YOLOv8 Nano + Sam,True,True,2,Random,10%,90%,90%
+5504,YOLOv8 Nano + Sam,True,True,2,Random,10%,90%,100%
+5505,YOLOv8 Nano + Sam,True,True,2,Random,10%,90%,110%
+5506,YOLOv8 Nano + Sam,True,True,2,Random,10%,100%,90%
+5507,YOLOv8 Nano + Sam,True,True,2,Random,10%,100%,100%
+5508,YOLOv8 Nano + Sam,True,True,2,Random,10%,100%,110%
+5509,YOLOv8 Nano + Sam,True,True,2,Random,10%,110%,90%
+5510,YOLOv8 Nano + Sam,True,True,2,Random,10%,110%,100%
+5511,YOLOv8 Nano + Sam,True,True,2,Random,10%,110%,110%
+5512,YOLOv8 Nano + Sam,True,True,2,Random,15%,90%,90%
+5513,YOLOv8 Nano + Sam,True,True,2,Random,15%,90%,100%
+5514,YOLOv8 Nano + Sam,True,True,2,Random,15%,90%,110%
+5515,YOLOv8 Nano + Sam,True,True,2,Random,15%,100%,90%
+5516,YOLOv8 Nano + Sam,True,True,2,Random,15%,100%,100%
+5517,YOLOv8 Nano + Sam,True,True,2,Random,15%,100%,110%
+5518,YOLOv8 Nano + Sam,True,True,2,Random,15%,110%,90%
+5519,YOLOv8 Nano + Sam,True,True,2,Random,15%,110%,100%
+5520,YOLOv8 Nano + Sam,True,True,2,Random,15%,110%,110%
+5521,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,90%,90%
+5522,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,90%,100%
+5523,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,90%,110%
+5524,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,100%,90%
+5525,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,100%,100%
+5526,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,100%,110%
+5527,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,110%,90%
+5528,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,110%,100%
+5529,YOLOv8 Nano + Sam,True,True,2,Distance Max,0%,110%,110%
+5530,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,90%,90%
+5531,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,90%,100%
+5532,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,90%,110%
+5533,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,100%,90%
+5534,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,100%,100%
+5535,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,100%,110%
+5536,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,110%,90%
+5537,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,110%,100%
+5538,YOLOv8 Nano + Sam,True,True,2,Distance Max,5%,110%,110%
+5539,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,90%,90%
+5540,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,90%,100%
+5541,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,90%,110%
+5542,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,100%,90%
+5543,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,100%,100%
+5544,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,100%,110%
+5545,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,110%,90%
+5546,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,110%,100%
+5547,YOLOv8 Nano + Sam,True,True,2,Distance Max,10%,110%,110%
+5548,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,90%,90%
+5549,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,90%,100%
+5550,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,90%,110%
+5551,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,100%,90%
+5552,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,100%,100%
+5553,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,100%,110%
+5554,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,110%,90%
+5555,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,110%,100%
+5556,YOLOv8 Nano + Sam,True,True,2,Distance Max,15%,110%,110%
+5557,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,90%,90%
+5558,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,90%,100%
+5559,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,90%,110%
+5560,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,100%,90%
+5561,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,100%,100%
+5562,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,100%,110%
+5563,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,110%,90%
+5564,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,110%,100%
+5565,YOLOv8 Nano + Sam,True,True,2,Voronoi,0%,110%,110%
+5566,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,90%,90%
+5567,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,90%,100%
+5568,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,90%,110%
+5569,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,100%,90%
+5570,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,100%,100%
+5571,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,100%,110%
+5572,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,110%,90%
+5573,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,110%,100%
+5574,YOLOv8 Nano + Sam,True,True,2,Voronoi,5%,110%,110%
+5575,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,90%,90%
+5576,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,90%,100%
+5577,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,90%,110%
+5578,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,100%,90%
+5579,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,100%,100%
+5580,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,100%,110%
+5581,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,110%,90%
+5582,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,110%,100%
+5583,YOLOv8 Nano + Sam,True,True,2,Voronoi,10%,110%,110%
+5584,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,90%,90%
+5585,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,90%,100%
+5586,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,90%,110%
+5587,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,100%,90%
+5588,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,100%,100%
+5589,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,100%,110%
+5590,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,110%,90%
+5591,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,110%,100%
+5592,YOLOv8 Nano + Sam,True,True,2,Voronoi,15%,110%,110%
+5593,YOLOv8 Nano + Sam,True,True,3,Random,0%,90%,90%
+5594,YOLOv8 Nano + Sam,True,True,3,Random,0%,90%,100%
+5595,YOLOv8 Nano + Sam,True,True,3,Random,0%,90%,110%
+5596,YOLOv8 Nano + Sam,True,True,3,Random,0%,100%,90%
+5597,YOLOv8 Nano + Sam,True,True,3,Random,0%,100%,100%
+5598,YOLOv8 Nano + Sam,True,True,3,Random,0%,100%,110%
+5599,YOLOv8 Nano + Sam,True,True,3,Random,0%,110%,90%
+5600,YOLOv8 Nano + Sam,True,True,3,Random,0%,110%,100%
+5601,YOLOv8 Nano + Sam,True,True,3,Random,0%,110%,110%
+5602,YOLOv8 Nano + Sam,True,True,3,Random,5%,90%,90%
+5603,YOLOv8 Nano + Sam,True,True,3,Random,5%,90%,100%
+5604,YOLOv8 Nano + Sam,True,True,3,Random,5%,90%,110%
+5605,YOLOv8 Nano + Sam,True,True,3,Random,5%,100%,90%
+5606,YOLOv8 Nano + Sam,True,True,3,Random,5%,100%,100%
+5607,YOLOv8 Nano + Sam,True,True,3,Random,5%,100%,110%
+5608,YOLOv8 Nano + Sam,True,True,3,Random,5%,110%,90%
+5609,YOLOv8 Nano + Sam,True,True,3,Random,5%,110%,100%
+5610,YOLOv8 Nano + Sam,True,True,3,Random,5%,110%,110%
+5611,YOLOv8 Nano + Sam,True,True,3,Random,10%,90%,90%
+5612,YOLOv8 Nano + Sam,True,True,3,Random,10%,90%,100%
+5613,YOLOv8 Nano + Sam,True,True,3,Random,10%,90%,110%
+5614,YOLOv8 Nano + Sam,True,True,3,Random,10%,100%,90%
+5615,YOLOv8 Nano + Sam,True,True,3,Random,10%,100%,100%
+5616,YOLOv8 Nano + Sam,True,True,3,Random,10%,100%,110%
+5617,YOLOv8 Nano + Sam,True,True,3,Random,10%,110%,90%
+5618,YOLOv8 Nano + Sam,True,True,3,Random,10%,110%,100%
+5619,YOLOv8 Nano + Sam,True,True,3,Random,10%,110%,110%
+5620,YOLOv8 Nano + Sam,True,True,3,Random,15%,90%,90%
+5621,YOLOv8 Nano + Sam,True,True,3,Random,15%,90%,100%
+5622,YOLOv8 Nano + Sam,True,True,3,Random,15%,90%,110%
+5623,YOLOv8 Nano + Sam,True,True,3,Random,15%,100%,90%
+5624,YOLOv8 Nano + Sam,True,True,3,Random,15%,100%,100%
+5625,YOLOv8 Nano + Sam,True,True,3,Random,15%,100%,110%
+5626,YOLOv8 Nano + Sam,True,True,3,Random,15%,110%,90%
+5627,YOLOv8 Nano + Sam,True,True,3,Random,15%,110%,100%
+5628,YOLOv8 Nano + Sam,True,True,3,Random,15%,110%,110%
+5629,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,90%,90%
+5630,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,90%,100%
+5631,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,90%,110%
+5632,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,100%,90%
+5633,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,100%,100%
+5634,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,100%,110%
+5635,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,110%,90%
+5636,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,110%,100%
+5637,YOLOv8 Nano + Sam,True,True,3,Distance Max,0%,110%,110%
+5638,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,90%,90%
+5639,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,90%,100%
+5640,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,90%,110%
+5641,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,100%,90%
+5642,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,100%,100%
+5643,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,100%,110%
+5644,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,110%,90%
+5645,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,110%,100%
+5646,YOLOv8 Nano + Sam,True,True,3,Distance Max,5%,110%,110%
+5647,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,90%,90%
+5648,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,90%,100%
+5649,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,90%,110%
+5650,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,100%,90%
+5651,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,100%,100%
+5652,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,100%,110%
+5653,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,110%,90%
+5654,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,110%,100%
+5655,YOLOv8 Nano + Sam,True,True,3,Distance Max,10%,110%,110%
+5656,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,90%,90%
+5657,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,90%,100%
+5658,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,90%,110%
+5659,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,100%,90%
+5660,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,100%,100%
+5661,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,100%,110%
+5662,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,110%,90%
+5663,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,110%,100%
+5664,YOLOv8 Nano + Sam,True,True,3,Distance Max,15%,110%,110%
+5665,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,90%,90%
+5666,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,90%,100%
+5667,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,90%,110%
+5668,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,100%,90%
+5669,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,100%,100%
+5670,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,100%,110%
+5671,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,110%,90%
+5672,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,110%,100%
+5673,YOLOv8 Nano + Sam,True,True,3,Voronoi,0%,110%,110%
+5674,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,90%,90%
+5675,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,90%,100%
+5676,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,90%,110%
+5677,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,100%,90%
+5678,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,100%,100%
+5679,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,100%,110%
+5680,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,110%,90%
+5681,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,110%,100%
+5682,YOLOv8 Nano + Sam,True,True,3,Voronoi,5%,110%,110%
+5683,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,90%,90%
+5684,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,90%,100%
+5685,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,90%,110%
+5686,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,100%,90%
+5687,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,100%,100%
+5688,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,100%,110%
+5689,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,110%,90%
+5690,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,110%,100%
+5691,YOLOv8 Nano + Sam,True,True,3,Voronoi,10%,110%,110%
+5692,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,90%,90%
+5693,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,90%,100%
+5694,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,90%,110%
+5695,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,100%,90%
+5696,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,100%,100%
+5697,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,100%,110%
+5698,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,110%,90%
+5699,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,110%,100%
+5700,YOLOv8 Nano + Sam,True,True,3,Voronoi,15%,110%,110%
+5701,YOLOv8 Nano + Sam,True,True,4,Random,0%,90%,90%
+5702,YOLOv8 Nano + Sam,True,True,4,Random,0%,90%,100%
+5703,YOLOv8 Nano + Sam,True,True,4,Random,0%,90%,110%
+5704,YOLOv8 Nano + Sam,True,True,4,Random,0%,100%,90%
+5705,YOLOv8 Nano + Sam,True,True,4,Random,0%,100%,100%
+5706,YOLOv8 Nano + Sam,True,True,4,Random,0%,100%,110%
+5707,YOLOv8 Nano + Sam,True,True,4,Random,0%,110%,90%
+5708,YOLOv8 Nano + Sam,True,True,4,Random,0%,110%,100%
+5709,YOLOv8 Nano + Sam,True,True,4,Random,0%,110%,110%
+5710,YOLOv8 Nano + Sam,True,True,4,Random,5%,90%,90%
+5711,YOLOv8 Nano + Sam,True,True,4,Random,5%,90%,100%
+5712,YOLOv8 Nano + Sam,True,True,4,Random,5%,90%,110%
+5713,YOLOv8 Nano + Sam,True,True,4,Random,5%,100%,90%
+5714,YOLOv8 Nano + Sam,True,True,4,Random,5%,100%,100%
+5715,YOLOv8 Nano + Sam,True,True,4,Random,5%,100%,110%
+5716,YOLOv8 Nano + Sam,True,True,4,Random,5%,110%,90%
+5717,YOLOv8 Nano + Sam,True,True,4,Random,5%,110%,100%
+5718,YOLOv8 Nano + Sam,True,True,4,Random,5%,110%,110%
+5719,YOLOv8 Nano + Sam,True,True,4,Random,10%,90%,90%
+5720,YOLOv8 Nano + Sam,True,True,4,Random,10%,90%,100%
+5721,YOLOv8 Nano + Sam,True,True,4,Random,10%,90%,110%
+5722,YOLOv8 Nano + Sam,True,True,4,Random,10%,100%,90%
+5723,YOLOv8 Nano + Sam,True,True,4,Random,10%,100%,100%
+5724,YOLOv8 Nano + Sam,True,True,4,Random,10%,100%,110%
+5725,YOLOv8 Nano + Sam,True,True,4,Random,10%,110%,90%
+5726,YOLOv8 Nano + Sam,True,True,4,Random,10%,110%,100%
+5727,YOLOv8 Nano + Sam,True,True,4,Random,10%,110%,110%
+5728,YOLOv8 Nano + Sam,True,True,4,Random,15%,90%,90%
+5729,YOLOv8 Nano + Sam,True,True,4,Random,15%,90%,100%
+5730,YOLOv8 Nano + Sam,True,True,4,Random,15%,90%,110%
+5731,YOLOv8 Nano + Sam,True,True,4,Random,15%,100%,90%
+5732,YOLOv8 Nano + Sam,True,True,4,Random,15%,100%,100%
+5733,YOLOv8 Nano + Sam,True,True,4,Random,15%,100%,110%
+5734,YOLOv8 Nano + Sam,True,True,4,Random,15%,110%,90%
+5735,YOLOv8 Nano + Sam,True,True,4,Random,15%,110%,100%
+5736,YOLOv8 Nano + Sam,True,True,4,Random,15%,110%,110%
+5737,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,90%,90%
+5738,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,90%,100%
+5739,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,90%,110%
+5740,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,100%,90%
+5741,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,100%,100%
+5742,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,100%,110%
+5743,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,110%,90%
+5744,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,110%,100%
+5745,YOLOv8 Nano + Sam,True,True,4,Distance Max,0%,110%,110%
+5746,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,90%,90%
+5747,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,90%,100%
+5748,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,90%,110%
+5749,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,100%,90%
+5750,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,100%,100%
+5751,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,100%,110%
+5752,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,110%,90%
+5753,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,110%,100%
+5754,YOLOv8 Nano + Sam,True,True,4,Distance Max,5%,110%,110%
+5755,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,90%,90%
+5756,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,90%,100%
+5757,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,90%,110%
+5758,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,100%,90%
+5759,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,100%,100%
+5760,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,100%,110%
+5761,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,110%,90%
+5762,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,110%,100%
+5763,YOLOv8 Nano + Sam,True,True,4,Distance Max,10%,110%,110%
+5764,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,90%,90%
+5765,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,90%,100%
+5766,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,90%,110%
+5767,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,100%,90%
+5768,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,100%,100%
+5769,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,100%,110%
+5770,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,110%,90%
+5771,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,110%,100%
+5772,YOLOv8 Nano + Sam,True,True,4,Distance Max,15%,110%,110%
+5773,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,90%,90%
+5774,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,90%,100%
+5775,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,90%,110%
+5776,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,100%,90%
+5777,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,100%,100%
+5778,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,100%,110%
+5779,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,110%,90%
+5780,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,110%,100%
+5781,YOLOv8 Nano + Sam,True,True,4,Voronoi,0%,110%,110%
+5782,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,90%,90%
+5783,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,90%,100%
+5784,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,90%,110%
+5785,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,100%,90%
+5786,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,100%,100%
+5787,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,100%,110%
+5788,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,110%,90%
+5789,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,110%,100%
+5790,YOLOv8 Nano + Sam,True,True,4,Voronoi,5%,110%,110%
+5791,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,90%,90%
+5792,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,90%,100%
+5793,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,90%,110%
+5794,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,100%,90%
+5795,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,100%,100%
+5796,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,100%,110%
+5797,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,110%,90%
+5798,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,110%,100%
+5799,YOLOv8 Nano + Sam,True,True,4,Voronoi,10%,110%,110%
+5800,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,90%,90%
+5801,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,90%,100%
+5802,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,90%,110%
+5803,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,100%,90%
+5804,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,100%,100%
+5805,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,100%,110%
+5806,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,110%,90%
+5807,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,110%,100%
+5808,YOLOv8 Nano + Sam,True,True,4,Voronoi,15%,110%,110%
+5809,YOLOv8 Nano + Sam,True,True,5,Random,0%,90%,90%
+5810,YOLOv8 Nano + Sam,True,True,5,Random,0%,90%,100%
+5811,YOLOv8 Nano + Sam,True,True,5,Random,0%,90%,110%
+5812,YOLOv8 Nano + Sam,True,True,5,Random,0%,100%,90%
+5813,YOLOv8 Nano + Sam,True,True,5,Random,0%,100%,100%
+5814,YOLOv8 Nano + Sam,True,True,5,Random,0%,100%,110%
+5815,YOLOv8 Nano + Sam,True,True,5,Random,0%,110%,90%
+5816,YOLOv8 Nano + Sam,True,True,5,Random,0%,110%,100%
+5817,YOLOv8 Nano + Sam,True,True,5,Random,0%,110%,110%
+5818,YOLOv8 Nano + Sam,True,True,5,Random,5%,90%,90%
+5819,YOLOv8 Nano + Sam,True,True,5,Random,5%,90%,100%
+5820,YOLOv8 Nano + Sam,True,True,5,Random,5%,90%,110%
+5821,YOLOv8 Nano + Sam,True,True,5,Random,5%,100%,90%
+5822,YOLOv8 Nano + Sam,True,True,5,Random,5%,100%,100%
+5823,YOLOv8 Nano + Sam,True,True,5,Random,5%,100%,110%
+5824,YOLOv8 Nano + Sam,True,True,5,Random,5%,110%,90%
+5825,YOLOv8 Nano + Sam,True,True,5,Random,5%,110%,100%
+5826,YOLOv8 Nano + Sam,True,True,5,Random,5%,110%,110%
+5827,YOLOv8 Nano + Sam,True,True,5,Random,10%,90%,90%
+5828,YOLOv8 Nano + Sam,True,True,5,Random,10%,90%,100%
+5829,YOLOv8 Nano + Sam,True,True,5,Random,10%,90%,110%
+5830,YOLOv8 Nano + Sam,True,True,5,Random,10%,100%,90%
+5831,YOLOv8 Nano + Sam,True,True,5,Random,10%,100%,100%
+5832,YOLOv8 Nano + Sam,True,True,5,Random,10%,100%,110%
+5833,YOLOv8 Nano + Sam,True,True,5,Random,10%,110%,90%
+5834,YOLOv8 Nano + Sam,True,True,5,Random,10%,110%,100%
+5835,YOLOv8 Nano + Sam,True,True,5,Random,10%,110%,110%
+5836,YOLOv8 Nano + Sam,True,True,5,Random,15%,90%,90%
+5837,YOLOv8 Nano + Sam,True,True,5,Random,15%,90%,100%
+5838,YOLOv8 Nano + Sam,True,True,5,Random,15%,90%,110%
+5839,YOLOv8 Nano + Sam,True,True,5,Random,15%,100%,90%
+5840,YOLOv8 Nano + Sam,True,True,5,Random,15%,100%,100%
+5841,YOLOv8 Nano + Sam,True,True,5,Random,15%,100%,110%
+5842,YOLOv8 Nano + Sam,True,True,5,Random,15%,110%,90%
+5843,YOLOv8 Nano + Sam,True,True,5,Random,15%,110%,100%
+5844,YOLOv8 Nano + Sam,True,True,5,Random,15%,110%,110%
+5845,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,90%,90%
+5846,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,90%,100%
+5847,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,90%,110%
+5848,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,100%,90%
+5849,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,100%,100%
+5850,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,100%,110%
+5851,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,110%,90%
+5852,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,110%,100%
+5853,YOLOv8 Nano + Sam,True,True,5,Distance Max,0%,110%,110%
+5854,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,90%,90%
+5855,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,90%,100%
+5856,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,90%,110%
+5857,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,100%,90%
+5858,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,100%,100%
+5859,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,100%,110%
+5860,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,110%,90%
+5861,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,110%,100%
+5862,YOLOv8 Nano + Sam,True,True,5,Distance Max,5%,110%,110%
+5863,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,90%,90%
+5864,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,90%,100%
+5865,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,90%,110%
+5866,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,100%,90%
+5867,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,100%,100%
+5868,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,100%,110%
+5869,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,110%,90%
+5870,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,110%,100%
+5871,YOLOv8 Nano + Sam,True,True,5,Distance Max,10%,110%,110%
+5872,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,90%,90%
+5873,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,90%,100%
+5874,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,90%,110%
+5875,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,100%,90%
+5876,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,100%,100%
+5877,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,100%,110%
+5878,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,110%,90%
+5879,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,110%,100%
+5880,YOLOv8 Nano + Sam,True,True,5,Distance Max,15%,110%,110%
+5881,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,90%,90%
+5882,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,90%,100%
+5883,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,90%,110%
+5884,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,100%,90%
+5885,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,100%,100%
+5886,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,100%,110%
+5887,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,110%,90%
+5888,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,110%,100%
+5889,YOLOv8 Nano + Sam,True,True,5,Voronoi,0%,110%,110%
+5890,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,90%,90%
+5891,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,90%,100%
+5892,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,90%,110%
+5893,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,100%,90%
+5894,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,100%,100%
+5895,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,100%,110%
+5896,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,110%,90%
+5897,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,110%,100%
+5898,YOLOv8 Nano + Sam,True,True,5,Voronoi,5%,110%,110%
+5899,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,90%,90%
+5900,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,90%,100%
+5901,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,90%,110%
+5902,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,100%,90%
+5903,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,100%,100%
+5904,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,100%,110%
+5905,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,110%,90%
+5906,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,110%,100%
+5907,YOLOv8 Nano + Sam,True,True,5,Voronoi,10%,110%,110%
+5908,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,90%,90%
+5909,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,90%,100%
+5910,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,90%,110%
+5911,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,100%,90%
+5912,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,100%,100%
+5913,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,100%,110%
+5914,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,110%,90%
+5915,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,110%,100%
+5916,YOLOv8 Nano + Sam,True,True,5,Voronoi,15%,110%,110%
+5917,YOLOv8 Nano + Sam,True,True,6,Random,0%,90%,90%
+5918,YOLOv8 Nano + Sam,True,True,6,Random,0%,90%,100%
+5919,YOLOv8 Nano + Sam,True,True,6,Random,0%,90%,110%
+5920,YOLOv8 Nano + Sam,True,True,6,Random,0%,100%,90%
+5921,YOLOv8 Nano + Sam,True,True,6,Random,0%,100%,100%
+5922,YOLOv8 Nano + Sam,True,True,6,Random,0%,100%,110%
+5923,YOLOv8 Nano + Sam,True,True,6,Random,0%,110%,90%
+5924,YOLOv8 Nano + Sam,True,True,6,Random,0%,110%,100%
+5925,YOLOv8 Nano + Sam,True,True,6,Random,0%,110%,110%
+5926,YOLOv8 Nano + Sam,True,True,6,Random,5%,90%,90%
+5927,YOLOv8 Nano + Sam,True,True,6,Random,5%,90%,100%
+5928,YOLOv8 Nano + Sam,True,True,6,Random,5%,90%,110%
+5929,YOLOv8 Nano + Sam,True,True,6,Random,5%,100%,90%
+5930,YOLOv8 Nano + Sam,True,True,6,Random,5%,100%,100%
+5931,YOLOv8 Nano + Sam,True,True,6,Random,5%,100%,110%
+5932,YOLOv8 Nano + Sam,True,True,6,Random,5%,110%,90%
+5933,YOLOv8 Nano + Sam,True,True,6,Random,5%,110%,100%
+5934,YOLOv8 Nano + Sam,True,True,6,Random,5%,110%,110%
+5935,YOLOv8 Nano + Sam,True,True,6,Random,10%,90%,90%
+5936,YOLOv8 Nano + Sam,True,True,6,Random,10%,90%,100%
+5937,YOLOv8 Nano + Sam,True,True,6,Random,10%,90%,110%
+5938,YOLOv8 Nano + Sam,True,True,6,Random,10%,100%,90%
+5939,YOLOv8 Nano + Sam,True,True,6,Random,10%,100%,100%
+5940,YOLOv8 Nano + Sam,True,True,6,Random,10%,100%,110%
+5941,YOLOv8 Nano + Sam,True,True,6,Random,10%,110%,90%
+5942,YOLOv8 Nano + Sam,True,True,6,Random,10%,110%,100%
+5943,YOLOv8 Nano + Sam,True,True,6,Random,10%,110%,110%
+5944,YOLOv8 Nano + Sam,True,True,6,Random,15%,90%,90%
+5945,YOLOv8 Nano + Sam,True,True,6,Random,15%,90%,100%
+5946,YOLOv8 Nano + Sam,True,True,6,Random,15%,90%,110%
+5947,YOLOv8 Nano + Sam,True,True,6,Random,15%,100%,90%
+5948,YOLOv8 Nano + Sam,True,True,6,Random,15%,100%,100%
+5949,YOLOv8 Nano + Sam,True,True,6,Random,15%,100%,110%
+5950,YOLOv8 Nano + Sam,True,True,6,Random,15%,110%,90%
+5951,YOLOv8 Nano + Sam,True,True,6,Random,15%,110%,100%
+5952,YOLOv8 Nano + Sam,True,True,6,Random,15%,110%,110%
+5953,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,90%,90%
+5954,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,90%,100%
+5955,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,90%,110%
+5956,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,100%,90%
+5957,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,100%,100%
+5958,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,100%,110%
+5959,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,110%,90%
+5960,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,110%,100%
+5961,YOLOv8 Nano + Sam,True,True,6,Distance Max,0%,110%,110%
+5962,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,90%,90%
+5963,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,90%,100%
+5964,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,90%,110%
+5965,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,100%,90%
+5966,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,100%,100%
+5967,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,100%,110%
+5968,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,110%,90%
+5969,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,110%,100%
+5970,YOLOv8 Nano + Sam,True,True,6,Distance Max,5%,110%,110%
+5971,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,90%,90%
+5972,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,90%,100%
+5973,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,90%,110%
+5974,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,100%,90%
+5975,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,100%,100%
+5976,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,100%,110%
+5977,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,110%,90%
+5978,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,110%,100%
+5979,YOLOv8 Nano + Sam,True,True,6,Distance Max,10%,110%,110%
+5980,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,90%,90%
+5981,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,90%,100%
+5982,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,90%,110%
+5983,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,100%,90%
+5984,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,100%,100%
+5985,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,100%,110%
+5986,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,110%,90%
+5987,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,110%,100%
+5988,YOLOv8 Nano + Sam,True,True,6,Distance Max,15%,110%,110%
+5989,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,90%,90%
+5990,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,90%,100%
+5991,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,90%,110%
+5992,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,100%,90%
+5993,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,100%,100%
+5994,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,100%,110%
+5995,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,110%,90%
+5996,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,110%,100%
+5997,YOLOv8 Nano + Sam,True,True,6,Voronoi,0%,110%,110%
+5998,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,90%,90%
+5999,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,90%,100%
+6000,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,90%,110%
+6001,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,100%,90%
+6002,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,100%,100%
+6003,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,100%,110%
+6004,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,110%,90%
+6005,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,110%,100%
+6006,YOLOv8 Nano + Sam,True,True,6,Voronoi,5%,110%,110%
+6007,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,90%,90%
+6008,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,90%,100%
+6009,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,90%,110%
+6010,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,100%,90%
+6011,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,100%,100%
+6012,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,100%,110%
+6013,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,110%,90%
+6014,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,110%,100%
+6015,YOLOv8 Nano + Sam,True,True,6,Voronoi,10%,110%,110%
+6016,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,90%,90%
+6017,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,90%,100%
+6018,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,90%,110%
+6019,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,100%,90%
+6020,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,100%,100%
+6021,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,100%,110%
+6022,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,110%,90%
+6023,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,110%,100%
+6024,YOLOv8 Nano + Sam,True,True,6,Voronoi,15%,110%,110%
+6025,YOLOv8 Nano + Sam,True,True,7,Random,0%,90%,90%
+6026,YOLOv8 Nano + Sam,True,True,7,Random,0%,90%,100%
+6027,YOLOv8 Nano + Sam,True,True,7,Random,0%,90%,110%
+6028,YOLOv8 Nano + Sam,True,True,7,Random,0%,100%,90%
+6029,YOLOv8 Nano + Sam,True,True,7,Random,0%,100%,100%
+6030,YOLOv8 Nano + Sam,True,True,7,Random,0%,100%,110%
+6031,YOLOv8 Nano + Sam,True,True,7,Random,0%,110%,90%
+6032,YOLOv8 Nano + Sam,True,True,7,Random,0%,110%,100%
+6033,YOLOv8 Nano + Sam,True,True,7,Random,0%,110%,110%
+6034,YOLOv8 Nano + Sam,True,True,7,Random,5%,90%,90%
+6035,YOLOv8 Nano + Sam,True,True,7,Random,5%,90%,100%
+6036,YOLOv8 Nano + Sam,True,True,7,Random,5%,90%,110%
+6037,YOLOv8 Nano + Sam,True,True,7,Random,5%,100%,90%
+6038,YOLOv8 Nano + Sam,True,True,7,Random,5%,100%,100%
+6039,YOLOv8 Nano + Sam,True,True,7,Random,5%,100%,110%
+6040,YOLOv8 Nano + Sam,True,True,7,Random,5%,110%,90%
+6041,YOLOv8 Nano + Sam,True,True,7,Random,5%,110%,100%
+6042,YOLOv8 Nano + Sam,True,True,7,Random,5%,110%,110%
+6043,YOLOv8 Nano + Sam,True,True,7,Random,10%,90%,90%
+6044,YOLOv8 Nano + Sam,True,True,7,Random,10%,90%,100%
+6045,YOLOv8 Nano + Sam,True,True,7,Random,10%,90%,110%
+6046,YOLOv8 Nano + Sam,True,True,7,Random,10%,100%,90%
+6047,YOLOv8 Nano + Sam,True,True,7,Random,10%,100%,100%
+6048,YOLOv8 Nano + Sam,True,True,7,Random,10%,100%,110%
+6049,YOLOv8 Nano + Sam,True,True,7,Random,10%,110%,90%
+6050,YOLOv8 Nano + Sam,True,True,7,Random,10%,110%,100%
+6051,YOLOv8 Nano + Sam,True,True,7,Random,10%,110%,110%
+6052,YOLOv8 Nano + Sam,True,True,7,Random,15%,90%,90%
+6053,YOLOv8 Nano + Sam,True,True,7,Random,15%,90%,100%
+6054,YOLOv8 Nano + Sam,True,True,7,Random,15%,90%,110%
+6055,YOLOv8 Nano + Sam,True,True,7,Random,15%,100%,90%
+6056,YOLOv8 Nano + Sam,True,True,7,Random,15%,100%,100%
+6057,YOLOv8 Nano + Sam,True,True,7,Random,15%,100%,110%
+6058,YOLOv8 Nano + Sam,True,True,7,Random,15%,110%,90%
+6059,YOLOv8 Nano + Sam,True,True,7,Random,15%,110%,100%
+6060,YOLOv8 Nano + Sam,True,True,7,Random,15%,110%,110%
+6061,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,90%,90%
+6062,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,90%,100%
+6063,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,90%,110%
+6064,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,100%,90%
+6065,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,100%,100%
+6066,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,100%,110%
+6067,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,110%,90%
+6068,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,110%,100%
+6069,YOLOv8 Nano + Sam,True,True,7,Distance Max,0%,110%,110%
+6070,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,90%,90%
+6071,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,90%,100%
+6072,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,90%,110%
+6073,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,100%,90%
+6074,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,100%,100%
+6075,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,100%,110%
+6076,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,110%,90%
+6077,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,110%,100%
+6078,YOLOv8 Nano + Sam,True,True,7,Distance Max,5%,110%,110%
+6079,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,90%,90%
+6080,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,90%,100%
+6081,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,90%,110%
+6082,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,100%,90%
+6083,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,100%,100%
+6084,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,100%,110%
+6085,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,110%,90%
+6086,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,110%,100%
+6087,YOLOv8 Nano + Sam,True,True,7,Distance Max,10%,110%,110%
+6088,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,90%,90%
+6089,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,90%,100%
+6090,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,90%,110%
+6091,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,100%,90%
+6092,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,100%,100%
+6093,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,100%,110%
+6094,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,90%
+6095,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,100%
+6096,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,110%
+6097,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,90%
+6098,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,100%
+6099,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,110%
+6100,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,100%,90%
+6101,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,100%,100%
+6102,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,100%,110%
+6103,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,110%,90%
+6104,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,110%,100%
+6105,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,110%,110%
+6106,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,90%,90%
+6107,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,90%,100%
+6108,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,90%,110%
+6109,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,100%,90%
+6110,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,100%,100%
+6111,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,100%,110%
+6112,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,110%,90%
+6113,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,110%,100%
+6114,YOLOv8 Nano + Sam,True,True,7,Voronoi,5%,110%,110%
+6115,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,90%,90%
+6116,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,90%,100%
+6117,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,90%,110%
+6118,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,100%,90%
+6119,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,100%,100%
+6120,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,100%,110%
+6121,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,110%,90%
+6122,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,110%,100%
+6123,YOLOv8 Nano + Sam,True,True,7,Voronoi,10%,110%,110%
+6124,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,90%,90%
+6125,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,90%,100%
+6126,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,90%,110%
+6127,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,100%,90%
+6128,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,100%,100%
+6129,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,100%,110%
+6130,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,110%,90%
+6131,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,110%,100%
+6132,YOLOv8 Nano + Sam,True,True,7,Voronoi,15%,110%,110%
+6133,YOLOv8 Nano + Sam,True,False,1,Random,0%,90%,N/A
+6134,YOLOv8 Nano + Sam,True,False,1,Random,0%,100%,N/A
+6135,YOLOv8 Nano + Sam,True,False,1,Random,0%,110%,N/A
+6136,YOLOv8 Nano + Sam,True,False,1,Random,5%,90%,N/A
+6137,YOLOv8 Nano + Sam,True,False,1,Random,5%,100%,N/A
+6138,YOLOv8 Nano + Sam,True,False,1,Random,5%,110%,N/A
+6139,YOLOv8 Nano + Sam,True,False,1,Random,10%,90%,N/A
+6140,YOLOv8 Nano + Sam,True,False,1,Random,10%,100%,N/A
+6141,YOLOv8 Nano + Sam,True,False,1,Random,10%,110%,N/A
+6142,YOLOv8 Nano + Sam,True,False,1,Random,15%,90%,N/A
+6143,YOLOv8 Nano + Sam,True,False,1,Random,15%,100%,N/A
+6144,YOLOv8 Nano + Sam,True,False,1,Random,15%,110%,N/A
+6145,YOLOv8 Nano + Sam,True,False,1,Distance Max,0%,90%,N/A
+6146,YOLOv8 Nano + Sam,True,False,1,Distance Max,0%,100%,N/A
+6147,YOLOv8 Nano + Sam,True,False,1,Distance Max,0%,110%,N/A
+6148,YOLOv8 Nano + Sam,True,False,1,Distance Max,5%,90%,N/A
+6149,YOLOv8 Nano + Sam,True,False,1,Distance Max,5%,100%,N/A
+6150,YOLOv8 Nano + Sam,True,False,1,Distance Max,5%,110%,N/A
+6151,YOLOv8 Nano + Sam,True,False,1,Distance Max,10%,90%,N/A
+6152,YOLOv8 Nano + Sam,True,False,1,Distance Max,10%,100%,N/A
+6153,YOLOv8 Nano + Sam,True,False,1,Distance Max,10%,110%,N/A
+6154,YOLOv8 Nano + Sam,True,False,1,Distance Max,15%,90%,N/A
+6155,YOLOv8 Nano + Sam,True,False,1,Distance Max,15%,100%,N/A
+6156,YOLOv8 Nano + Sam,True,False,1,Distance Max,15%,110%,N/A
+6157,YOLOv8 Nano + Sam,True,False,1,Voronoi,0%,90%,N/A
+6158,YOLOv8 Nano + Sam,True,False,1,Voronoi,0%,100%,N/A
+6159,YOLOv8 Nano + Sam,True,False,1,Voronoi,0%,110%,N/A
+6160,YOLOv8 Nano + Sam,True,False,1,Voronoi,5%,90%,N/A
+6161,YOLOv8 Nano + Sam,True,False,1,Voronoi,5%,100%,N/A
+6162,YOLOv8 Nano + Sam,True,False,1,Voronoi,5%,110%,N/A
+6163,YOLOv8 Nano + Sam,True,False,1,Voronoi,10%,90%,N/A
+6164,YOLOv8 Nano + Sam,True,False,1,Voronoi,10%,100%,N/A
+6165,YOLOv8 Nano + Sam,True,False,1,Voronoi,10%,110%,N/A
+6166,YOLOv8 Nano + Sam,True,False,1,Voronoi,15%,90%,N/A
+6167,YOLOv8 Nano + Sam,True,False,1,Voronoi,15%,100%,N/A
+6168,YOLOv8 Nano + Sam,True,False,1,Voronoi,15%,110%,N/A
+6169,YOLOv8 Nano + Sam,True,False,2,Random,0%,90%,N/A
+6170,YOLOv8 Nano + Sam,True,False,2,Random,0%,100%,N/A
+6171,YOLOv8 Nano + Sam,True,False,2,Random,0%,110%,N/A
+6172,YOLOv8 Nano + Sam,True,False,2,Random,5%,90%,N/A
+6173,YOLOv8 Nano + Sam,True,False,2,Random,5%,100%,N/A
+6174,YOLOv8 Nano + Sam,True,False,2,Random,5%,110%,N/A
+6175,YOLOv8 Nano + Sam,True,False,2,Random,10%,90%,N/A
+6176,YOLOv8 Nano + Sam,True,False,2,Random,10%,100%,N/A
+6177,YOLOv8 Nano + Sam,True,False,2,Random,10%,110%,N/A
+6178,YOLOv8 Nano + Sam,True,False,2,Random,15%,90%,N/A
+6179,YOLOv8 Nano + Sam,True,False,2,Random,15%,100%,N/A
+6180,YOLOv8 Nano + Sam,True,False,2,Random,15%,110%,N/A
+6181,YOLOv8 Nano + Sam,True,False,2,Distance Max,0%,90%,N/A
+6182,YOLOv8 Nano + Sam,True,False,2,Distance Max,0%,100%,N/A
+6183,YOLOv8 Nano + Sam,True,False,2,Distance Max,0%,110%,N/A
+6184,YOLOv8 Nano + Sam,True,False,2,Distance Max,5%,90%,N/A
+6185,YOLOv8 Nano + Sam,True,False,2,Distance Max,5%,100%,N/A
+6186,YOLOv8 Nano + Sam,True,False,2,Distance Max,5%,110%,N/A
+6187,YOLOv8 Nano + Sam,True,False,2,Distance Max,10%,90%,N/A
+6188,YOLOv8 Nano + Sam,True,False,2,Distance Max,10%,100%,N/A
+6189,YOLOv8 Nano + Sam,True,False,2,Distance Max,10%,110%,N/A
+6190,YOLOv8 Nano + Sam,True,False,2,Distance Max,15%,90%,N/A
+6191,YOLOv8 Nano + Sam,True,False,2,Distance Max,15%,100%,N/A
+6192,YOLOv8 Nano + Sam,True,False,2,Distance Max,15%,110%,N/A
+6193,YOLOv8 Nano + Sam,True,False,2,Voronoi,0%,90%,N/A
+6194,YOLOv8 Nano + Sam,True,False,2,Voronoi,0%,100%,N/A
+6195,YOLOv8 Nano + Sam,True,False,2,Voronoi,0%,110%,N/A
+6196,YOLOv8 Nano + Sam,True,False,2,Voronoi,5%,90%,N/A
+6197,YOLOv8 Nano + Sam,True,False,2,Voronoi,5%,100%,N/A
+6198,YOLOv8 Nano + Sam,True,False,2,Voronoi,5%,110%,N/A
+6199,YOLOv8 Nano + Sam,True,False,2,Voronoi,10%,90%,N/A
+6200,YOLOv8 Nano + Sam,True,False,2,Voronoi,10%,100%,N/A
+6201,YOLOv8 Nano + Sam,True,False,2,Voronoi,10%,110%,N/A
+6202,YOLOv8 Nano + Sam,True,False,2,Voronoi,15%,90%,N/A
+6203,YOLOv8 Nano + Sam,True,False,2,Voronoi,15%,100%,N/A
+6204,YOLOv8 Nano + Sam,True,False,2,Voronoi,15%,110%,N/A
+6205,YOLOv8 Nano + Sam,True,False,3,Random,0%,90%,N/A
+6206,YOLOv8 Nano + Sam,True,False,3,Random,0%,100%,N/A
+6207,YOLOv8 Nano + Sam,True,False,3,Random,0%,110%,N/A
+6208,YOLOv8 Nano + Sam,True,False,3,Random,5%,90%,N/A
+6209,YOLOv8 Nano + Sam,True,False,3,Random,5%,100%,N/A
+6210,YOLOv8 Nano + Sam,True,False,3,Random,5%,110%,N/A
+6211,YOLOv8 Nano + Sam,True,False,3,Random,10%,90%,N/A
+6212,YOLOv8 Nano + Sam,True,False,3,Random,10%,100%,N/A
+6213,YOLOv8 Nano + Sam,True,False,3,Random,10%,110%,N/A
+6214,YOLOv8 Nano + Sam,True,False,3,Random,15%,90%,N/A
+6215,YOLOv8 Nano + Sam,True,False,3,Random,15%,100%,N/A
+6216,YOLOv8 Nano + Sam,True,False,3,Random,15%,110%,N/A
+6217,YOLOv8 Nano + Sam,True,False,3,Distance Max,0%,90%,N/A
+6218,YOLOv8 Nano + Sam,True,False,3,Distance Max,0%,100%,N/A
+6219,YOLOv8 Nano + Sam,True,False,3,Distance Max,0%,110%,N/A
+6220,YOLOv8 Nano + Sam,True,False,3,Distance Max,5%,90%,N/A
+6221,YOLOv8 Nano + Sam,True,False,3,Distance Max,5%,100%,N/A
+6222,YOLOv8 Nano + Sam,True,False,3,Distance Max,5%,110%,N/A
+6223,YOLOv8 Nano + Sam,True,False,3,Distance Max,10%,90%,N/A
+6224,YOLOv8 Nano + Sam,True,False,3,Distance Max,10%,100%,N/A
+6225,YOLOv8 Nano + Sam,True,False,3,Distance Max,10%,110%,N/A
+6226,YOLOv8 Nano + Sam,True,False,3,Distance Max,15%,90%,N/A
+6227,YOLOv8 Nano + Sam,True,False,3,Distance Max,15%,100%,N/A
+6228,YOLOv8 Nano + Sam,True,False,3,Distance Max,15%,110%,N/A
+6229,YOLOv8 Nano + Sam,True,False,3,Voronoi,0%,90%,N/A
+6230,YOLOv8 Nano + Sam,True,False,3,Voronoi,0%,100%,N/A
+6231,YOLOv8 Nano + Sam,True,False,3,Voronoi,0%,110%,N/A
+6232,YOLOv8 Nano + Sam,True,False,3,Voronoi,5%,90%,N/A
+6233,YOLOv8 Nano + Sam,True,False,3,Voronoi,5%,100%,N/A
+6234,YOLOv8 Nano + Sam,True,False,3,Voronoi,5%,110%,N/A
+6235,YOLOv8 Nano + Sam,True,False,3,Voronoi,10%,90%,N/A
+6236,YOLOv8 Nano + Sam,True,False,3,Voronoi,10%,100%,N/A
+6237,YOLOv8 Nano + Sam,True,False,3,Voronoi,10%,110%,N/A
+6238,YOLOv8 Nano + Sam,True,False,3,Voronoi,15%,90%,N/A
+6239,YOLOv8 Nano + Sam,True,False,3,Voronoi,15%,100%,N/A
+6240,YOLOv8 Nano + Sam,True,False,3,Voronoi,15%,110%,N/A
+6241,YOLOv8 Nano + Sam,True,False,4,Random,0%,90%,N/A
+6242,YOLOv8 Nano + Sam,True,False,4,Random,0%,100%,N/A
+6243,YOLOv8 Nano + Sam,True,False,4,Random,0%,110%,N/A
+6244,YOLOv8 Nano + Sam,True,False,4,Random,5%,90%,N/A
+6245,YOLOv8 Nano + Sam,True,False,4,Random,5%,100%,N/A
+6246,YOLOv8 Nano + Sam,True,False,4,Random,5%,110%,N/A
+6247,YOLOv8 Nano + Sam,True,False,4,Random,10%,90%,N/A
+6248,YOLOv8 Nano + Sam,True,False,4,Random,10%,100%,N/A
+6249,YOLOv8 Nano + Sam,True,False,4,Random,10%,110%,N/A
+6250,YOLOv8 Nano + Sam,True,False,4,Random,15%,90%,N/A
+6251,YOLOv8 Nano + Sam,True,False,4,Random,15%,100%,N/A
+6252,YOLOv8 Nano + Sam,True,False,4,Random,15%,110%,N/A
+6253,YOLOv8 Nano + Sam,True,False,4,Distance Max,0%,90%,N/A
+6254,YOLOv8 Nano + Sam,True,False,4,Distance Max,0%,100%,N/A
+6255,YOLOv8 Nano + Sam,True,False,4,Distance Max,0%,110%,N/A
+6256,YOLOv8 Nano + Sam,True,False,4,Distance Max,5%,90%,N/A
+6257,YOLOv8 Nano + Sam,True,False,4,Distance Max,5%,100%,N/A
+6258,YOLOv8 Nano + Sam,True,False,4,Distance Max,5%,110%,N/A
+6259,YOLOv8 Nano + Sam,True,False,4,Distance Max,10%,90%,N/A
+6260,YOLOv8 Nano + Sam,True,False,4,Distance Max,10%,100%,N/A
+6261,YOLOv8 Nano + Sam,True,False,4,Distance Max,10%,110%,N/A
+6262,YOLOv8 Nano + Sam,True,False,4,Distance Max,15%,90%,N/A
+6263,YOLOv8 Nano + Sam,True,False,4,Distance Max,15%,100%,N/A
+6264,YOLOv8 Nano + Sam,True,False,4,Distance Max,15%,110%,N/A
+6265,YOLOv8 Nano + Sam,True,False,4,Voronoi,0%,90%,N/A
+6266,YOLOv8 Nano + Sam,True,False,4,Voronoi,0%,100%,N/A
+6267,YOLOv8 Nano + Sam,True,False,4,Voronoi,0%,110%,N/A
+6268,YOLOv8 Nano + Sam,True,False,4,Voronoi,5%,90%,N/A
+6269,YOLOv8 Nano + Sam,True,False,4,Voronoi,5%,100%,N/A
+6270,YOLOv8 Nano + Sam,True,False,4,Voronoi,5%,110%,N/A
+6271,YOLOv8 Nano + Sam,True,False,4,Voronoi,10%,90%,N/A
+6272,YOLOv8 Nano + Sam,True,False,4,Voronoi,10%,100%,N/A
+6273,YOLOv8 Nano + Sam,True,False,4,Voronoi,10%,110%,N/A
+6274,YOLOv8 Nano + Sam,True,False,4,Voronoi,15%,90%,N/A
+6275,YOLOv8 Nano + Sam,True,False,4,Voronoi,15%,100%,N/A
+6276,YOLOv8 Nano + Sam,True,False,4,Voronoi,15%,110%,N/A
+6277,YOLOv8 Nano + Sam,True,False,5,Random,0%,90%,N/A
+6278,YOLOv8 Nano + Sam,True,False,5,Random,0%,100%,N/A
+6279,YOLOv8 Nano + Sam,True,False,5,Random,0%,110%,N/A
+6280,YOLOv8 Nano + Sam,True,False,5,Random,5%,90%,N/A
+6281,YOLOv8 Nano + Sam,True,False,5,Random,5%,100%,N/A
+6282,YOLOv8 Nano + Sam,True,False,5,Random,5%,110%,N/A
+6283,YOLOv8 Nano + Sam,True,False,5,Random,10%,90%,N/A
+6284,YOLOv8 Nano + Sam,True,False,5,Random,10%,100%,N/A
+6285,YOLOv8 Nano + Sam,True,False,5,Random,10%,110%,N/A
+6286,YOLOv8 Nano + Sam,True,False,5,Random,15%,90%,N/A
+6287,YOLOv8 Nano + Sam,True,False,5,Random,15%,100%,N/A
+6288,YOLOv8 Nano + Sam,True,False,5,Random,15%,110%,N/A
+6289,YOLOv8 Nano + Sam,True,False,5,Distance Max,0%,90%,N/A
+6290,YOLOv8 Nano + Sam,True,False,5,Distance Max,0%,100%,N/A
+6291,YOLOv8 Nano + Sam,True,False,5,Distance Max,0%,110%,N/A
+6292,YOLOv8 Nano + Sam,True,False,5,Distance Max,5%,90%,N/A
+6293,YOLOv8 Nano + Sam,True,False,5,Distance Max,5%,100%,N/A
+6294,YOLOv8 Nano + Sam,True,False,5,Distance Max,5%,110%,N/A
+6295,YOLOv8 Nano + Sam,True,False,5,Distance Max,10%,90%,N/A
+6296,YOLOv8 Nano + Sam,True,False,5,Distance Max,10%,100%,N/A
+6297,YOLOv8 Nano + Sam,True,False,5,Distance Max,10%,110%,N/A
+6298,YOLOv8 Nano + Sam,True,False,5,Distance Max,15%,90%,N/A
+6299,YOLOv8 Nano + Sam,True,False,5,Distance Max,15%,100%,N/A
+6300,YOLOv8 Nano + Sam,True,False,5,Distance Max,15%,110%,N/A
+6301,YOLOv8 Nano + Sam,True,False,5,Voronoi,0%,90%,N/A
+6302,YOLOv8 Nano + Sam,True,False,5,Voronoi,0%,100%,N/A
+6303,YOLOv8 Nano + Sam,True,False,5,Voronoi,0%,110%,N/A
+6304,YOLOv8 Nano + Sam,True,False,5,Voronoi,5%,90%,N/A
+6305,YOLOv8 Nano + Sam,True,False,5,Voronoi,5%,100%,N/A
+6306,YOLOv8 Nano + Sam,True,False,5,Voronoi,5%,110%,N/A
+6307,YOLOv8 Nano + Sam,True,False,5,Voronoi,10%,90%,N/A
+6308,YOLOv8 Nano + Sam,True,False,5,Voronoi,10%,100%,N/A
+6309,YOLOv8 Nano + Sam,True,False,5,Voronoi,10%,110%,N/A
+6310,YOLOv8 Nano + Sam,True,False,5,Voronoi,15%,90%,N/A
+6311,YOLOv8 Nano + Sam,True,False,5,Voronoi,15%,100%,N/A
+6312,YOLOv8 Nano + Sam,True,False,5,Voronoi,15%,110%,N/A
+6313,YOLOv8 Nano + Sam,True,False,6,Random,0%,90%,N/A
+6314,YOLOv8 Nano + Sam,True,False,6,Random,0%,100%,N/A
+6315,YOLOv8 Nano + Sam,True,False,6,Random,0%,110%,N/A
+6316,YOLOv8 Nano + Sam,True,False,6,Random,5%,90%,N/A
+6317,YOLOv8 Nano + Sam,True,False,6,Random,5%,100%,N/A
+6318,YOLOv8 Nano + Sam,True,False,6,Random,5%,110%,N/A
+6319,YOLOv8 Nano + Sam,True,False,6,Random,10%,90%,N/A
+6320,YOLOv8 Nano + Sam,True,False,6,Random,10%,100%,N/A
+6321,YOLOv8 Nano + Sam,True,False,6,Random,10%,110%,N/A
+6322,YOLOv8 Nano + Sam,True,False,6,Random,15%,90%,N/A
+6323,YOLOv8 Nano + Sam,True,False,6,Random,15%,100%,N/A
+6324,YOLOv8 Nano + Sam,True,False,6,Random,15%,110%,N/A
+6325,YOLOv8 Nano + Sam,True,False,6,Distance Max,0%,90%,N/A
+6326,YOLOv8 Nano + Sam,True,False,6,Distance Max,0%,100%,N/A
+6327,YOLOv8 Nano + Sam,True,False,6,Distance Max,0%,110%,N/A
+6328,YOLOv8 Nano + Sam,True,False,6,Distance Max,5%,90%,N/A
+6329,YOLOv8 Nano + Sam,True,False,6,Distance Max,5%,100%,N/A
+6330,YOLOv8 Nano + Sam,True,False,6,Distance Max,5%,110%,N/A
+6331,YOLOv8 Nano + Sam,True,False,6,Distance Max,10%,90%,N/A
+6332,YOLOv8 Nano + Sam,True,False,6,Distance Max,10%,100%,N/A
+6333,YOLOv8 Nano + Sam,True,False,6,Distance Max,10%,110%,N/A
+6334,YOLOv8 Nano + Sam,True,False,6,Distance Max,15%,90%,N/A
+6335,YOLOv8 Nano + Sam,True,False,6,Distance Max,15%,100%,N/A
+6336,YOLOv8 Nano + Sam,True,False,6,Distance Max,15%,110%,N/A
+6337,YOLOv8 Nano + Sam,True,False,6,Voronoi,0%,90%,N/A
+6338,YOLOv8 Nano + Sam,True,False,6,Voronoi,0%,100%,N/A
+6339,YOLOv8 Nano + Sam,True,False,6,Voronoi,0%,110%,N/A
+6340,YOLOv8 Nano + Sam,True,False,6,Voronoi,5%,90%,N/A
+6341,YOLOv8 Nano + Sam,True,False,6,Voronoi,5%,100%,N/A
+6342,YOLOv8 Nano + Sam,True,False,6,Voronoi,5%,110%,N/A
+6343,YOLOv8 Nano + Sam,True,False,6,Voronoi,10%,90%,N/A
+6344,YOLOv8 Nano + Sam,True,False,6,Voronoi,10%,100%,N/A
+6345,YOLOv8 Nano + Sam,True,False,6,Voronoi,10%,110%,N/A
+6346,YOLOv8 Nano + Sam,True,False,6,Voronoi,15%,90%,N/A
+6347,YOLOv8 Nano + Sam,True,False,6,Voronoi,15%,100%,N/A
+6348,YOLOv8 Nano + Sam,True,False,6,Voronoi,15%,110%,N/A
+6349,YOLOv8 Nano + Sam,True,False,7,Random,0%,90%,N/A
+6350,YOLOv8 Nano + Sam,True,False,7,Random,0%,100%,N/A
+6351,YOLOv8 Nano + Sam,True,False,7,Random,0%,110%,N/A
+6352,YOLOv8 Nano + Sam,True,False,7,Random,5%,90%,N/A
+6353,YOLOv8 Nano + Sam,True,False,7,Random,5%,100%,N/A
+6354,YOLOv8 Nano + Sam,True,False,7,Random,5%,110%,N/A
+6355,YOLOv8 Nano + Sam,True,False,7,Random,10%,90%,N/A
+6356,YOLOv8 Nano + Sam,True,False,7,Random,10%,100%,N/A
+6357,YOLOv8 Nano + Sam,True,False,7,Random,10%,110%,N/A
+6358,YOLOv8 Nano + Sam,True,False,7,Random,15%,90%,N/A
+6359,YOLOv8 Nano + Sam,True,False,7,Random,15%,100%,N/A
+6360,YOLOv8 Nano + Sam,True,False,7,Random,15%,110%,N/A
+6361,YOLOv8 Nano + Sam,True,False,7,Distance Max,0%,90%,N/A
+6362,YOLOv8 Nano + Sam,True,False,7,Distance Max,0%,100%,N/A
+6363,YOLOv8 Nano + Sam,True,False,7,Distance Max,0%,110%,N/A
+6364,YOLOv8 Nano + Sam,True,False,7,Distance Max,5%,90%,N/A
+6365,YOLOv8 Nano + Sam,True,False,7,Distance Max,5%,100%,N/A
+6366,YOLOv8 Nano + Sam,True,False,7,Distance Max,5%,110%,N/A
+6367,YOLOv8 Nano + Sam,True,False,7,Distance Max,10%,90%,N/A
+6368,YOLOv8 Nano + Sam,True,False,7,Distance Max,10%,100%,N/A
+6369,YOLOv8 Nano + Sam,True,False,7,Distance Max,10%,110%,N/A
+6370,YOLOv8 Nano + Sam,True,False,7,Distance Max,15%,90%,N/A
+6371,YOLOv8 Nano + Sam,True,False,7,Distance Max,15%,100%,N/A
+6372,YOLOv8 Nano + Sam,True,False,7,Distance Max,15%,110%,N/A
+6373,YOLOv8 Nano + Sam,True,False,7,Voronoi,0%,90%,N/A
+6374,YOLOv8 Nano + Sam,True,False,7,Voronoi,0%,100%,N/A
+6375,YOLOv8 Nano + Sam,True,False,7,Voronoi,0%,110%,N/A
+6376,YOLOv8 Nano + Sam,True,False,7,Voronoi,5%,90%,N/A
+6377,YOLOv8 Nano + Sam,True,False,7,Voronoi,5%,100%,N/A
+6378,YOLOv8 Nano + Sam,True,False,7,Voronoi,5%,110%,N/A
+6379,YOLOv8 Nano + Sam,True,False,7,Voronoi,10%,90%,N/A
+6380,YOLOv8 Nano + Sam,True,False,7,Voronoi,10%,100%,N/A
+6381,YOLOv8 Nano + Sam,True,False,7,Voronoi,10%,110%,N/A
+6382,YOLOv8 Nano + Sam,True,False,7,Voronoi,15%,90%,N/A
+6383,YOLOv8 Nano + Sam,True,False,7,Voronoi,15%,100%,N/A
+6384,YOLOv8 Nano + Sam,True,False,7,Voronoi,15%,110%,N/A
+6385,YOLOv8 Nano + Sam,False,True,1,Random,0%,N/A,90%
+6386,YOLOv8 Nano + Sam,False,True,1,Random,0%,N/A,100%
+6387,YOLOv8 Nano + Sam,False,True,1,Random,0%,N/A,110%
+6388,YOLOv8 Nano + Sam,False,True,1,Random,5%,N/A,90%
+6389,YOLOv8 Nano + Sam,False,True,1,Random,5%,N/A,100%
+6390,YOLOv8 Nano + Sam,False,True,1,Random,5%,N/A,110%
+6391,YOLOv8 Nano + Sam,False,True,1,Random,10%,N/A,90%
+6392,YOLOv8 Nano + Sam,False,True,1,Random,10%,N/A,100%
+6393,YOLOv8 Nano + Sam,False,True,1,Random,10%,N/A,110%
+6394,YOLOv8 Nano + Sam,False,True,1,Random,15%,N/A,90%
+6395,YOLOv8 Nano + Sam,False,True,1,Random,15%,N/A,100%
+6396,YOLOv8 Nano + Sam,False,True,1,Random,15%,N/A,110%
+6397,YOLOv8 Nano + Sam,False,True,1,Distance Max,0%,N/A,90%
+6398,YOLOv8 Nano + Sam,False,True,1,Distance Max,0%,N/A,100%
+6399,YOLOv8 Nano + Sam,False,True,1,Distance Max,0%,N/A,110%
+6400,YOLOv8 Nano + Sam,False,True,1,Distance Max,5%,N/A,90%
+6401,YOLOv8 Nano + Sam,False,True,1,Distance Max,5%,N/A,100%
+6402,YOLOv8 Nano + Sam,False,True,1,Distance Max,5%,N/A,110%
+6403,YOLOv8 Nano + Sam,False,True,1,Distance Max,10%,N/A,90%
+6404,YOLOv8 Nano + Sam,False,True,1,Distance Max,10%,N/A,100%
+6405,YOLOv8 Nano + Sam,False,True,1,Distance Max,10%,N/A,110%
+6406,YOLOv8 Nano + Sam,False,True,1,Distance Max,15%,N/A,90%
+6407,YOLOv8 Nano + Sam,False,True,1,Distance Max,15%,N/A,100%
+6408,YOLOv8 Nano + Sam,False,True,1,Distance Max,15%,N/A,110%
+6409,YOLOv8 Nano + Sam,False,True,1,Voronoi,0%,N/A,90%
+6410,YOLOv8 Nano + Sam,False,True,1,Voronoi,0%,N/A,100%
+6411,YOLOv8 Nano + Sam,False,True,1,Voronoi,0%,N/A,110%
+6412,YOLOv8 Nano + Sam,False,True,1,Voronoi,5%,N/A,90%
+6413,YOLOv8 Nano + Sam,False,True,1,Voronoi,5%,N/A,100%
+6414,YOLOv8 Nano + Sam,False,True,1,Voronoi,5%,N/A,110%
+6415,YOLOv8 Nano + Sam,False,True,1,Voronoi,10%,N/A,90%
+6416,YOLOv8 Nano + Sam,False,True,1,Voronoi,10%,N/A,100%
+6417,YOLOv8 Nano + Sam,False,True,1,Voronoi,10%,N/A,110%
+6418,YOLOv8 Nano + Sam,False,True,1,Voronoi,15%,N/A,90%
+6419,YOLOv8 Nano + Sam,False,True,1,Voronoi,15%,N/A,100%
+6420,YOLOv8 Nano + Sam,False,True,1,Voronoi,15%,N/A,110%
+6421,YOLOv8 Nano + Sam,False,True,2,Random,0%,N/A,90%
+6422,YOLOv8 Nano + Sam,False,True,2,Random,0%,N/A,100%
+6423,YOLOv8 Nano + Sam,False,True,2,Random,0%,N/A,110%
+6424,YOLOv8 Nano + Sam,False,True,2,Random,5%,N/A,90%
+6425,YOLOv8 Nano + Sam,False,True,2,Random,5%,N/A,100%
+6426,YOLOv8 Nano + Sam,False,True,2,Random,5%,N/A,110%
+6427,YOLOv8 Nano + Sam,False,True,2,Random,10%,N/A,90%
+6428,YOLOv8 Nano + Sam,False,True,2,Random,10%,N/A,100%
+6429,YOLOv8 Nano + Sam,False,True,2,Random,10%,N/A,110%
+6430,YOLOv8 Nano + Sam,False,True,2,Random,15%,N/A,90%
+6431,YOLOv8 Nano + Sam,False,True,2,Random,15%,N/A,100%
+6432,YOLOv8 Nano + Sam,False,True,2,Random,15%,N/A,110%
+6433,YOLOv8 Nano + Sam,False,True,2,Distance Max,0%,N/A,90%
+6434,YOLOv8 Nano + Sam,False,True,2,Distance Max,0%,N/A,100%
+6435,YOLOv8 Nano + Sam,False,True,2,Distance Max,0%,N/A,110%
+6436,YOLOv8 Nano + Sam,False,True,2,Distance Max,5%,N/A,90%
+6437,YOLOv8 Nano + Sam,False,True,2,Distance Max,5%,N/A,100%
+6438,YOLOv8 Nano + Sam,False,True,2,Distance Max,5%,N/A,110%
+6439,YOLOv8 Nano + Sam,False,True,2,Distance Max,10%,N/A,90%
+6440,YOLOv8 Nano + Sam,False,True,2,Distance Max,10%,N/A,100%
+6441,YOLOv8 Nano + Sam,False,True,2,Distance Max,10%,N/A,110%
+6442,YOLOv8 Nano + Sam,False,True,2,Distance Max,15%,N/A,90%
+6443,YOLOv8 Nano + Sam,False,True,2,Distance Max,15%,N/A,100%
+6444,YOLOv8 Nano + Sam,False,True,2,Distance Max,15%,N/A,110%
+6445,YOLOv8 Nano + Sam,False,True,2,Voronoi,0%,N/A,90%
+6446,YOLOv8 Nano + Sam,False,True,2,Voronoi,0%,N/A,100%
+6447,YOLOv8 Nano + Sam,False,True,2,Voronoi,0%,N/A,110%
+6448,YOLOv8 Nano + Sam,False,True,2,Voronoi,5%,N/A,90%
+6449,YOLOv8 Nano + Sam,False,True,2,Voronoi,5%,N/A,100%
+6450,YOLOv8 Nano + Sam,False,True,2,Voronoi,5%,N/A,110%
+6451,YOLOv8 Nano + Sam,False,True,2,Voronoi,10%,N/A,90%
+6452,YOLOv8 Nano + Sam,False,True,2,Voronoi,10%,N/A,100%
+6453,YOLOv8 Nano + Sam,False,True,2,Voronoi,10%,N/A,110%
+6454,YOLOv8 Nano + Sam,False,True,2,Voronoi,15%,N/A,90%
+6455,YOLOv8 Nano + Sam,False,True,2,Voronoi,15%,N/A,100%
+6456,YOLOv8 Nano + Sam,False,True,2,Voronoi,15%,N/A,110%
+6457,YOLOv8 Nano + Sam,False,True,3,Random,0%,N/A,90%
+6458,YOLOv8 Nano + Sam,False,True,3,Random,0%,N/A,100%
+6459,YOLOv8 Nano + Sam,False,True,3,Random,0%,N/A,110%
+6460,YOLOv8 Nano + Sam,False,True,3,Random,5%,N/A,90%
+6461,YOLOv8 Nano + Sam,False,True,3,Random,5%,N/A,100%
+6462,YOLOv8 Nano + Sam,False,True,3,Random,5%,N/A,110%
+6463,YOLOv8 Nano + Sam,False,True,3,Random,10%,N/A,90%
+6464,YOLOv8 Nano + Sam,False,True,3,Random,10%,N/A,100%
+6465,YOLOv8 Nano + Sam,False,True,3,Random,10%,N/A,110%
+6466,YOLOv8 Nano + Sam,False,True,3,Random,15%,N/A,90%
+6467,YOLOv8 Nano + Sam,False,True,3,Random,15%,N/A,100%
+6468,YOLOv8 Nano + Sam,False,True,3,Random,15%,N/A,110%
+6469,YOLOv8 Nano + Sam,False,True,3,Distance Max,0%,N/A,90%
+6470,YOLOv8 Nano + Sam,False,True,3,Distance Max,0%,N/A,100%
+6471,YOLOv8 Nano + Sam,False,True,3,Distance Max,0%,N/A,110%
+6472,YOLOv8 Nano + Sam,False,True,3,Distance Max,5%,N/A,90%
+6473,YOLOv8 Nano + Sam,False,True,3,Distance Max,5%,N/A,100%
+6474,YOLOv8 Nano + Sam,False,True,3,Distance Max,5%,N/A,110%
+6475,YOLOv8 Nano + Sam,False,True,3,Distance Max,10%,N/A,90%
+6476,YOLOv8 Nano + Sam,False,True,3,Distance Max,10%,N/A,100%
+6477,YOLOv8 Nano + Sam,False,True,3,Distance Max,10%,N/A,110%
+6478,YOLOv8 Nano + Sam,False,True,3,Distance Max,15%,N/A,90%
+6479,YOLOv8 Nano + Sam,False,True,3,Distance Max,15%,N/A,100%
+6480,YOLOv8 Nano + Sam,False,True,3,Distance Max,15%,N/A,110%
+6481,YOLOv8 Nano + Sam,False,True,3,Voronoi,0%,N/A,90%
+6482,YOLOv8 Nano + Sam,False,True,3,Voronoi,0%,N/A,100%
+6483,YOLOv8 Nano + Sam,False,True,3,Voronoi,0%,N/A,110%
+6484,YOLOv8 Nano + Sam,False,True,3,Voronoi,5%,N/A,90%
+6485,YOLOv8 Nano + Sam,False,True,3,Voronoi,5%,N/A,100%
+6486,YOLOv8 Nano + Sam,False,True,3,Voronoi,5%,N/A,110%
+6487,YOLOv8 Nano + Sam,False,True,3,Voronoi,10%,N/A,90%
+6488,YOLOv8 Nano + Sam,False,True,3,Voronoi,10%,N/A,100%
+6489,YOLOv8 Nano + Sam,False,True,3,Voronoi,10%,N/A,110%
+6490,YOLOv8 Nano + Sam,False,True,3,Voronoi,15%,N/A,90%
+6491,YOLOv8 Nano + Sam,False,True,3,Voronoi,15%,N/A,100%
+6492,YOLOv8 Nano + Sam,False,True,3,Voronoi,15%,N/A,110%
+6493,YOLOv8 Nano + Sam,False,True,4,Random,0%,N/A,90%
+6494,YOLOv8 Nano + Sam,False,True,4,Random,0%,N/A,100%
+6495,YOLOv8 Nano + Sam,False,True,4,Random,0%,N/A,110%
+6496,YOLOv8 Nano + Sam,False,True,4,Random,5%,N/A,90%
+6497,YOLOv8 Nano + Sam,False,True,4,Random,5%,N/A,100%
+6498,YOLOv8 Nano + Sam,False,True,4,Random,5%,N/A,110%
+6499,YOLOv8 Nano + Sam,False,True,4,Random,10%,N/A,90%
+6500,YOLOv8 Nano + Sam,False,True,4,Random,10%,N/A,100%
+6501,YOLOv8 Nano + Sam,False,True,4,Random,10%,N/A,110%
+6502,YOLOv8 Nano + Sam,False,True,4,Random,15%,N/A,90%
+6503,YOLOv8 Nano + Sam,False,True,4,Random,15%,N/A,100%
+6504,YOLOv8 Nano + Sam,False,True,4,Random,15%,N/A,110%
+6505,YOLOv8 Nano + Sam,False,True,4,Distance Max,0%,N/A,90%
+6506,YOLOv8 Nano + Sam,False,True,4,Distance Max,0%,N/A,100%
+6507,YOLOv8 Nano + Sam,False,True,4,Distance Max,0%,N/A,110%
+6508,YOLOv8 Nano + Sam,False,True,4,Distance Max,5%,N/A,90%
+6509,YOLOv8 Nano + Sam,False,True,4,Distance Max,5%,N/A,100%
+6510,YOLOv8 Nano + Sam,False,True,4,Distance Max,5%,N/A,110%
+6511,YOLOv8 Nano + Sam,False,True,4,Distance Max,10%,N/A,90%
+6512,YOLOv8 Nano + Sam,False,True,4,Distance Max,10%,N/A,100%
+6513,YOLOv8 Nano + Sam,False,True,4,Distance Max,10%,N/A,110%
+6514,YOLOv8 Nano + Sam,False,True,4,Distance Max,15%,N/A,90%
+6515,YOLOv8 Nano + Sam,False,True,4,Distance Max,15%,N/A,100%
+6516,YOLOv8 Nano + Sam,False,True,4,Distance Max,15%,N/A,110%
+6517,YOLOv8 Nano + Sam,False,True,4,Voronoi,0%,N/A,90%
+6518,YOLOv8 Nano + Sam,False,True,4,Voronoi,0%,N/A,100%
+6519,YOLOv8 Nano + Sam,False,True,4,Voronoi,0%,N/A,110%
+6520,YOLOv8 Nano + Sam,False,True,4,Voronoi,5%,N/A,90%
+6521,YOLOv8 Nano + Sam,False,True,4,Voronoi,5%,N/A,100%
+6522,YOLOv8 Nano + Sam,False,True,4,Voronoi,5%,N/A,110%
+6523,YOLOv8 Nano + Sam,False,True,4,Voronoi,10%,N/A,90%
+6524,YOLOv8 Nano + Sam,False,True,4,Voronoi,10%,N/A,100%
+6525,YOLOv8 Nano + Sam,False,True,4,Voronoi,10%,N/A,110%
+6526,YOLOv8 Nano + Sam,False,True,4,Voronoi,15%,N/A,90%
+6527,YOLOv8 Nano + Sam,False,True,4,Voronoi,15%,N/A,100%
+6528,YOLOv8 Nano + Sam,False,True,4,Voronoi,15%,N/A,110%
+6529,YOLOv8 Nano + Sam,False,True,5,Random,0%,N/A,90%
+6530,YOLOv8 Nano + Sam,False,True,5,Random,0%,N/A,100%
+6531,YOLOv8 Nano + Sam,False,True,5,Random,0%,N/A,110%
+6532,YOLOv8 Nano + Sam,False,True,5,Random,5%,N/A,90%
+6533,YOLOv8 Nano + Sam,False,True,5,Random,5%,N/A,100%
+6534,YOLOv8 Nano + Sam,False,True,5,Random,5%,N/A,110%
+6535,YOLOv8 Nano + Sam,False,True,5,Random,10%,N/A,90%
+6536,YOLOv8 Nano + Sam,False,True,5,Random,10%,N/A,100%
+6537,YOLOv8 Nano + Sam,False,True,5,Random,10%,N/A,110%
+6538,YOLOv8 Nano + Sam,False,True,5,Random,15%,N/A,90%
+6539,YOLOv8 Nano + Sam,False,True,5,Random,15%,N/A,100%
+6540,YOLOv8 Nano + Sam,False,True,5,Random,15%,N/A,110%
+6541,YOLOv8 Nano + Sam,False,True,5,Distance Max,0%,N/A,90%
+6542,YOLOv8 Nano + Sam,False,True,5,Distance Max,0%,N/A,100%
+6543,YOLOv8 Nano + Sam,False,True,5,Distance Max,0%,N/A,110%
+6544,YOLOv8 Nano + Sam,False,True,5,Distance Max,5%,N/A,90%
+6545,YOLOv8 Nano + Sam,False,True,5,Distance Max,5%,N/A,100%
+6546,YOLOv8 Nano + Sam,False,True,5,Distance Max,5%,N/A,110%
+6547,YOLOv8 Nano + Sam,False,True,5,Distance Max,10%,N/A,90%
+6548,YOLOv8 Nano + Sam,False,True,5,Distance Max,10%,N/A,100%
+6549,YOLOv8 Nano + Sam,False,True,5,Distance Max,10%,N/A,110%
+6550,YOLOv8 Nano + Sam,False,True,5,Distance Max,15%,N/A,90%
+6551,YOLOv8 Nano + Sam,False,True,5,Distance Max,15%,N/A,100%
+6552,YOLOv8 Nano + Sam,False,True,5,Distance Max,15%,N/A,110%
+6553,YOLOv8 Nano + Sam,False,True,5,Voronoi,0%,N/A,90%
+6554,YOLOv8 Nano + Sam,False,True,5,Voronoi,0%,N/A,100%
+6555,YOLOv8 Nano + Sam,False,True,5,Voronoi,0%,N/A,110%
+6556,YOLOv8 Nano + Sam,False,True,5,Voronoi,5%,N/A,90%
+6557,YOLOv8 Nano + Sam,False,True,5,Voronoi,5%,N/A,100%
+6558,YOLOv8 Nano + Sam,False,True,5,Voronoi,5%,N/A,110%
+6559,YOLOv8 Nano + Sam,False,True,5,Voronoi,10%,N/A,90%
+6560,YOLOv8 Nano + Sam,False,True,5,Voronoi,10%,N/A,100%
+6561,YOLOv8 Nano + Sam,False,True,5,Voronoi,10%,N/A,110%
+6562,YOLOv8 Nano + Sam,False,True,5,Voronoi,15%,N/A,90%
+6563,YOLOv8 Nano + Sam,False,True,5,Voronoi,15%,N/A,100%
+6564,YOLOv8 Nano + Sam,False,True,5,Voronoi,15%,N/A,110%
+6565,YOLOv8 Nano + Sam,False,True,6,Random,0%,N/A,90%
+6566,YOLOv8 Nano + Sam,False,True,6,Random,0%,N/A,100%
+6567,YOLOv8 Nano + Sam,False,True,6,Random,0%,N/A,110%
+6568,YOLOv8 Nano + Sam,False,True,6,Random,5%,N/A,90%
+6569,YOLOv8 Nano + Sam,False,True,6,Random,5%,N/A,100%
+6570,YOLOv8 Nano + Sam,False,True,6,Random,5%,N/A,110%
+6571,YOLOv8 Nano + Sam,False,True,6,Random,10%,N/A,90%
+6572,YOLOv8 Nano + Sam,False,True,6,Random,10%,N/A,100%
+6573,YOLOv8 Nano + Sam,False,True,6,Random,10%,N/A,110%
+6574,YOLOv8 Nano + Sam,False,True,6,Random,15%,N/A,90%
+6575,YOLOv8 Nano + Sam,False,True,6,Random,15%,N/A,100%
+6576,YOLOv8 Nano + Sam,False,True,6,Random,15%,N/A,110%
+6577,YOLOv8 Nano + Sam,False,True,6,Distance Max,0%,N/A,90%
+6578,YOLOv8 Nano + Sam,False,True,6,Distance Max,0%,N/A,100%
+6579,YOLOv8 Nano + Sam,False,True,6,Distance Max,0%,N/A,110%
+6580,YOLOv8 Nano + Sam,False,True,6,Distance Max,5%,N/A,90%
+6581,YOLOv8 Nano + Sam,False,True,6,Distance Max,5%,N/A,100%
+6582,YOLOv8 Nano + Sam,False,True,6,Distance Max,5%,N/A,110%
+6583,YOLOv8 Nano + Sam,False,True,6,Distance Max,10%,N/A,90%
+6584,YOLOv8 Nano + Sam,False,True,6,Distance Max,10%,N/A,100%
+6585,YOLOv8 Nano + Sam,False,True,6,Distance Max,10%,N/A,110%
+6586,YOLOv8 Nano + Sam,False,True,6,Distance Max,15%,N/A,90%
+6587,YOLOv8 Nano + Sam,False,True,6,Distance Max,15%,N/A,100%
+6588,YOLOv8 Nano + Sam,False,True,6,Distance Max,15%,N/A,110%
+6589,YOLOv8 Nano + Sam,False,True,6,Voronoi,0%,N/A,90%
+6590,YOLOv8 Nano + Sam,False,True,6,Voronoi,0%,N/A,100%
+6591,YOLOv8 Nano + Sam,False,True,6,Voronoi,0%,N/A,110%
+6592,YOLOv8 Nano + Sam,False,True,6,Voronoi,5%,N/A,90%
+6593,YOLOv8 Nano + Sam,False,True,6,Voronoi,5%,N/A,100%
+6594,YOLOv8 Nano + Sam,False,True,6,Voronoi,5%,N/A,110%
+6595,YOLOv8 Nano + Sam,False,True,6,Voronoi,10%,N/A,90%
+6596,YOLOv8 Nano + Sam,False,True,6,Voronoi,10%,N/A,100%
+6597,YOLOv8 Nano + Sam,False,True,6,Voronoi,10%,N/A,110%
+6598,YOLOv8 Nano + Sam,False,True,6,Voronoi,15%,N/A,90%
+6599,YOLOv8 Nano + Sam,False,True,6,Voronoi,15%,N/A,100%
+6600,YOLOv8 Nano + Sam,False,True,6,Voronoi,15%,N/A,110%
+6601,YOLOv8 Nano + Sam,False,True,7,Random,0%,N/A,90%
+6602,YOLOv8 Nano + Sam,False,True,7,Random,0%,N/A,100%
+6603,YOLOv8 Nano + Sam,False,True,7,Random,0%,N/A,110%
+6604,YOLOv8 Nano + Sam,False,True,7,Random,5%,N/A,90%
+6605,YOLOv8 Nano + Sam,False,True,7,Random,5%,N/A,100%
+6606,YOLOv8 Nano + Sam,False,True,7,Random,5%,N/A,110%
+6607,YOLOv8 Nano + Sam,False,True,7,Random,10%,N/A,90%
+6608,YOLOv8 Nano + Sam,False,True,7,Random,10%,N/A,100%
+6609,YOLOv8 Nano + Sam,False,True,7,Random,10%,N/A,110%
+6610,YOLOv8 Nano + Sam,False,True,7,Random,15%,N/A,90%
+6611,YOLOv8 Nano + Sam,False,True,7,Random,15%,N/A,100%
+6612,YOLOv8 Nano + Sam,False,True,7,Random,15%,N/A,110%
+6613,YOLOv8 Nano + Sam,False,True,7,Distance Max,0%,N/A,90%
+6614,YOLOv8 Nano + Sam,False,True,7,Distance Max,0%,N/A,100%
+6615,YOLOv8 Nano + Sam,False,True,7,Distance Max,0%,N/A,110%
+6616,YOLOv8 Nano + Sam,False,True,7,Distance Max,5%,N/A,90%
+6617,YOLOv8 Nano + Sam,False,True,7,Distance Max,5%,N/A,100%
+6618,YOLOv8 Nano + Sam,False,True,7,Distance Max,5%,N/A,110%
+6619,YOLOv8 Nano + Sam,False,True,7,Distance Max,10%,N/A,90%
+6620,YOLOv8 Nano + Sam,False,True,7,Distance Max,10%,N/A,100%
+6621,YOLOv8 Nano + Sam,False,True,7,Distance Max,10%,N/A,110%
+6622,YOLOv8 Nano + Sam,False,True,7,Distance Max,15%,N/A,90%
+6623,YOLOv8 Nano + Sam,False,True,7,Distance Max,15%,N/A,100%
+6624,YOLOv8 Nano + Sam,False,True,7,Distance Max,15%,N/A,110%
+6625,YOLOv8 Nano + Sam,False,True,7,Voronoi,0%,N/A,90%
+6626,YOLOv8 Nano + Sam,False,True,7,Voronoi,0%,N/A,100%
+6627,YOLOv8 Nano + Sam,False,True,7,Voronoi,0%,N/A,110%
+6628,YOLOv8 Nano + Sam,False,True,7,Voronoi,5%,N/A,90%
+6629,YOLOv8 Nano + Sam,False,True,7,Voronoi,5%,N/A,100%
+6630,YOLOv8 Nano + Sam,False,True,7,Voronoi,5%,N/A,110%
+6631,YOLOv8 Nano + Sam,False,True,7,Voronoi,10%,N/A,90%
+6632,YOLOv8 Nano + Sam,False,True,7,Voronoi,10%,N/A,100%
+6633,YOLOv8 Nano + Sam,False,True,7,Voronoi,10%,N/A,110%
+6634,YOLOv8 Nano + Sam,False,True,7,Voronoi,15%,N/A,90%
+6635,YOLOv8 Nano + Sam,False,True,7,Voronoi,15%,N/A,100%
+6636,YOLOv8 Nano + Sam,False,True,7,Voronoi,15%,N/A,110%
+6637,YOLOv8 Nano + Sam,False,False,1,Random,0%,N/A,N/A
+6638,YOLOv8 Nano + Sam,False,False,1,Random,5%,N/A,N/A
+6639,YOLOv8 Nano + Sam,False,False,1,Random,10%,N/A,N/A
+6640,YOLOv8 Nano + Sam,False,False,1,Random,15%,N/A,N/A
+6641,YOLOv8 Nano + Sam,False,False,1,Distance Max,0%,N/A,N/A
+6642,YOLOv8 Nano + Sam,False,False,1,Distance Max,5%,N/A,N/A
+6643,YOLOv8 Nano + Sam,False,False,1,Distance Max,10%,N/A,N/A
+6644,YOLOv8 Nano + Sam,False,False,1,Distance Max,15%,N/A,N/A
+6645,YOLOv8 Nano + Sam,False,False,1,Voronoi,0%,N/A,N/A
+6646,YOLOv8 Nano + Sam,False,False,1,Voronoi,5%,N/A,N/A
+6647,YOLOv8 Nano + Sam,False,False,1,Voronoi,10%,N/A,N/A
+6648,YOLOv8 Nano + Sam,False,False,1,Voronoi,15%,N/A,N/A
+6649,YOLOv8 Nano + Sam,False,False,2,Random,0%,N/A,N/A
+6650,YOLOv8 Nano + Sam,False,False,2,Random,5%,N/A,N/A
+6651,YOLOv8 Nano + Sam,False,False,2,Random,10%,N/A,N/A
+6652,YOLOv8 Nano + Sam,False,False,2,Random,15%,N/A,N/A
+6653,YOLOv8 Nano + Sam,False,False,2,Distance Max,0%,N/A,N/A
+6654,YOLOv8 Nano + Sam,False,False,2,Distance Max,5%,N/A,N/A
+6655,YOLOv8 Nano + Sam,False,False,2,Distance Max,10%,N/A,N/A
+6656,YOLOv8 Nano + Sam,False,False,2,Distance Max,15%,N/A,N/A
+6657,YOLOv8 Nano + Sam,False,False,2,Voronoi,0%,N/A,N/A
+6658,YOLOv8 Nano + Sam,False,False,2,Voronoi,5%,N/A,N/A
+6659,YOLOv8 Nano + Sam,False,False,2,Voronoi,10%,N/A,N/A
+6660,YOLOv8 Nano + Sam,False,False,2,Voronoi,15%,N/A,N/A
+6661,YOLOv8 Nano + Sam,False,False,3,Random,0%,N/A,N/A
+6662,YOLOv8 Nano + Sam,False,False,3,Random,5%,N/A,N/A
+6663,YOLOv8 Nano + Sam,False,False,3,Random,10%,N/A,N/A
+6664,YOLOv8 Nano + Sam,False,False,3,Random,15%,N/A,N/A
+6665,YOLOv8 Nano + Sam,False,False,3,Distance Max,0%,N/A,N/A
+6666,YOLOv8 Nano + Sam,False,False,3,Distance Max,5%,N/A,N/A
+6667,YOLOv8 Nano + Sam,False,False,3,Distance Max,10%,N/A,N/A
+6668,YOLOv8 Nano + Sam,False,False,3,Distance Max,15%,N/A,N/A
+6669,YOLOv8 Nano + Sam,False,False,3,Voronoi,0%,N/A,N/A
+6670,YOLOv8 Nano + Sam,False,False,3,Voronoi,5%,N/A,N/A
+6671,YOLOv8 Nano + Sam,False,False,3,Voronoi,10%,N/A,N/A
+6672,YOLOv8 Nano + Sam,False,False,3,Voronoi,15%,N/A,N/A
+6673,YOLOv8 Nano + Sam,False,False,4,Random,0%,N/A,N/A
+6674,YOLOv8 Nano + Sam,False,False,4,Random,5%,N/A,N/A
+6675,YOLOv8 Nano + Sam,False,False,4,Random,10%,N/A,N/A
+6676,YOLOv8 Nano + Sam,False,False,4,Random,15%,N/A,N/A
+6677,YOLOv8 Nano + Sam,False,False,4,Distance Max,0%,N/A,N/A
+6678,YOLOv8 Nano + Sam,False,False,4,Distance Max,5%,N/A,N/A
+6679,YOLOv8 Nano + Sam,False,False,4,Distance Max,10%,N/A,N/A
+6680,YOLOv8 Nano + Sam,False,False,4,Distance Max,15%,N/A,N/A
+6681,YOLOv8 Nano + Sam,False,False,4,Voronoi,0%,N/A,N/A
+6682,YOLOv8 Nano + Sam,False,False,4,Voronoi,5%,N/A,N/A
+6683,YOLOv8 Nano + Sam,False,False,4,Voronoi,10%,N/A,N/A
+6684,YOLOv8 Nano + Sam,False,False,4,Voronoi,15%,N/A,N/A
+6685,YOLOv8 Nano + Sam,False,False,5,Random,0%,N/A,N/A
+6686,YOLOv8 Nano + Sam,False,False,5,Random,5%,N/A,N/A
+6687,YOLOv8 Nano + Sam,False,False,5,Random,10%,N/A,N/A
+6688,YOLOv8 Nano + Sam,False,False,5,Random,15%,N/A,N/A
+6689,YOLOv8 Nano + Sam,False,False,5,Distance Max,0%,N/A,N/A
+6690,YOLOv8 Nano + Sam,False,False,5,Distance Max,5%,N/A,N/A
+6691,YOLOv8 Nano + Sam,False,False,5,Distance Max,10%,N/A,N/A
+6692,YOLOv8 Nano + Sam,False,False,5,Distance Max,15%,N/A,N/A
+6693,YOLOv8 Nano + Sam,False,False,5,Voronoi,0%,N/A,N/A
+6694,YOLOv8 Nano + Sam,False,False,5,Voronoi,5%,N/A,N/A
+6695,YOLOv8 Nano + Sam,False,False,5,Voronoi,10%,N/A,N/A
+6696,YOLOv8 Nano + Sam,False,False,5,Voronoi,15%,N/A,N/A
+6697,YOLOv8 Nano + Sam,False,False,6,Random,0%,N/A,N/A
+6698,YOLOv8 Nano + Sam,False,False,6,Random,5%,N/A,N/A
+6699,YOLOv8 Nano + Sam,False,False,6,Random,10%,N/A,N/A
+6700,YOLOv8 Nano + Sam,False,False,6,Random,15%,N/A,N/A
+6701,YOLOv8 Nano + Sam,False,False,6,Distance Max,0%,N/A,N/A
+6702,YOLOv8 Nano + Sam,False,False,6,Distance Max,5%,N/A,N/A
+6703,YOLOv8 Nano + Sam,False,False,6,Distance Max,10%,N/A,N/A
+6704,YOLOv8 Nano + Sam,False,False,6,Distance Max,15%,N/A,N/A
+6705,YOLOv8 Nano + Sam,False,False,6,Voronoi,0%,N/A,N/A
+6706,YOLOv8 Nano + Sam,False,False,6,Voronoi,5%,N/A,N/A
+6707,YOLOv8 Nano + Sam,False,False,6,Voronoi,10%,N/A,N/A
+6708,YOLOv8 Nano + Sam,False,False,6,Voronoi,15%,N/A,N/A
+6709,YOLOv8 Nano + Sam,False,False,7,Random,0%,N/A,N/A
+6710,YOLOv8 Nano + Sam,False,False,7,Random,5%,N/A,N/A
+6711,YOLOv8 Nano + Sam,False,False,7,Random,10%,N/A,N/A
+6712,YOLOv8 Nano + Sam,False,False,7,Random,15%,N/A,N/A
+6713,YOLOv8 Nano + Sam,False,False,7,Distance Max,0%,N/A,N/A
+6714,YOLOv8 Nano + Sam,False,False,7,Distance Max,5%,N/A,N/A
+6715,YOLOv8 Nano + Sam,False,False,7,Distance Max,10%,N/A,N/A
+6716,YOLOv8 Nano + Sam,False,False,7,Distance Max,15%,N/A,N/A
+6717,YOLOv8 Nano + Sam,False,False,7,Voronoi,0%,N/A,N/A
+6718,YOLOv8 Nano + Sam,False,False,7,Voronoi,5%,N/A,N/A
+6719,YOLOv8 Nano + Sam,False,False,7,Voronoi,10%,N/A,N/A
+6720,YOLOv8 Nano + Sam,False,False,7,Voronoi,15%,N/A,N/A
