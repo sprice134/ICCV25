@@ -361,7 +361,7 @@ if __name__ == "__main__":
         'MaskInclusion': [False],
         # 'BoundingBoxDistortion': ['90%'],
         'Model': ['YOLOv8 Nano + Sam'],
-        'NumberOfPOIs': [4]
+        'NumberOfPOIs': [5]
         # "POIPlacementAlgorithm": ['Random']
 
     }
