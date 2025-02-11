@@ -357,7 +357,7 @@ if __name__ == "__main__":
         # 'ID': [2114, 881, 2225] #3569] #3458
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
-        'BoxInclusion': [True],
+        'BoxInclusion': [False],
         'MaskInclusion': [False],
         # 'BoundingBoxDistortion': ['90%'],
         'Model': ['YOLOv8 Nano + Sam'],
