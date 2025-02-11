@@ -357,7 +357,7 @@ if __name__ == "__main__":
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
         'BoxInclusion': [True],
-        'MaskInclusion': [False],
+        'MaskInclusion': [True],
         'BoundingBoxDistortion': ['90%'],
         'Model': ['Mask2Former'],
         'NumberOfPOIs': [5, 6, 7]
