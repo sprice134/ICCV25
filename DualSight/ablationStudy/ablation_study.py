@@ -104,7 +104,8 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
         "YOLOv8 XL": "yolov8x",
         "Mask R-CNN": "maskrcnn",
         "Mask2Former": "mask2former",
-        "YOLOv8 Nano + Sam": "yolov8n_dualsight"
+        "YOLOv8 Nano + Sam": "yolov8n_dualsight",
+        "YOLOv8 X-Large + Sam": "yolov8x_dualsight"
     }
 
     for _, row in filtered_df.iterrows():
@@ -354,14 +355,14 @@ if __name__ == "__main__":
 
     # Define experiment filters as desired
     experiment_filters = {
-        # 'ID': [2114, 881, 2225] #3569] #3458
+        'ID': list(range(5265, 5293))
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
-        'BoxInclusion': [True],
-        'MaskInclusion': [True],
-        # 'BoundingBoxDistortion': ['90%'],
-        'Model': ['YOLOv8 Nano + Sam'],
-        'NumberOfPOIs': [7]
+        # 'BoxInclusion': [True],
+        # 'MaskInclusion': [True],
+        # 'BoundingBoxDistortion': ['100%'],
+        # 'Model': ['YOLOv8 Nano + Sam'],
+        # 'NumberOfPOIs': [1]
         # "POIPlacementAlgorithm": ['Random']
 
     }

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=7_mask       # Job name
+#SBATCH --job-name=IDs_v2       # Job name
 #SBATCH --cpus-per-task=12              # Number of CPU cores
 #SBATCH --gres=gpu:1                    # Number of GPUs
 #SBATCH -C A100|V100|L40S               # A100 or V100 GPU
@@ -17,6 +17,13 @@ echo "  - Memory: $SLURM_MEM_PER_NODE"
 # Activate the Python virtual environment
 source /home/sprice/ICCV25/maskFormerEnv/bin/activate
 
+
+python ablation_study_cl.py \
+        --BoxInclusion False \
+        # --MaskInclusion True \
+        --Model "YOLOv8 X-Large + Sam" \
+        --NumberOfPOIs 7 \
+        # --BoundingBoxDistortion "110%" \
 
 # python /home/sprice/ICCV25/DualSight/multiImageDS_SR_V5.py
 # python /home/sprice/ICCV25/DualSight/ablationStudy/ablation_study.py

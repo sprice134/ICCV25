@@ -23,7 +23,8 @@ def create_doi_csv(csv_filename="DOI.csv"):
         "YOLOv8 XL",
         "Mask R-CNN",
         "Mask2Former",
-        "YOLOv8 Nano + Sam"
+        "YOLOv8 Nano + Sam",
+        "YOLOv8 X-Large + Sam"
         # "MobileNetV3"
     ]
     box_inclusion = [True, False]
