@@ -15,9 +15,15 @@ Usage Example:
         --device "cuda"
 
     python model_sam_inference.py \
-        --inference-pickle "../../savedInference/particle_yolov8n_inference.pkl" \
+        --inference-pickle "../../savedInference/particle_maskrcnn_inference.pkl" \
         --images-dir "/home/sprice/ICCV25/datasets/powder/test" \
-        --output-pickle "../../savedInference/particle_yolov8n_dualsight_inference.pkl" \
+        --output-pickle "../../savedInference/particle_maskrcnn_dualsight_inference.pkl" \
+        --device "cuda"
+
+    python model_sam_inference.py \
+        --inference-pickle "../../savedInference/particle_mask2former_inference.pkl" \
+        --images-dir "/home/sprice/ICCV25/datasets/powder/test" \
+        --output-pickle "../../savedInference/particle_mask2former_dualsight_inference.pkl" \
         --device "cuda"
 
 Description:
