@@ -1,0 +1,6 @@
+Running job on gpu-5-26
+Requested resources:
+  - CPUs: 12
+  - GPUs: 
+  - Memory: 24000
+slurmstepd: error: *** JOB 1179444 ON gpu-5-26 CANCELLED AT 2025-02-13T11:45:54 ***
