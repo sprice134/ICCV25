@@ -105,7 +105,9 @@ def run_experiments(doiDF, inference_dir, images_dir, output_dir, filters):
         "Mask R-CNN": "maskrcnn",
         "Mask2Former": "mask2former",
         "YOLOv8 Nano + Sam": "yolov8n_dualsight",
-        "YOLOv8 X-Large + Sam": "yolov8x_dualsight"
+        "YOLOv8 X-Large + Sam": "yolov8x_dualsight",
+        "Mask R-CNN + Sam": "yolov8n_dualsight",
+        "Mask2Former + Sam": "yolov8x_dualsight"
     }
 
     for _, row in filtered_df.iterrows():
@@ -355,7 +357,7 @@ if __name__ == "__main__":
 
     # Define experiment filters as desired
     experiment_filters = {
-        'ID': list(range(8265, 8465))
+        'ID': list(range(8465, 8665))
         # 'ID': [4660, 4661, 4662, 4687, 4688, 4689, 4696, 4700, 4701, 4705, 4706, 4707, 4712, 4713, 4714, 4715, 4716,
             #    4720, 4721, 4722, 4723, 4724, 4725]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
