@@ -95,6 +95,6 @@ def summarize_sam_mask_results(doi_csv_path, results_json_dir, output_csv_path):
     print(f"\nDone! Updated CSV saved to: {output_csv_path}")
 
 if __name__ == '__main__':
-    summarize_sam_mask_results('/home/sprice/ICCV25/DualSight/ablationStudy/DOI.csv', 
-                               '/home/sprice/ICCV25/DualSight/ablationStudy/ablation_outputs',
+    summarize_sam_mask_results('DOI.csv', 
+                               'ablation_outputs/',
                                 'processedResults.csv')

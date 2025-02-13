@@ -20,7 +20,7 @@ def create_doi_csv(csv_filename="DOI.csv"):
     # Define categories/conditions:
     models = [
         "YOLOv8 Nano",
-        "YOLOv8 XL",
+        "YOLOv8 X-Large",
         "Mask R-CNN",
         "Mask2Former",
         "YOLOv8 Nano + Sam",
