@@ -768,7 +768,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 767,YOLOv8 Nano,True,False,1,Random,15%,100%,,0.7148733822168026
 768,YOLOv8 Nano,True,False,1,Random,15%,110%,,0.708740883302697
 769,YOLOv8 Nano,True,False,1,Distance Max,0%,90%,,0.7161852954514039
-770,YOLOv8 Nano,True,False,1,Distance Max,0%,100%,,0.710111530837396
+770,YOLOv8 Nano,True,False,1,Distance Max,0%,100%,,0.7390226706880432
 771,YOLOv8 Nano,True,False,1,Distance Max,0%,110%,,0.7106607530532427
 772,YOLOv8 Nano,True,False,1,Distance Max,5%,90%,,0.7189051035158737
 773,YOLOv8 Nano,True,False,1,Distance Max,5%,100%,,0.7181820917103312
@@ -879,7 +879,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 878,YOLOv8 Nano,True,False,4,Distance Max,0%,100%,,0.6992795482884229
 879,YOLOv8 Nano,True,False,4,Distance Max,0%,110%,,0.6189309479496248
 880,YOLOv8 Nano,True,False,4,Distance Max,5%,90%,,0.7079888709319693
-881,YOLOv8 Nano,True,False,4,Distance Max,5%,100%,,0.6739311378236462
+881,YOLOv8 Nano,True,False,4,Distance Max,5%,100%,,0.6860985642156293
 882,YOLOv8 Nano,True,False,4,Distance Max,5%,110%,,0.675948559600469
 883,YOLOv8 Nano,True,False,4,Distance Max,10%,90%,,0.6822805606649149
 884,YOLOv8 Nano,True,False,4,Distance Max,10%,100%,,0.6663793263073259
@@ -3567,7 +3567,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 3566,Mask R-CNN,True,False,4,Distance Max,0%,100%,,0.6605752121353761
 3567,Mask R-CNN,True,False,4,Distance Max,0%,110%,,0.6443665191495394
 3568,Mask R-CNN,True,False,4,Distance Max,5%,90%,,0.6520312533516608
-3569,Mask R-CNN,True,False,4,Distance Max,5%,100%,,0.660712484278332
+3569,Mask R-CNN,True,False,4,Distance Max,5%,100%,,0.6468593771471551
 3570,Mask R-CNN,True,False,4,Distance Max,5%,110%,,0.6375436366674131
 3571,Mask R-CNN,True,False,4,Distance Max,10%,90%,,0.6503664448699011
 3572,Mask R-CNN,True,False,4,Distance Max,10%,100%,,0.6477706496205646
@@ -6095,8 +6095,8 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 6094,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,90%,
 6095,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,100%,
 6096,YOLOv8 Nano + Sam,True,True,7,Distance Max,15%,110%,110%,
-6097,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,90%,
-6098,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,100%,
+6097,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,90%,0.6275818837564623
+6098,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,100%,0.628778001611001
 6099,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,90%,110%,
 6100,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,100%,90%,
 6101,YOLOv8 Nano + Sam,True,True,7,Voronoi,0%,100%,100%,
@@ -6893,7 +6893,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 6892,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,90%,90%,0.6628415311988741
 6893,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,90%,100%,0.6656158435166775
 6894,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,90%,110%,0.6622315300621799
-6895,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,100%,90%,
+6895,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,100%,90%,0.6281419802401992
 6896,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,100%,100%,
 6897,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,100%,110%,
 6898,YOLOv8 X-Large + Sam,True,True,2,Distance Max,15%,110%,90%,
@@ -7595,12 +7595,12 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 7594,YOLOv8 X-Large + Sam,True,False,4,Random,15%,90%,,0.7111852888109012
 7595,YOLOv8 X-Large + Sam,True,False,4,Random,15%,100%,,0.7152729540793337
 7596,YOLOv8 X-Large + Sam,True,False,4,Random,15%,110%,,0.6967985081121164
-7597,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,90%,,
-7598,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,100%,,
-7599,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,110%,,
-7600,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,90%,,
-7601,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,100%,,
-7602,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,110%,,
+7597,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,90%,,0.6991195505753309
+7598,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,100%,,0.6851051711892275
+7599,YOLOv8 X-Large + Sam,True,False,4,Distance Max,0%,110%,,0.6742566441940234
+7600,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,90%,,0.6999738359527135
+7601,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,100%,,0.6813937968288514
+7602,YOLOv8 X-Large + Sam,True,False,4,Distance Max,5%,110%,,0.6751889568729739
 7603,YOLOv8 X-Large + Sam,True,False,4,Distance Max,10%,90%,,
 7604,YOLOv8 X-Large + Sam,True,False,4,Distance Max,10%,100%,,
 7605,YOLOv8 X-Large + Sam,True,False,4,Distance Max,10%,110%,,
@@ -7931,11 +7931,11 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 7930,YOLOv8 X-Large + Sam,False,True,6,Distance Max,15%,,90%,
 7931,YOLOv8 X-Large + Sam,False,True,6,Distance Max,15%,,100%,
 7932,YOLOv8 X-Large + Sam,False,True,6,Distance Max,15%,,110%,
-7933,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,90%,
-7934,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,100%,
-7935,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,110%,
-7936,YOLOv8 X-Large + Sam,False,True,6,Voronoi,5%,,90%,
-7937,YOLOv8 X-Large + Sam,False,True,6,Voronoi,5%,,100%,
+7933,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,90%,0.08003755313659563
+7934,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,100%,0.08137271422089883
+7935,YOLOv8 X-Large + Sam,False,True,6,Voronoi,0%,,110%,0.08359012628072232
+7936,YOLOv8 X-Large + Sam,False,True,6,Voronoi,5%,,90%,0.08109552074472957
+7937,YOLOv8 X-Large + Sam,False,True,6,Voronoi,5%,,100%,0.08658356337877182
 7938,YOLOv8 X-Large + Sam,False,True,6,Voronoi,5%,,110%,
 7939,YOLOv8 X-Large + Sam,False,True,6,Voronoi,10%,,90%,
 7940,YOLOv8 X-Large + Sam,False,True,6,Voronoi,10%,,100%,
@@ -8019,14 +8019,14 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 8018,YOLOv8 X-Large + Sam,False,False,4,Random,5%,,,0.6069522248973426
 8019,YOLOv8 X-Large + Sam,False,False,4,Random,10%,,,0.6006252677715544
 8020,YOLOv8 X-Large + Sam,False,False,4,Random,15%,,,0.6158944997466618
-8021,YOLOv8 X-Large + Sam,False,False,4,Distance Max,0%,,,
-8022,YOLOv8 X-Large + Sam,False,False,4,Distance Max,5%,,,
-8023,YOLOv8 X-Large + Sam,False,False,4,Distance Max,10%,,,
-8024,YOLOv8 X-Large + Sam,False,False,4,Distance Max,15%,,,
-8025,YOLOv8 X-Large + Sam,False,False,4,Voronoi,0%,,,
-8026,YOLOv8 X-Large + Sam,False,False,4,Voronoi,5%,,,
-8027,YOLOv8 X-Large + Sam,False,False,4,Voronoi,10%,,,
-8028,YOLOv8 X-Large + Sam,False,False,4,Voronoi,15%,,,
+8021,YOLOv8 X-Large + Sam,False,False,4,Distance Max,0%,,,0.40454427802101006
+8022,YOLOv8 X-Large + Sam,False,False,4,Distance Max,5%,,,0.43162525747499975
+8023,YOLOv8 X-Large + Sam,False,False,4,Distance Max,10%,,,0.4593813249508603
+8024,YOLOv8 X-Large + Sam,False,False,4,Distance Max,15%,,,0.4409986693165261
+8025,YOLOv8 X-Large + Sam,False,False,4,Voronoi,0%,,,0.6013416987027963
+8026,YOLOv8 X-Large + Sam,False,False,4,Voronoi,5%,,,0.6136290348720603
+8027,YOLOv8 X-Large + Sam,False,False,4,Voronoi,10%,,,0.6073587193449804
+8028,YOLOv8 X-Large + Sam,False,False,4,Voronoi,15%,,,0.6109033104803149
 8029,YOLOv8 X-Large + Sam,False,False,5,Random,0%,,,
 8030,YOLOv8 X-Large + Sam,False,False,5,Random,5%,,,
 8031,YOLOv8 X-Large + Sam,False,False,5,Random,10%,,,

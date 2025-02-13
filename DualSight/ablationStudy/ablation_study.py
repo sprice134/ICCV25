@@ -355,7 +355,7 @@ if __name__ == "__main__":
 
     # Define experiment filters as desired
     experiment_filters = {
-        'ID': list(range(8017, 8065))
+        'ID': list(range(7180, 7280))
         # 'ID': [770]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
         # 'BoxInclusion': [True],
