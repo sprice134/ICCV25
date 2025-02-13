@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1                    # Number of GPUs
 #SBATCH -C A100|V100|L40S               # A100 or V100 GPU
 #SBATCH --mem=12000MB                   # Memory in MB
-#SBATCH --time=6:00:00                 # Time limit (HH:MM:SS)
+#SBATCH --time=24:00:00                 # Time limit (HH:MM:SS)
 #SBATCH --partition=short               # Partition name
 
 # Print some job information
