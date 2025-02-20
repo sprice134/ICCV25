@@ -6,21 +6,32 @@ import numpy as np
 from PIL import Image
 import torch
 import argparse
+import colorsys  # For converting HSV to RGB
 
 # Import the SAM model helpers – adjust the path if necessary.
 from sam_helper import load_sam_model, run_sam_inference
 
-def generate_random_colors(n=256):
+def generate_neon_colors(n=256):
     """
-    Generate a list of n random RGB colors.
+    Generate a list of n bright, neon-style RGB colors by sampling random hues
+    at full (or near-full) saturation and value.
     """
     random.seed(42)  # for reproducibility
     colors = []
     for _ in range(n):
-        r = random.randint(0, 255)
-        g = random.randint(0, 255)
-        b = random.randint(0, 255)
+        # Random hue [0, 1), full saturation & brightness for neon look.
+        hue = random.random()
+        saturation = 1.0
+        value = 1.0
+
+        # Convert HSV to RGB in [0,1] range.
+        r, g, b = colorsys.hsv_to_rgb(hue, saturation, value)
+        # Scale up to 0–255 and convert to int.
+        r = int(r * 255)
+        g = int(g * 255)
+        b = int(b * 255)
         colors.append((r, g, b))
+    
     return colors
 
 def threshold_mask(mask):
@@ -154,7 +165,8 @@ def refine_and_save_masks(inference_files, image_name, output_dir, image_dir, sa
         device=sam_model_params["device"]
     )
     
-    random_colors = generate_random_colors(256)
+    # Use the new neon color generator
+    random_colors = generate_neon_colors(256)
     
     for inf_file in inference_files:
         if not os.path.exists(inf_file):
@@ -219,7 +231,6 @@ if __name__ == "__main__":
         sam_model_params=sam_model_params,
         sam_params=sam_params
     )
-
 
 
     '''
