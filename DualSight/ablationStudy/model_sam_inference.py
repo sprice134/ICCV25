@@ -61,6 +61,9 @@ SAM_MASK_EXPANSION_RATE = 0.0
 # -----------------------------------------------------------------------------
 # Main function: load inference, run SAM, and save with the same structure.
 # -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Main function: load inference, run SAM, and save with the same structure.
+# -----------------------------------------------------------------------------
 def refine_inference_with_sam(inference_pickle, images_dir, output_pickle, device="cuda"):
     """
     Loads an inference pickle containing original model outputs (with keys: polygons, boxes, masks),
@@ -124,27 +127,55 @@ def refine_inference_with_sam(inference_pickle, images_dir, output_pickle, devic
                 bin_mask = mask.astype(np.uint8)
             bin_masks.append(bin_mask)
 
-        # Run SAM to refine the annotations.
-        refined_masks = run_sam_inference(
-            predictor=sam_predictor,
-            loop_image=loop_image,
-            listOfPolygons=polygons,
-            listOfBoxes=boxes,
-            listOfMasks=bin_masks,
-            image_width=image_width,
-            image_height=image_height,
-            num_points=SAM_NUM_POINTS,
-            dropout_percentage=0,  # Hardcoded; adjust if needed.
-            ignore_border_percentage=SAM_IGNORE_BORDER_PERCENTAGE,
-            algorithm=SAM_ALGORITHM,
-            use_box_input=SAM_USE_BOX_INPUT,
-            use_mask_input=SAM_USE_MASK_INPUT,
-            box_expansion_rate=SAM_BOX_EXPANSION_RATE,
-            mask_expansion_rate=SAM_MASK_EXPANSION_RATE
-        )
-
-        # Replace the original "masks" key with the refined masks.
-        ann_data["masks"] = refined_masks
+        # Filter out annotations where the mask area is too small.
+        valid_polygons = []
+        valid_boxes = []
+        valid_bin_masks = []
+        required_area = SAM_NUM_POINTS ** 2
+        for poly, box, bmask in zip(polygons, boxes, bin_masks):
+            area = np.sum(bmask)
+            if area < required_area:
+                print(f"[INFO] Skipping annotation for image '{image_name}' due to insufficient mask area ({area} < {required_area})")
+                continue
+            valid_polygons.append(poly)
+            valid_boxes.append(box)
+            valid_bin_masks.append(bmask)
+        
+        try:
+            # Check that the annotation lists are consistent.
+            if not (len(valid_polygons) == len(valid_boxes) == len(valid_bin_masks)):
+                raise ValueError("Inconsistent lengths between polygons, boxes, and masks after filtering")
+            
+            # Run SAM to refine the annotations.
+            refined_masks = run_sam_inference(
+                predictor=sam_predictor,
+                loop_image=loop_image,
+                listOfPolygons=valid_polygons,
+                listOfBoxes=valid_boxes,
+                listOfMasks=valid_bin_masks,
+                image_width=image_width,
+                image_height=image_height,
+                num_points=SAM_NUM_POINTS,
+                dropout_percentage=0,  # Hardcoded; adjust if needed.
+                ignore_border_percentage=SAM_IGNORE_BORDER_PERCENTAGE,
+                algorithm=SAM_ALGORITHM,
+                use_box_input=SAM_USE_BOX_INPUT,
+                use_mask_input=SAM_USE_MASK_INPUT,
+                box_expansion_rate=SAM_BOX_EXPANSION_RATE,
+                mask_expansion_rate=SAM_MASK_EXPANSION_RATE
+            )
+        except Exception as e:
+            print(f"[ERROR] SAM inference failed for image '{image_name}': {e}")
+            # If there's an issue with masks, boxes, or polygons, clear all.
+            ann_data["masks"] = []
+            ann_data["boxes"] = []
+            ann_data["polygons"] = []
+        else:
+            # Replace the original "masks" key with the refined masks.
+            ann_data["masks"] = refined_masks
+            # Optionally, update polygons and boxes to match the filtered ones.
+            ann_data["polygons"] = valid_polygons
+            ann_data["boxes"] = valid_boxes
 
         # Save the updated dictionary for this image (structure remains identical).
         refined_data[image_name] = ann_data
