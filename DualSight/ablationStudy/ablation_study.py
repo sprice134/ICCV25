@@ -358,7 +358,7 @@ if __name__ == "__main__":
     # Define experiment filters as desired
     experiment_filters = {
         # 'ID': list(range(9265, 9465))
-        'ID': list(range(9700, 9900)) #+ list(range(7186, 7280)) #+ list(range(7008, 7079))
+        'ID': list(range(10500, 10700)) #+ list(range(7186, 7280)) #+ list(range(7008, 7079))
         # 'ID': [4660, 4661, 4662, 4687, 4688, 4689, 4696, 4700, 4701, 4705, 4706, 4707, 4712, 4713, 4714, 4715, 4716,
             #    4720, 4721, 4722, 4723, 4724, 4725]
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
