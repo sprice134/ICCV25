@@ -18,7 +18,7 @@ run_sam() {
     local pkl_path="$1"
     local run_name="$2"
     echo "Running SAM Ablation for run: $run_name with pickle: $pkl_path"
-    python sam.py \
+    python sam_v2.py \
         --inference_pickle_path "$pkl_path" \
         --images_dir "$IMAGES_DIR" \
         --output_dir "$OUTPUT_DIR" \

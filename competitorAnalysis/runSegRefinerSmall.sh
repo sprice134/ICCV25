@@ -49,7 +49,7 @@ run_segrefiner() {
 
     echo "Running segrefiner.py for run: $run_name with pickle: $pkl_path using LITTLE model"
 
-    python segrefiner.py \
+    python segrefiner_v2.py \
         --inference_pickle_path "$pkl_path" \
         --images_dir "$IMAGES_DIR" \
         --output_dir "$OUTPUT_DIR" \

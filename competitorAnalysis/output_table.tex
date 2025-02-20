@@ -1,32 +1,32 @@
 \begin{table*}[h!]
 \centering
 \begin{adjustbox}{width=\textwidth}
-\begin{tabular}{@{}l|c|c|c|c|c|c|c|c@{}}
+\begin{tabular}{@{}l|c|c|c|c|c|c|c|c|c|c@{}}
 \toprule
-\textbf{Model} & \textbf{AP$^{50}_{\text{mask}}$} & \textbf{AP$^{75}_{\text{mask}}$} & \textbf{AP$^{95}_{\text{mask}}$} & \textbf{AP$^{50:95}_{\text{mask}}$} & \textbf{AR$^{50}_{\text{mask}}$} & \textbf{AR$^{75}_{\text{mask}}$} & \textbf{AR$^{95}_{\text{mask}}$} & \textbf{AR$^{50:95}_{\text{mask}}$} \\ \midrule
-YOLOv8 Nano & 0.8373 & 0.6693 & 0.0806 & 0.5291 & 0.7203 & 0.5664 & -0.0035 & 0.4277 \\
-YOLOv8 Nano + CascadePSP & 0.8450 & 0.7529 & 0.3781 & 0.6587 & 0.7345 & 0.6593 & 0.2870 & 0.5603 \\
-YOLOv8 Nano + SegRefiner - Small & 0.8026 & 0.6911 & 0.1952 & 0.5630 & 0.6797 & 0.5915 & 0.1240 & 0.4650 \\
-YOLOv8 Nano + SegRefiner - Large & 0.8338 & 0.7296 & 0.3445 & 0.6360 & 0.7054 & 0.6239 & 0.2474 & 0.5255 \\
-YOLOv8 Nano + DualSight (Ours) & \textbf{0.8812} & \textbf{0.8059} & \textbf{0.4591} & \textbf{0.7154} & \textbf{0.7624} & \textbf{0.6999} & \textbf{0.3690} & \textbf{0.6104} \\
+\textbf{Model} & \textbf{AP$^{50}_{\text{mask}}$} & \textbf{AP$^{75}_{\text{mask}}$} & \textbf{AP$^{95}_{\text{mask}}$} & \textbf{AP$^{50:95}_{\text{mask}}$} & \textbf{AR$^{50}_{\text{mask}}$} & \textbf{AR$^{75}_{\text{mask}}$} & \textbf{AR$^{95}_{\text{mask}}$} & \textbf{AR$^{50:95}_{\text{mask}}$} & \textbf{AP$^{50:95}_{\text{box}}$} & \textbf{AR$^{50:95}_{\text{box}}$} \\ \midrule
+\textit{YOLOv8 Nano} \cite{yolov8architecture} & 0.8373 & 0.6693 & 0.0806 & 0.5291 & 0.7203 & 0.5664 & -0.0035 & 0.4277 & 0.5577 & 0.4602 \\
++ CascadePSP \cite{cheng2020cascadepsp} & 0.8450 & 0.7529 & 0.3781 & 0.6587 & 0.7345 & 0.6593 & 0.2870 & 0.5603 & 0.6708 & 0.5736 \\
++ SegRefiner - Small \cite{wang2023segrefiner} & 0.8078 & 0.6965 & 0.1843 & 0.5629 & 0.6948 & 0.5996 & 0.1252 & 0.4732 & 0.4414 & 0.3902 \\
++ SegRefiner - Large \cite{wang2023segrefiner} & 0.8344 & 0.7267 & 0.3455 & 0.6355 & 0.7035 & 0.6174 & 0.2479 & 0.5229 & 0.6351 & 0.5297 \\
++ SAM (This Work) & \textbf{0.8812} & \textbf{0.8059} & \textbf{0.4591} & \textbf{0.7154} & \textbf{0.7624} & \textbf{0.6999} & \textbf{0.3690} & \textbf{0.6104} & \textbf{0.7396} & \textbf{0.6433} \\
 \midrule
-YOLOv8 X-Large & 0.8357 & 0.6802 & 0.0916 & 0.5358 & 0.7088 & 0.5656 & 0.0200 & 0.4314 \\
-YOLOv8 X-Large + CascadePSP & 0.8446 & 0.7587 & 0.3870 & 0.6635 & 0.7230 & 0.6612 & 0.3006 & 0.5616 \\
-YOLOv8 X-Large + SegRefiner - Small & 0.8055 & 0.6894 & 0.1854 & 0.5601 & 0.6795 & 0.5944 & 0.1211 & 0.4650 \\
-YOLOv8 X-Large + SegRefiner - Large & 0.8363 & 0.7420 & 0.3500 & 0.6428 & 0.6972 & 0.6313 & 0.2571 & 0.5286 \\
-YOLOv8 X-Large + DualSight (Ours) & \textbf{0.8775} & \textbf{0.8102} & \textbf{0.4757} & \textbf{0.7211} & \textbf{0.7474} & \textbf{0.6943} & \textbf{0.3864} & \textbf{0.6094} \\
+\textit{YOLOv8 X-Large} \cite{yolov8architecture} & 0.8352 & 0.6841 & 0.0964 & 0.5386 & 0.6998 & 0.5605 & 0.0210 & 0.4271 & 0.5597 & 0.4504 \\
++ CascadePSP \cite{cheng2020cascadepsp} & 0.8446 & 0.7587 & 0.3870 & 0.6635 & 0.7230 & 0.6612 & 0.3006 & 0.5616 & 0.6795 & 0.5740 \\
++ SegRefiner - Small \cite{wang2023segrefiner} & 0.8105 & 0.6865 & 0.1860 & 0.5610 & 0.6831 & 0.5957 & 0.1214 & 0.4667 & 0.4637 & 0.3885 \\
++ SegRefiner - Large \cite{wang2023segrefiner} & 0.8329 & 0.7375 & 0.3523 & 0.6409 & 0.6933 & 0.6278 & 0.2610 & 0.5274 & 0.6242 & 0.5209 \\
++ SAM (This Work) & \textbf{0.8775} & \textbf{0.8102} & \textbf{0.4757} & \textbf{0.7211} & \textbf{0.7474} & \textbf{0.6943} & \textbf{0.3864} & \textbf{0.6094} & \textbf{0.7497} & \textbf{0.6430} \\
 \midrule
-Mask R-CNN & 0.6876 & 0.5599 & 0.1061 & 0.4512 & 0.5604 & 0.4557 & 0.0404 & 0.3522 \\
-Mask R-CNN + CascadePSP & 0.7254 & 0.6305 & 0.3245 & 0.5601 & 0.5943 & 0.5223 & 0.2511 & 0.4559 \\
-Mask R-CNN + SegRefiner - Small & 0.6976 & 0.5953 & 0.1841 & 0.4923 & 0.5911 & 0.5096 & 0.1312 & 0.4106 \\
-Mask R-CNN + SegRefiner - Large & 0.7416 & 0.6551 & 0.3184 & 0.5717 & 0.6047 & 0.5343 & 0.2346 & 0.4579 \\
-Mask R-CNN + DualSight (Ours) & \textbf{0.7788} & \textbf{0.7130} & \textbf{0.4692} & \textbf{0.6537} & \textbf{0.6348} & \textbf{0.5849} & \textbf{0.3773} & \textbf{0.5323} \\
+\textit{Mask R-CNN} \cite{he2017mask} & 0.6876 & 0.5599 & 0.1061 & 0.4512 & 0.5604 & 0.4557 & 0.0404 & 0.3522 & 0.5120 & 0.4151 \\
++ CascadePSP \cite{cheng2020cascadepsp} & 0.7254 & 0.6305 & 0.3245 & 0.5601 & 0.5943 & 0.5223 & 0.2511 & 0.4559 & 0.5842 & 0.4769 \\
++ SegRefiner - Small \cite{wang2023segrefiner} & 0.6899 & 0.6050 & 0.2056 & 0.5001 & 0.5745 & 0.5047 & 0.1395 & 0.4062 & 0.4110 & 0.3377 \\
++ SegRefiner - Large \cite{wang2023segrefiner} & 0.7291 & 0.6434 & 0.3031 & 0.5586 & 0.6046 & 0.5351 & 0.2284 & 0.4560 & 0.5732 & 0.4639 \\
++ SAM (This Work) & \textbf{0.7788} & \textbf{0.7130} & \textbf{0.4692} & \textbf{0.6537} & \textbf{0.6348} & \textbf{0.5849} & \textbf{0.3773} & \textbf{0.5323} & \textbf{0.6650} & \textbf{0.5493} \\
 \midrule
-Mask2Former & 0.6336 & 0.5111 & 0.1229 & 0.4225 & 0.5974 & 0.5019 & 0.0884 & 0.3959 \\
-Mask2Former + CascadePSP & \textbf{0.6673} & \textbf{0.5805} & 0.2387 & 0.4955 & 0.5978 & 0.5374 & 0.2176 & 0.4509 \\
-Mask2Former + SegRefiner - Small & 0.6305 & 0.5061 & 0.1279 & 0.4215 & 0.5759 & 0.4810 & 0.0922 & 0.3830 \\
-Mask2Former + SegRefiner - Large & 0.6603 & 0.5701 & 0.2370 & 0.4891 & 0.5872 & 0.5251 & 0.2049 & 0.4391 \\
-Mask2Former + DualSight (Ours) & 0.6548 & 0.5497 & \textbf{0.3110} & \textbf{0.5052} & \textbf{0.6124} & \textbf{0.5420} & \textbf{0.3121} & \textbf{0.4889} \\
+\textit{Mask2Former} \cite{cheng2022masked} & 0.6336 & 0.5111 & 0.1229 & 0.4225 & 0.5974 & 0.5019 & 0.0884 & 0.3959 & 0.4147 & 0.3937 \\
++ CascadePSP \cite{cheng2020cascadepsp} & \textbf{0.6673} & \textbf{0.5805} & 0.2387 & 0.4955 & 0.5978 & 0.5374 & 0.2176 & 0.4509 & 0.4915 & 0.4592 \\
++ SegRefiner - Small \cite{wang2023segrefiner} & 0.6300 & 0.4871 & 0.1176 & 0.4116 & 0.5749 & 0.4693 & 0.0852 & 0.3765 & 0.3122 & 0.2922 \\
++ SegRefiner - Large \cite{wang2023segrefiner} & 0.6626 & 0.5718 & 0.2357 & 0.4900 & 0.5872 & 0.5254 & 0.2022 & 0.4383 & 0.4543 & 0.4275 \\
++ SAM (This Work) & 0.6548 & 0.5497 & \textbf{0.3110} & \textbf{0.5052} & \textbf{0.6124} & \textbf{0.5420} & \textbf{0.3121} & \textbf{0.4889} & \textbf{0.5162} & \textbf{0.5003} \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}

@@ -49,7 +49,7 @@ run_evaluation() {
     echo "Inference Pickle: $pkl_path"
     echo "----------------------------------------"
 
-    python rawModels.py \
+    python rawModels_v2.py \
         --inference_pickle_path "$pkl_path" \
         --images_dir "$IMAGES_DIR" \
         --output_csv "$OUTPUT_CSV" \
