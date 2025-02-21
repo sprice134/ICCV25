@@ -358,8 +358,8 @@ if __name__ == "__main__":
     # Define experiment filters as desired
     experiment_filters = {
         # 'ID': list(range(9265, 9465))
-        # 'ID': list(range(10500, 10700)) #+ list(range(7186, 7280)) #+ list(range(7008, 7079))
-        'ID': [4723, 4724] +  list(range(4774, 4780)) + list(range(4783, 4789)) + list(range(6092, 6097))
+        'ID': list(range(10700, 10753)) #+ #list(range(7424, 7477)) #+ list(range(7008, 7079))
+        # 'ID': [4723, 4724] +  list(range(4774, 4780)) + list(range(4783, 4789)) + list(range(6092, 6097))
         # 'ID': [3684]# + list(range(3611, 3684)) #+ list(range(3577,3599))
         # 'BoxInclusion': [True],
         # 'MaskInclusion': [True],

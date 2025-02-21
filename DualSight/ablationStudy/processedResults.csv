@@ -8779,7 +8779,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 8778,Mask R-CNN + Sam,True,True,7,Distance Max,15%,90%,110%,0.47706319002933417
 8779,Mask R-CNN + Sam,True,True,7,Distance Max,15%,100%,90%,0.4461003750449393
 8780,Mask R-CNN + Sam,True,True,7,Distance Max,15%,100%,100%,0.44614518958570465
-8781,Mask R-CNN + Sam,True,True,7,Distance Max,15%,100%,110%,
+8781,Mask R-CNN + Sam,True,True,7,Distance Max,15%,100%,110%,0.44580164009094664
 8782,Mask R-CNN + Sam,True,True,7,Distance Max,15%,110%,90%,
 8783,Mask R-CNN + Sam,True,True,7,Distance Max,15%,110%,100%,
 8784,Mask R-CNN + Sam,True,True,7,Distance Max,15%,110%,110%,
@@ -9999,7 +9999,7 @@ ID,Model,BoxInclusion,MaskInclusion,NumberOfPOIs,POIPlacementAlgorithm,Perimeter
 9998,Mask2Former + Sam,True,True,6,Distance Max,5%,100%,100%,0.40494535833169704
 9999,Mask2Former + Sam,True,True,6,Distance Max,5%,100%,110%,0.40519734611099506
 10000,Mask2Former + Sam,True,True,6,Distance Max,5%,110%,90%,0.3695932682566954
-10001,Mask2Former + Sam,True,True,6,Distance Max,5%,110%,100%,
+10001,Mask2Former + Sam,True,True,6,Distance Max,5%,110%,100%,0.3694070500932877
 10002,Mask2Former + Sam,True,True,6,Distance Max,5%,110%,110%,
 10003,Mask2Former + Sam,True,True,6,Distance Max,10%,90%,90%,
 10004,Mask2Former + Sam,True,True,6,Distance Max,10%,90%,100%,
