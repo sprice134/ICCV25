@@ -43,15 +43,15 @@ def main():
     
     # SAM inference parameters
     sam_params = {
-        "num_points": 3,               # Number of points of interest per mask
-        "algorithm": "Voronoi",   # e.g., "Random" or your chosen algorithm
-        "ignore_border_percentage": 10,
+        "num_points": 7,               # Number of points of interest per mask
+        "algorithm": "Distance Max",   # e.g., "Random" or your chosen algorithm
+        "ignore_border_percentage": 0,
         "use_box_input": True,
-        "use_mask_input": False,
+        "use_mask_input": True,
     }
     # These rates can be adjusted to expand the boxes/masks if needed
-    box_expansion_rate = 0.0
-    mask_expansion_rate = 0.0
+    box_expansion_rate = 1.1
+    mask_expansion_rate = 1.1
 
     # -------------------------------------------------------------------------
     # Load the SAM model

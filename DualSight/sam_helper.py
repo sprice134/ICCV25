@@ -385,6 +385,7 @@ def run_sam_inference(
     use_mask_input=False,
     box_expansion_rate=0.0,
     mask_expansion_rate=0.0
+
 ):
     """
     Runs SAM segmentation refinement on predicted masks.
